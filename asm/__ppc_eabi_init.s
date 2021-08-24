@@ -1,0 +1,54 @@
+.include "macros.inc"
+
+.section .text
+
+.global __init_user
+__init_user:
+/* 803DB994 003D8794  7C 08 02 A6 */	mflr r0
+/* 803DB998 003D8798  90 01 00 04 */	stw r0, 4(r1)
+/* 803DB99C 003D879C  94 21 FF F8 */	stwu r1, -8(r1)
+/* 803DB9A0 003D87A0  48 00 00 15 */	bl __init_cpp
+/* 803DB9A4 003D87A4  80 01 00 0C */	lwz r0, 0xc(r1)
+/* 803DB9A8 003D87A8  38 21 00 08 */	addi r1, r1, 8
+/* 803DB9AC 003D87AC  7C 08 03 A6 */	mtlr r0
+/* 803DB9B0 003D87B0  4E 80 00 20 */	blr 
+
+.global __init_cpp
+__init_cpp:
+/* 803DB9B4 003D87B4  7C 08 02 A6 */	mflr r0
+/* 803DB9B8 003D87B8  90 01 00 04 */	stw r0, 4(r1)
+/* 803DB9BC 003D87BC  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 803DB9C0 003D87C0  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 803DB9C4 003D87C4  3C 60 80 49 */	lis r3, lbl_80489440@ha
+/* 803DB9C8 003D87C8  38 03 94 40 */	addi r0, r3, lbl_80489440@l
+/* 803DB9CC 003D87CC  7C 1F 03 78 */	mr r31, r0
+/* 803DB9D0 003D87D0  48 00 00 04 */	b lbl_803DB9D4
+lbl_803DB9D4:
+/* 803DB9D4 003D87D4  48 00 00 04 */	b lbl_803DB9D8
+lbl_803DB9D8:
+/* 803DB9D8 003D87D8  48 00 00 10 */	b lbl_803DB9E8
+lbl_803DB9DC:
+/* 803DB9DC 003D87DC  7D 88 03 A6 */	mtlr r12
+/* 803DB9E0 003D87E0  4E 80 00 21 */	blrl 
+/* 803DB9E4 003D87E4  3B FF 00 04 */	addi r31, r31, 4
+lbl_803DB9E8:
+/* 803DB9E8 003D87E8  81 9F 00 00 */	lwz r12, 0(r31)
+/* 803DB9EC 003D87EC  28 0C 00 00 */	cmplwi r12, 0
+/* 803DB9F0 003D87F0  40 82 FF EC */	bne lbl_803DB9DC
+/* 803DB9F4 003D87F4  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 803DB9F8 003D87F8  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 803DB9FC 003D87FC  38 21 00 10 */	addi r1, r1, 0x10
+/* 803DBA00 003D8800  7C 08 03 A6 */	mtlr r0
+/* 803DBA04 003D8804  4E 80 00 20 */	blr 
+
+.global _ExitProcess
+_ExitProcess:
+/* 803DBA08 003D8808  7C 08 02 A6 */	mflr r0
+/* 803DBA0C 003D880C  90 01 00 04 */	stw r0, 4(r1)
+/* 803DBA10 003D8810  94 21 FF F8 */	stwu r1, -8(r1)
+/* 803DBA14 003D8814  4B FE 79 49 */	bl PPCHalt
+/* 803DBA18 003D8818  80 01 00 0C */	lwz r0, 0xc(r1)
+/* 803DBA1C 003D881C  38 21 00 08 */	addi r1, r1, 8
+/* 803DBA20 003D8820  7C 08 03 A6 */	mtlr r0
+/* 803DBA24 003D8824  4E 80 00 20 */	blr 
+
