@@ -17074,8 +17074,8 @@ func_803C3428:
 /* 803C3428 003C0228  FF A0 00 4C */	mtfsb1 0x1d
 /* 803C342C 003C022C  4E 80 00 20 */	blr 
 
-.global func_803C3430
-func_803C3430:
+.global DBInit
+DBInit:
 /* 803C3430 003C0230  3C 80 80 00 */	lis r4, 0x80000040@ha
 /* 803C3434 003C0234  38 04 00 40 */	addi r0, r4, 0x80000040@l
 /* 803C3438 003C0238  3C 60 80 3C */	lis r3, lbl_803C34BC@ha
@@ -17087,8 +17087,8 @@ func_803C3430:
 /* 803C3450 003C0250  90 0D 0C 3C */	stw r0, lbl_805DDD1C@sda21(r13)
 /* 803C3454 003C0254  4E 80 00 20 */	blr 
 
-.global func_803C3458
-func_803C3458:
+.global DBIsDebuggerPresent
+DBIsDebuggerPresent:
 /* 803C3458 003C0258  80 6D 0C 38 */	lwz r3, lbl_805DDD18@sda21(r13)
 /* 803C345C 003C025C  28 03 00 00 */	cmplwi r3, 0
 /* 803C3460 003C0260  40 82 00 0C */	bne lbl_803C346C
@@ -17132,8 +17132,8 @@ func_803C34CC:
 /* 803C34E0 003C02E0  7C 83 00 38 */	and r3, r4, r0
 /* 803C34E4 003C02E4  4E 80 00 20 */	blr 
 
-.global func_803C34E8
-func_803C34E8:
+.global DBPrintf
+DBPrintf:
 /* 803C34E8 003C02E8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803C34EC 003C02EC  40 86 00 24 */	bne cr1, lbl_803C3510
 /* 803C34F0 003C02F0  D8 21 00 28 */	stfd f1, 0x28(r1)
@@ -34155,8 +34155,8 @@ func_803D22F4:
 lbl_803D2344:
 /* 803D2344 003CF144  4E 80 00 20 */	blr 
 
-.global func_803D2348
-func_803D2348:
+.global __OSFPRInit
+__OSFPRInit:
 /* 803D2348 003CF148  7C 60 00 A6 */	mfmsr r3
 /* 803D234C 003CF14C  60 63 20 00 */	ori r3, r3, 0x2000
 /* 803D2350 003CF150  7C 60 01 24 */	mtmsr r3
