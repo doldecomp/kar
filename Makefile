@@ -101,7 +101,7 @@ $(LDSCRIPT): ldscript.lcf
 
 $(DOL): $(ELF) | tools
 	$(ELF2DOL) $< $@ $(SDATA_PDHR) $(SBSS_PDHR) $(TARGET_COL)
-	$(SHA1SUM) -c $(NAME).$(VERSION).sha1
+	$(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 
 clean:
 	rm -f -d -r build

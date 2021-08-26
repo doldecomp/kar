@@ -7835,8 +7835,8 @@ lbl_80509B40:
 .global lbl_80509DC0
 lbl_80509DC0:
 	.incbin "baserom.dol", 0x506DC0, 0x280
-.global lbl_8050A040
-lbl_8050A040:
+.global debugfont
+debugfont:
 	.incbin "baserom.dol", 0x507040, 0x25FC4
 .global lbl_80530004
 lbl_80530004:

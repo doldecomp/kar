@@ -2,8 +2,8 @@
 
 .section .text
 
-.global func_803AD168
-func_803AD168:
+.global ___destroy_global_chain
+___destroy_global_chain:
 /* 803AD168 003A9F68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803AD16C 003A9F6C  7C 08 02 A6 */	mflr r0
 /* 803AD170 003A9F70  90 01 00 14 */	stw r0, 0x14(r1)
