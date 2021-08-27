@@ -2,16 +2,6 @@
 
 .section .text
 
-.global HSD_PObjGetFlags
-HSD_PObjGetFlags:
-/* 8040531C 0040211C  28 03 00 00 */	cmplwi r3, 0
-/* 80405320 00402120  41 82 00 0C */	beq lbl_8040532C
-/* 80405324 00402124  A0 63 00 0C */	lhz r3, 0xc(r3)
-/* 80405328 00402128  4E 80 00 20 */	blr 
-lbl_8040532C:
-/* 8040532C 0040212C  38 60 00 00 */	li r3, 0
-/* 80405330 00402130  4E 80 00 20 */	blr 
-
 .global HSD_PObjRemoveAnimAllByFlags
 HSD_PObjRemoveAnimAllByFlags:
 /* 80405334 00402134  94 21 FF E0 */	stwu r1, -0x20(r1)
