@@ -31,7 +31,8 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/text_803EC02C.o				\
 	$(BUILD_DIR)/asm/cobj.o							\
 	$(BUILD_DIR)/asm/fobj.o							\
-	$(BUILD_DIR)/asm/text_8040531C.o				\
+	$(BUILD_DIR)/asm/pobj.o							\
+	$(BUILD_DIR)/asm/text_80407EE0.o				\
 	$(BUILD_DIR)/asm/text_8041B450.o				\
 
 CTORS_O_FILES :=                                    \
