@@ -6832,8 +6832,8 @@ lbl_805DCD00:
 .global lbl_805DCD08
 lbl_805DCD08:
 	.incbin "baserom.dol", 0x539F28, 0x8
-.global lbl_805DCD10
-lbl_805DCD10:
+.global hsd_obj
+hsd_obj:
 	.incbin "baserom.dol", 0x539F30, 0x8
 .global lbl_805DCD18
 lbl_805DCD18:

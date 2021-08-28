@@ -2,6 +2,7 @@
 #define _objalloc_h_
 
 #include "global.h"
+#include "dolphin/types.h"
 
 typedef struct _objheap {
     u32 top;

@@ -2,6 +2,7 @@
 #define _class_h_
 
 #include "global.h"
+#include "dolphin/types.h"
 
 #define HSD_CLASS_INFO(o) ((HSD_ClassInfo*)o)
 #define HSD_CLASS_METHOD(o) (o->parent.class_info)

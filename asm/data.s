@@ -7409,8 +7409,8 @@ lbl_80503FC0:
 .global lbl_80503FF0
 lbl_80503FF0:
 	.incbin "baserom.dol", 0x500FF0, 0x28
-.global lbl_80504018
-lbl_80504018:
+.global heap
+heap:
 	.incbin "baserom.dol", 0x501018, 0x10
 .global lbl_80504028
 lbl_80504028:
@@ -7460,11 +7460,11 @@ lbl_80504388:
 .global lbl_80504418
 lbl_80504418:
 	.incbin "baserom.dol", 0x501418, 0x90
-.global lbl_805044A8
-lbl_805044A8:
+.global objInfo
+objInfo:
 	.incbin "baserom.dol", 0x5014A8, 0x3C
-.global lbl_805044E4
-lbl_805044E4:
+.global sysdolphin_base_library
+sysdolphin_base_library:
 	.incbin "baserom.dol", 0x5014E4, 0x1C
 .global lbl_80504500
 lbl_80504500:
@@ -7493,8 +7493,8 @@ lbl_805046C0:
 .global lbl_80504708
 lbl_80504708:
 	.incbin "baserom.dol", 0x501708, 0xA0
-.global lbl_805047A8
-lbl_805047A8:
+.global hsdClass
+hsdClass:
 	.incbin "baserom.dol", 0x5017A8, 0x3C
 .global lbl_805047E4
 lbl_805047E4:

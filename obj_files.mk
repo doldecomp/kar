@@ -34,7 +34,11 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/src/sysdolphin/pobj.o				\
 	$(BUILD_DIR)/asm/pobj.o							\
 	$(BUILD_DIR)/asm/text_80407EE0.o				\
+	$(BUILD_DIR)/asm/objalloc.o						\
+	$(BUILD_DIR)/asm/text_8041838C.o				\
 	$(BUILD_DIR)/asm/text_8041B450.o				\
+	$(BUILD_DIR)/asm/object.o						\
+	$(BUILD_DIR)/asm/text_8041BF1C.o				\
 
 CTORS_O_FILES :=                                    \
 	$(BUILD_DIR)/asm/ctors.o						\
