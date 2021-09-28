@@ -19,3 +19,4 @@
 *.dump
 build
 tools/mwcc_compiler/
+*.bat
