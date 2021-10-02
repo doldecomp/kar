@@ -25,3 +25,7 @@ main.dol: `sha1: 977533bb96e6a16e127946396489be1b4164ac42`
 ## Contributions
 
 Contributions and PRs are welcome.
+
+## TODO
+
+1. texpdag.s and texopt.s are in the same file, find where they split and split them.

@@ -1,4 +1,4 @@
-CC := cc
+CC := gcc
 CFLAGS := -O3 -Wall -s
 
 elf2dol: elf2dol.c
