@@ -25,10 +25,25 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/text_803AFAC8.o				\
 	$(BUILD_DIR)/asm/cstring.o						\
 	$(BUILD_DIR)/asm/text_803B4AC0.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_1.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_dsp.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_dvd.o				\
+	$(BUILD_DIR)/asm/text_803C832C.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_gx.o				\
+	$(BUILD_DIR)/asm/text_803D13FC.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_os.o				\
 	$(BUILD_DIR)/asm/__ppc_eabi_init.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_2.o				\
-	$(BUILD_DIR)/asm/text_803EC02C.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_pad.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_vi.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_ai.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_ar.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_arq.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_card.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_si.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_exi.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_ax.o				\
+	$(BUILD_DIR)/asm/text_803EF1AC.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_mix.o				\
+	$(BUILD_DIR)/asm/text_803F3920.o				\
 	$(BUILD_DIR)/asm/dobj.o							\
 	$(BUILD_DIR)/asm/tobj.o							\
 	$(BUILD_DIR)/asm/text_803F7CA0.o				\
