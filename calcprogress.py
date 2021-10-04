@@ -3,7 +3,7 @@
 ################################################################################
 #                                 Description                                  #
 ################################################################################
-# calcprogress: Used to calculate the progress of the Pikmin decomp.           #
+# calcprogress: Used to calculate the progress of the Air Ride decomp.           #
 # Prints to stdout for now, but eventually will have some form of storage,     #
 # i.e. CSV, so that it can be used for a webpage display.                      #
 #                                                                              #
@@ -167,4 +167,4 @@ if __name__ == "__main__":
     print("Progress:")
     print(f"\tCode sections: {decomp_code_size} / {dol_code_size} bytes in src ({codeCompletionPcnt:%})")
     print(f"\tData sections: {decomp_data_size} / {dol_data_size} bytes in src ({dataCompletionPcnt:%})")
-    print("\nYou have {} out of 360 checks boxed.".format(partCount))
+    print("\nYou have {} out of 360 checkboxes.".format(partCount))
