@@ -27,6 +27,7 @@ ASM_DIRS := asm
 # Inputs
 S_FILES := $(wildcard asm/*.s)
 C_FILES := $(wildcard src/*.c)
+CPP_FILES := $(wildcard src/*.cpp)
 LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
 
 # Outputs
@@ -56,7 +57,7 @@ else
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
-CPP     := cpp -P
+CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
 CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol

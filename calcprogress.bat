@@ -1,0 +1,2 @@
+python calcprogress.py
+pause
