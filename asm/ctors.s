@@ -1,4 +1,11 @@
 .section .ctors, "wa"  # 0x80489440 - 0x80489460
 .global lbl_80489440
 lbl_80489440:
-	.incbin "baserom.dol", 0x486440, 0x20
+	.4byte 0x803AE1F8
+	.4byte 0x80383978
+	.4byte 0x8038814C
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000

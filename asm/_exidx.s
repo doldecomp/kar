@@ -1,7 +1,69 @@
 .include "macros.inc"
 
 .section ._exidx, "wa"  # 0x80005700 - 0x80005800
-	.incbin "baserom.dol", 0x486340, 0xCC
+	.4byte 0x803AD1C8
+	.4byte 0x00000074
+	.4byte 0x80005600
+	.4byte 0x803AD248
+	.4byte 0x00000078
+	.4byte 0x80005628
+	.4byte 0x803AD2C0
+	.4byte 0x000000FC
+	.4byte 0x80005630
+	.4byte 0x803AD3BC
+	.4byte 0x000000B8
+	.4byte 0x80005648
+	.4byte 0x803AD6A0
+	.4byte 0x00000028
+	.4byte 0x80005650
+	.4byte 0x803AD6C8
+	.4byte 0x00000028
+	.4byte 0x80005658
+	.4byte 0x803AD6F0
+	.4byte 0x00000028
+	.4byte 0x80005660
+	.4byte 0x803AD718
+	.4byte 0x00000020
+	.4byte 0x80005668
+	.4byte 0x803AD760
+	.4byte 0x00000264
+	.4byte 0x80005670
+	.4byte 0x803AD9C4
+	.4byte 0x0000005C
+	.4byte 0x80005678
+	.4byte 0x803AE694
+	.4byte 0x00000044
+	.4byte 0x80005680
+	.4byte 0x803AE6D8
+	.4byte 0x00000410
+	.4byte 0x80005688
+	.4byte 0x803AEAE8
+	.4byte 0x000001B4
+	.4byte 0x8000569C
+	.4byte 0x803AEC9C
+	.4byte 0x0000005C
+	.4byte 0x800056C8
+	.4byte 0x803AECF8
+	.4byte 0x0000050C
+	.4byte 0x800056D0
+	.4byte 0x803AF44C
+	.4byte 0x000001C0
+	.4byte 0x800056E4
+	.4byte 0x803AF60C
+	.4byte 0x00000204
+	.4byte 0x800056EC
 .global lbl_800057CC
 lbl_800057CC:
-	.incbin "baserom.dol", 0x48640C, 0x34
+	.4byte 0x80005700
+	.4byte 0x800057CC
+	.4byte 0x803AD1C8
+	.4byte 0x00002648
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
