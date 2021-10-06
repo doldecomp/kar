@@ -2,6 +2,7 @@
 
 INIT_O_FILES := 						            \
     $(BUILD_DIR)/asm/init.o							\
+    $(BUILD_DIR)/asm/init2.o						\
 
 EXTAB_O_FILES :=                                    \
     $(BUILD_DIR)/asm/_extab.o						\
