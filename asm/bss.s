@@ -767,8 +767,8 @@ lbl_8058BE54:
 .global lbl_8058BE80
 lbl_8058BE80:
 	.skip 0x18
-.global lbl_8058BE98
-lbl_8058BE98:
+.global shadow_alloc_data
+shadow_alloc_data:
 	.skip 0x30
 .global lbl_8058BEC8
 lbl_8058BEC8:

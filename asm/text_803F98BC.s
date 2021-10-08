@@ -1390,7 +1390,7 @@ func_803FAC18:
 /* 803FAC28 003F7A28  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 803FAC2C 003F7A2C  7C 7E 1B 78 */	mr r30, r3
 /* 803FAC30 003F7A30  93 A1 00 24 */	stw r29, 0x24(r1)
-/* 803FAC34 003F7A34  4B FF E3 F5 */	bl func_803F9028
+/* 803FAC34 003F7A34  4B FF E3 F5 */	bl HSD_StateInitTev
 /* 803FAC38 003F7A38  80 BE 00 0C */	lwz r5, 0xc(r30)
 /* 803FAC3C 003F7A3C  38 61 00 10 */	addi r3, r1, 0x10
 /* 803FAC40 003F7A40  83 FE 00 04 */	lwz r31, 4(r30)
@@ -1584,8 +1584,8 @@ lbl_803FAE94:
 /* 803FAEBC 003F7CBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FAEC0 003F7CC0  4E 80 00 20 */	blr 
 
-.global func_803FAEC4
-func_803FAEC4:
+.global HSD_MObjAddShadowTexture
+HSD_MObjAddShadowTexture:
 /* 803FAEC4 003F7CC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FAEC8 003F7CC8  7C 08 02 A6 */	mflr r0
 /* 803FAECC 003F7CCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1616,8 +1616,8 @@ lbl_803FAF14:
 /* 803FAF20 003F7D20  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FAF24 003F7D24  4E 80 00 20 */	blr 
 
-.global func_803FAF28
-func_803FAF28:
+.global HSD_MObjDeleteShadowTexture
+HSD_MObjDeleteShadowTexture:
 /* 803FAF28 003F7D28  28 03 00 00 */	cmplwi r3, 0
 /* 803FAF2C 003F7D2C  41 82 00 3C */	beq lbl_803FAF68
 /* 803FAF30 003F7D30  38 AD 11 14 */	addi r5, r13, lbl_805DE1F4@sda21

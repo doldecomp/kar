@@ -12509,8 +12509,9 @@ lbl_805DCD08:
 hsd_obj:
 	.4byte 0x6873645F
 	.4byte 0x6F626A00
-.global lbl_805DCD18
-lbl_805DCD18:
+.global shadow
+shadow:
+#	.string "shadow"
 	.4byte 0x73686164
 	.4byte 0x6F770000
 .global lbl_805DCD20

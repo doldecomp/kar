@@ -389,8 +389,8 @@ lbl_803F8F34:
 /* 803F8F40 003F5D40  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F8F44 003F5D44  4E 80 00 20 */	blr 
 
-.global func_803F8F48
-func_803F8F48:
+.global HSD_SetupChannelAll
+HSD_SetupChannelAll:
 /* 803F8F48 003F5D48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F8F4C 003F5D4C  7C 08 02 A6 */	mflr r0
 /* 803F8F50 003F5D50  90 01 00 14 */	stw r0, 0x14(r1)
@@ -445,8 +445,8 @@ lbl_803F8FE4:
 /* 803F8FF0 003F5DF0  90 6D 10 E8 */	stw r3, lbl_805DE1C8@sda21(r13)
 /* 803F8FF4 003F5DF4  4E 80 00 20 */	blr 
 
-.global func_803F8FF8
-func_803F8FF8:
+.global HSD_StateSetNumTexGens
+HSD_StateSetNumTexGens:
 /* 803F8FF8 003F5DF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F8FFC 003F5DFC  7C 08 02 A6 */	mflr r0
 /* 803F9000 003F5E00  90 01 00 14 */	stw r0, 0x14(r1)
@@ -460,8 +460,8 @@ func_803F8FF8:
 /* 803F9020 003F5E20  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F9024 003F5E24  4E 80 00 20 */	blr 
 
-.global func_803F9028
-func_803F9028:
+.global HSD_StateInitTev
+HSD_StateInitTev:
 /* 803F9028 003F5E28  38 00 00 00 */	li r0, 0
 /* 803F902C 003F5E2C  90 0D 11 00 */	stw r0, lbl_805DE1E0@sda21(r13)
 /* 803F9030 003F5E30  4E 80 00 20 */	blr 
@@ -743,8 +743,8 @@ lbl_803F9400:
 /* 803F9414 003F6214  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F9418 003F6218  4E 80 00 20 */	blr 
 
-.global func_803F941C
-func_803F941C:
+.global HSD_SetupTevStageAll
+HSD_SetupTevStageAll:
 /* 803F941C 003F621C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F9420 003F6220  7C 08 02 A6 */	mflr r0
 /* 803F9424 003F6224  3C 80 80 50 */	lis r4, lbl_80502928@ha
@@ -847,7 +847,7 @@ func_803F9554:
 /* 803F9558 003F6358  7C 08 02 A6 */	mflr r0
 /* 803F955C 003F635C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803F9560 003F6360  39 61 00 30 */	addi r11, r1, 0x30
-/* 803F9564 003F6364  4B FB 45 F1 */	bl func_803ADB54
+/* 803F9564 003F6364  4B FB 45 F1 */	bl _savegpr_27
 /* 803F9568 003F6368  3C 60 80 50 */	lis r3, lbl_80502460@ha
 /* 803F956C 003F636C  3B E0 00 00 */	li r31, 0
 /* 803F9570 003F6370  3B 83 24 60 */	addi r28, r3, lbl_80502460@l
@@ -874,7 +874,7 @@ lbl_803F95B0:
 /* 803F95BC 003F63BC  3B 9C 00 0C */	addi r28, r28, 0xc
 /* 803F95C0 003F63C0  41 80 FF C4 */	blt lbl_803F9584
 /* 803F95C4 003F63C4  39 61 00 30 */	addi r11, r1, 0x30
-/* 803F95C8 003F63C8  4B FB 45 D9 */	bl func_803ADBA0
+/* 803F95C8 003F63C8  4B FB 45 D9 */	bl _restgpr_27
 /* 803F95CC 003F63CC  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 803F95D0 003F63D0  7C 08 03 A6 */	mtlr r0
 /* 803F95D4 003F63D4  38 21 00 30 */	addi r1, r1, 0x30

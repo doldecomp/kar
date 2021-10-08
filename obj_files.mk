@@ -21,15 +21,19 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/text_8034D384.o				\
 	$(BUILD_DIR)/asm/__va_arg.o						\
 	$(BUILD_DIR)/asm/text_803AD168.o				\
+	$(BUILD_DIR)/asm/Gecko_ExceptionPPC.o			\
+	$(BUILD_DIR)/asm/GCN_mem_alloc.o				\
 	$(BUILD_DIR)/asm/abort_exit.o					\
 	$(BUILD_DIR)/asm/text_803AFAC8.o				\
 	$(BUILD_DIR)/asm/cstring.o						\
 	$(BUILD_DIR)/asm/text_803B4AC0.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_dsp.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_dvd.o				\
-	$(BUILD_DIR)/asm/text_803C832C.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_gx.o				\
-	$(BUILD_DIR)/asm/text_803D13FC.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_mtx.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_mtxvec.o			\
+	$(BUILD_DIR)/asm/dolphin_sdk_mtx44.o			\
+	$(BUILD_DIR)/asm/dolphin_sdk_vec.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_os.o				\
 	$(BUILD_DIR)/asm/__ppc_eabi_init.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_pad.o				\
@@ -76,7 +80,7 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/object.o						\
 	$(BUILD_DIR)/asm/text_8041BF1C.o				\
 	$(BUILD_DIR)/asm/memory.o						\
-	$(BUILD_DIR)/asm/text_8041CF1C.o				\
+	$(BUILD_DIR)/asm/shadow.o						\
 	$(BUILD_DIR)/asm/archive.o						\
 	$(BUILD_DIR)/asm/text_8041E434.o				\
 	$(BUILD_DIR)/asm/random.o						\
