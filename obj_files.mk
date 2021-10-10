@@ -26,7 +26,10 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/abort_exit.o					\
 	$(BUILD_DIR)/asm/text_803AFAC8.o				\
 	$(BUILD_DIR)/asm/cstring.o						\
-	$(BUILD_DIR)/asm/text_803B4AC0.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_other.o			\
+	$(BUILD_DIR)/asm/TRK_MINNOW_DOLPHIN.o			\
+	$(BUILD_DIR)/asm/PPCArch.o						\
+	$(BUILD_DIR)/asm/dolphin_sdk_db.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_dsp.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_dvd.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_gx.o				\
@@ -47,27 +50,24 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/dolphin_sdk_ax.o				\
 	$(BUILD_DIR)/asm/text_803EF1AC.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_mix.o				\
-	$(BUILD_DIR)/asm/text_803F3920.o				\
+	$(BUILD_DIR)/asm/dolphin_sdk_synth.o			\
 	$(BUILD_DIR)/asm/dobj.o							\
 	$(BUILD_DIR)/asm/tobj.o							\
-	$(BUILD_DIR)/asm/text_803F7CA0.o				\
 	$(BUILD_DIR)/asm/tev.o							\
-	$(BUILD_DIR)/asm/text_803F98BC.o				\
+	$(BUILD_DIR)/asm/mobj.o							\
 	$(BUILD_DIR)/asm/aobj.o							\
-	$(BUILD_DIR)/asm/text_803FDACC.o				\
+	$(BUILD_DIR)/asm/lobj.o							\
 	$(BUILD_DIR)/asm/cobj.o							\
 	$(BUILD_DIR)/asm/fobj.o							\
 	$(BUILD_DIR)/src/sysdolphin/pobj.o				\
 	$(BUILD_DIR)/asm/pobj.o							\
 	$(BUILD_DIR)/asm/jobj.o							\
-	$(BUILD_DIR)/asm/text_8040E360.o				\
+	$(BUILD_DIR)/asm/displayfunc.o					\
 	$(BUILD_DIR)/asm/initialize.o					\
 	$(BUILD_DIR)/asm/video.o						\
-	$(BUILD_DIR)/asm/text_80411CAC.o				\
 	$(BUILD_DIR)/asm/controller.o					\
 	$(BUILD_DIR)/asm/rumble.o						\
 	$(BUILD_DIR)/asm/spline.o						\
-	$(BUILD_DIR)/asm/text_804159A0.o				\
 	$(BUILD_DIR)/asm/mtx.o							\
 	$(BUILD_DIR)/asm/util.o							\
 	$(BUILD_DIR)/asm/objalloc.o						\
@@ -85,9 +85,7 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/text_8041E434.o				\
 	$(BUILD_DIR)/asm/random.o						\
 	$(BUILD_DIR)/asm/bytecode.o						\
-	$(BUILD_DIR)/asm/text_8041FC98.o				\
 	$(BUILD_DIR)/asm/class.o						\
-	$(BUILD_DIR)/asm/text_804212F4.o				\
 	$(BUILD_DIR)/asm/hash.o							\
 	$(BUILD_DIR)/asm/texp.o							\
 	$(BUILD_DIR)/asm/texpdag.o						\

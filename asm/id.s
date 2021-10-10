@@ -202,6 +202,9 @@ lbl_8041A7A8:
 lbl_8041A7C0:
 /* 8041A7C0 004175C0  38 60 00 00 */	li r3, 0
 /* 8041A7C4 004175C4  4E 80 00 20 */	blr 
+
+.global _HSD_IDForgetMemory
+_HSD_IDForgetMemory:
 /* 8041A7C8 004175C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041A7CC 004175CC  7C 08 02 A6 */	mflr r0
 /* 8041A7D0 004175D0  3C 60 80 59 */	lis r3, lbl_8058BC94@ha

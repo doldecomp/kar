@@ -1,6 +1,6 @@
 .include "macros.inc"
 
-.section .init  # 0x80003100 - 0x800054EC
+.section .init
 
 .global memset
 memset:

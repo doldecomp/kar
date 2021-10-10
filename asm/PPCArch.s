@@ -1,0 +1,139 @@
+.include "macros.inc"
+
+.section .text
+
+.global PPCMfmsr
+PPCMfmsr:
+/* 803C331C 003C011C  7C 60 00 A6 */	mfmsr r3
+/* 803C3320 003C0120  4E 80 00 20 */	blr 
+
+.global PPCMtmsr
+PPCMtmsr:
+/* 803C3324 003C0124  7C 60 01 24 */	mtmsr r3
+/* 803C3328 003C0128  4E 80 00 20 */	blr 
+
+.global PPCMfhid0
+PPCMfhid0:
+/* 803C332C 003C012C  7C 70 FA A6 */	mfspr r3, 0x3f0
+/* 803C3330 003C0130  4E 80 00 20 */	blr 
+
+.global PPCMthid0
+PPCMthid0:
+/* 803C3334 003C0134  7C 70 FB A6 */	mtspr 0x3f0, r3
+/* 803C3338 003C0138  4E 80 00 20 */	blr 
+
+.global PPCMfl2cr
+PPCMfl2cr:
+/* 803C333C 003C013C  7C 79 FA A6 */	mfspr r3, 0x3f9
+/* 803C3340 003C0140  4E 80 00 20 */	blr 
+
+.global PPCMtl2cr
+PPCMtl2cr:
+/* 803C3344 003C0144  7C 79 FB A6 */	mtspr 0x3f9, r3
+/* 803C3348 003C0148  4E 80 00 20 */	blr 
+
+.global PPCMtdec
+PPCMtdec:
+/* 803C334C 003C014C  7C 76 03 A6 */	mtspr 0x16, r3
+/* 803C3350 003C0150  4E 80 00 20 */	blr 
+
+.global PPCSync
+PPCSync:
+/* 803C3354 003C0154  44 00 00 02 */	sc 
+/* 803C3358 003C0158  4E 80 00 20 */	blr 
+
+.global PPCHalt
+PPCHalt:
+/* 803C335C 003C015C  7C 00 04 AC */	sync 0
+lbl_803C3360:
+/* 803C3360 003C0160  60 00 00 00 */	nop 
+/* 803C3364 003C0164  38 60 00 00 */	li r3, 0
+/* 803C3368 003C0168  60 00 00 00 */	nop 
+/* 803C336C 003C016C  4B FF FF F4 */	b lbl_803C3360
+
+.global PPCMtmmcr0
+PPCMtmmcr0:
+/* 803C3370 003C0170  7C 78 EB A6 */	mtspr 0x3b8, r3
+/* 803C3374 003C0174  4E 80 00 20 */	blr 
+
+.global PPCMtmmcr1
+PPCMtmmcr1:
+/* 803C3378 003C0178  7C 7C EB A6 */	mtspr 0x3bc, r3
+/* 803C337C 003C017C  4E 80 00 20 */	blr 
+
+.global func_803C3380
+func_803C3380:
+/* 803C3380 003C0180  7C 79 EB A6 */	mtspr 0x3b9, r3
+/* 803C3384 003C0184  4E 80 00 20 */	blr 
+
+.global func_803C3388
+func_803C3388:
+/* 803C3388 003C0188  7C 7A EB A6 */	mtspr 0x3ba, r3
+/* 803C338C 003C018C  4E 80 00 20 */	blr 
+
+.global func_803C3390
+func_803C3390:
+/* 803C3390 003C0190  7C 7D EB A6 */	mtspr 0x3bd, r3
+/* 803C3394 003C0194  4E 80 00 20 */	blr 
+
+.global func_803C3398
+func_803C3398:
+/* 803C3398 003C0198  7C 7E EB A6 */	mtspr 0x3be, r3
+/* 803C339C 003C019C  4E 80 00 20 */	blr 
+
+.global func_803C33A0
+func_803C33A0:
+/* 803C33A0 003C01A0  94 21 FF E8 */	stwu r1, -0x18(r1)
+/* 803C33A4 003C01A4  DB E1 00 10 */	stfd f31, 0x10(r1)
+/* 803C33A8 003C01A8  FF E0 04 8E */	mffs f31
+/* 803C33AC 003C01AC  DB E1 00 08 */	stfd f31, 8(r1)
+/* 803C33B0 003C01B0  80 61 00 0C */	lwz r3, 0xc(r1)
+/* 803C33B4 003C01B4  CB E1 00 10 */	lfd f31, 0x10(r1)
+/* 803C33B8 003C01B8  38 21 00 18 */	addi r1, r1, 0x18
+/* 803C33BC 003C01BC  4E 80 00 20 */	blr 
+
+.global func_803C33C0
+func_803C33C0:
+/* 803C33C0 003C01C0  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 803C33C4 003C01C4  DB E1 00 18 */	stfd f31, 0x18(r1)
+/* 803C33C8 003C01C8  38 80 00 00 */	li r4, 0
+/* 803C33CC 003C01CC  90 81 00 10 */	stw r4, 0x10(r1)
+/* 803C33D0 003C01D0  90 61 00 14 */	stw r3, 0x14(r1)
+/* 803C33D4 003C01D4  CB E1 00 10 */	lfd f31, 0x10(r1)
+/* 803C33D8 003C01D8  FD FE FD 8E */	mtfsf 0xff, f31
+/* 803C33DC 003C01DC  CB E1 00 18 */	lfd f31, 0x18(r1)
+/* 803C33E0 003C01E0  38 21 00 20 */	addi r1, r1, 0x20
+/* 803C33E4 003C01E4  4E 80 00 20 */	blr 
+
+.global func_803C33E8
+func_803C33E8:
+/* 803C33E8 003C01E8  7C 78 E2 A6 */	mfspr r3, 0x398
+/* 803C33EC 003C01EC  4E 80 00 20 */	blr 
+
+.global func_803C33F0
+func_803C33F0:
+/* 803C33F0 003C01F0  7C 78 E3 A6 */	mtspr 0x398, r3
+/* 803C33F4 003C01F4  4E 80 00 20 */	blr 
+
+.global func_803C33F8
+func_803C33F8:
+/* 803C33F8 003C01F8  7C 79 E3 A6 */	mtspr 0x399, r3
+/* 803C33FC 003C01FC  4E 80 00 20 */	blr 
+
+.global func_803C3400
+func_803C3400:
+/* 803C3400 003C0200  7C 08 02 A6 */	mflr r0
+/* 803C3404 003C0204  90 01 00 04 */	stw r0, 4(r1)
+/* 803C3408 003C0208  94 21 FF F8 */	stwu r1, -8(r1)
+/* 803C340C 003C020C  4B FF FF 21 */	bl PPCMfhid0
+/* 803C3410 003C0210  60 63 02 00 */	ori r3, r3, 0x200
+/* 803C3414 003C0214  4B FF FF 21 */	bl PPCMthid0
+/* 803C3418 003C0218  80 01 00 0C */	lwz r0, 0xc(r1)
+/* 803C341C 003C021C  38 21 00 08 */	addi r1, r1, 8
+/* 803C3420 003C0220  7C 08 03 A6 */	mtlr r0
+/* 803C3424 003C0224  4E 80 00 20 */	blr 
+
+.global func_803C3428
+func_803C3428:
+/* 803C3428 003C0228  FF A0 00 4C */	mtfsb1 0x1d
+/* 803C342C 003C022C  4E 80 00 20 */	blr 
