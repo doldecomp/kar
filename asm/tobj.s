@@ -2,8 +2,8 @@
 
 .section .text
 
-.global func_803F4B7C
-func_803F4B7C:
+.global HSD_TObjRemoveAnimAll
+HSD_TObjRemoveAnimAll:
 /* 803F4B7C 003F197C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F4B80 003F1980  7C 08 02 A6 */	mflr r0
 /* 803F4B84 003F1984  28 03 00 00 */	cmplwi r3, 0
@@ -33,8 +33,8 @@ lbl_803F4BC4:
 /* 803F4BD4 003F19D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F4BD8 003F19D8  4E 80 00 20 */	blr 
 
-.global func_803F4BDC
-func_803F4BDC:
+.global HSD_TObjAddAnim
+HSD_TObjAddAnim:
 /* 803F4BDC 003F19DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F4BE0 003F19E0  7C 08 02 A6 */	mflr r0
 /* 803F4BE4 003F19E4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -81,7 +81,7 @@ lbl_803F4C50:
 /* 803F4C70 003F1A70  3B 80 00 00 */	li r28, 0
 /* 803F4C74 003F1A74  48 00 00 0C */	b lbl_803F4C80
 lbl_803F4C78:
-/* 803F4C78 003F1A78  48 00 2D 05 */	bl func_803F797C
+/* 803F4C78 003F1A78  48 00 2D 05 */	bl HSD_TlutFree
 /* 803F4C7C 003F1A7C  3B 9C 00 04 */	addi r28, r28, 4
 lbl_803F4C80:
 /* 803F4C80 003F1A80  80 9F 00 6C */	lwz r4, 0x6c(r31)
@@ -104,7 +104,7 @@ lbl_803F4C98:
 lbl_803F4CC0:
 /* 803F4CC0 003F1AC0  80 7D 00 10 */	lwz r3, 0x10(r29)
 /* 803F4CC4 003F1AC4  7C 63 E0 2E */	lwzx r3, r3, r28
-/* 803F4CC8 003F1AC8  48 00 08 FD */	bl func_803F55C4
+/* 803F4CC8 003F1AC8  48 00 08 FD */	bl HSD_TlutLoadDesc
 /* 803F4CCC 003F1ACC  80 9F 00 6C */	lwz r4, 0x6c(r31)
 /* 803F4CD0 003F1AD0  3B 7B 00 01 */	addi r27, r27, 1
 /* 803F4CD4 003F1AD4  7C 64 E1 2E */	stwx r3, r4, r28
@@ -137,8 +137,8 @@ lbl_803F4D18:
 /* 803F4D28 003F1B28  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F4D2C 003F1B2C  4E 80 00 20 */	blr 
 
-.global func_803F4D30
-func_803F4D30:
+.global HSD_TObjReqAnimAllByFlags
+HSD_TObjReqAnimAllByFlags:
 /* 803F4D30 003F1B30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F4D34 003F1B34  7C 08 02 A6 */	mflr r0
 /* 803F4D38 003F1B38  28 03 00 00 */	cmplwi r3, 0
@@ -173,8 +173,8 @@ lbl_803F4D88:
 /* 803F4D9C 003F1B9C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F4DA0 003F1BA0  4E 80 00 20 */	blr 
 
-.global func_803F4DA4
-func_803F4DA4:
+.global TObjUpdateFunc
+TObjUpdateFunc:
 /* 803F4DA4 003F1BA4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F4DA8 003F1BA8  7C 08 02 A6 */	mflr r0
 /* 803F4DAC 003F1BAC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -640,8 +640,8 @@ lbl_803F53F0:
 /* 803F53FC 003F21FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F5400 003F2200  4E 80 00 20 */	blr 
 
-.global func_803F5404
-func_803F5404:
+.global TObjLoad
+TObjLoad:
 /* 803F5404 003F2204  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F5408 003F2208  7C 08 02 A6 */	mflr r0
 /* 803F540C 003F220C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -650,7 +650,7 @@ func_803F5404:
 /* 803F5418 003F2218  93 C1 00 08 */	stw r30, 8(r1)
 /* 803F541C 003F221C  7C 7E 1B 78 */	mr r30, r3
 /* 803F5420 003F2220  80 64 00 04 */	lwz r3, 4(r4)
-/* 803F5424 003F2224  48 00 01 09 */	bl func_803F552C
+/* 803F5424 003F2224  48 00 01 09 */	bl HSD_TObjLoadDesc
 /* 803F5428 003F2228  90 7E 00 08 */	stw r3, 8(r30)
 /* 803F542C 003F222C  38 00 00 3C */	li r0, 0x3c
 /* 803F5430 003F2230  80 7F 00 08 */	lwz r3, 8(r31)
@@ -693,7 +693,7 @@ func_803F5404:
 /* 803F54C4 003F22C4  80 1F 00 4C */	lwz r0, 0x4c(r31)
 /* 803F54C8 003F22C8  90 1E 00 58 */	stw r0, 0x58(r30)
 /* 803F54CC 003F22CC  80 7F 00 50 */	lwz r3, 0x50(r31)
-/* 803F54D0 003F22D0  48 00 00 F5 */	bl func_803F55C4
+/* 803F54D0 003F22D0  48 00 00 F5 */	bl HSD_TlutLoadDesc
 /* 803F54D4 003F22D4  90 7E 00 5C */	stw r3, 0x5c(r30)
 /* 803F54D8 003F22D8  38 60 00 00 */	li r3, 0
 /* 803F54DC 003F22DC  38 00 00 FF */	li r0, 0xff
@@ -705,7 +705,7 @@ func_803F5404:
 /* 803F54F4 003F22F4  90 7E 00 4C */	stw r3, 0x4c(r30)
 /* 803F54F8 003F22F8  98 1E 00 70 */	stb r0, 0x70(r30)
 /* 803F54FC 003F22FC  80 7F 00 58 */	lwz r3, 0x58(r31)
-/* 803F5500 003F2300  48 00 01 11 */	bl func_803F5610
+/* 803F5500 003F2300  48 00 01 11 */	bl HSD_TObjTevLoadDesc
 /* 803F5504 003F2304  90 7E 00 A8 */	stw r3, 0xa8(r30)
 /* 803F5508 003F2308  38 60 00 02 */	li r3, 2
 /* 803F550C 003F230C  48 01 B0 E5 */	bl func_804105F0
@@ -717,8 +717,8 @@ func_803F5404:
 /* 803F5524 003F2324  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F5528 003F2328  4E 80 00 20 */	blr 
 
-.global func_803F552C
-func_803F552C:
+.global HSD_TObjLoadDesc
+HSD_TObjLoadDesc:
 /* 803F552C 003F232C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F5530 003F2330  7C 08 02 A6 */	mflr r0
 /* 803F5534 003F2334  90 01 00 14 */	stw r0, 0x14(r1)
@@ -763,15 +763,15 @@ lbl_803F55AC:
 /* 803F55BC 003F23BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F55C0 003F23C0  4E 80 00 20 */	blr 
 
-.global func_803F55C4
-func_803F55C4:
+.global HSD_TlutLoadDesc
+HSD_TlutLoadDesc:
 /* 803F55C4 003F23C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F55C8 003F23C8  7C 08 02 A6 */	mflr r0
 /* 803F55CC 003F23CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803F55D0 003F23D0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803F55D4 003F23D4  7C 7F 1B 79 */	or. r31, r3, r3
 /* 803F55D8 003F23D8  41 82 00 20 */	beq lbl_803F55F8
-/* 803F55DC 003F23DC  48 00 23 49 */	bl func_803F7924
+/* 803F55DC 003F23DC  48 00 23 49 */	bl HSD_TlutAlloc
 /* 803F55E0 003F23E0  7F E4 FB 78 */	mr r4, r31
 /* 803F55E4 003F23E4  7C 7F 1B 78 */	mr r31, r3
 /* 803F55E8 003F23E8  38 A0 00 10 */	li r5, 0x10
@@ -787,15 +787,15 @@ lbl_803F55FC:
 /* 803F5608 003F2408  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F560C 003F240C  4E 80 00 20 */	blr 
 
-.global func_803F5610
-func_803F5610:
+.global HSD_TObjTevLoadDesc
+HSD_TObjTevLoadDesc:
 /* 803F5610 003F2410  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F5614 003F2414  7C 08 02 A6 */	mflr r0
 /* 803F5618 003F2418  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803F561C 003F241C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803F5620 003F2420  7C 7F 1B 79 */	or. r31, r3, r3
 /* 803F5624 003F2424  41 82 00 20 */	beq lbl_803F5644
-/* 803F5628 003F2428  48 00 23 81 */	bl func_803F79A8
+/* 803F5628 003F2428  48 00 23 81 */	bl HSD_TObjTevAlloc
 /* 803F562C 003F242C  7F E4 FB 78 */	mr r4, r31
 /* 803F5630 003F2430  7C 7F 1B 78 */	mr r31, r3
 /* 803F5634 003F2434  38 A0 00 20 */	li r5, 0x20
@@ -811,8 +811,8 @@ lbl_803F5648:
 /* 803F5654 003F2454  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F5658 003F2458  4E 80 00 20 */	blr 
 
-.global func_803F565C
-func_803F565C:
+.global _HSD_TObjGetCurrentByType
+_HSD_TObjGetCurrentByType:
 /* 803F565C 003F245C  28 03 00 00 */	cmplwi r3, 0
 /* 803F5660 003F2460  40 82 00 0C */	bne lbl_803F566C
 /* 803F5664 003F2464  80 6D 10 9C */	lwz r3, lbl_805DE17C@sda21(r13)
@@ -831,6 +831,9 @@ lbl_803F5688:
 /* 803F568C 003F248C  40 82 FF E8 */	bne lbl_803F5674
 /* 803F5690 003F2490  38 60 00 00 */	li r3, 0
 /* 803F5694 003F2494  4E 80 00 20 */	blr 
+
+.global HSD_TexMapID2PTTexMtx
+HSD_TexMapID2PTTexMtx:
 /* 803F5698 003F2498  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F569C 003F249C  7C 08 02 A6 */	mflr r0
 /* 803F56A0 003F24A0  28 03 00 07 */	cmplwi r3, 7
@@ -871,8 +874,8 @@ lbl_803F571C:
 /* 803F5724 003F2524  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F5728 003F2528  4E 80 00 20 */	blr 
 
-.global func_803F572C
-func_803F572C:
+.global MakeTextureMtx
+MakeTextureMtx:
 /* 803F572C 003F252C  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803F5730 003F2530  7C 08 02 A6 */	mflr r0
 /* 803F5734 003F2534  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -999,8 +1002,8 @@ lbl_803F5884:
 /* 803F58F8 003F26F8  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 803F58FC 003F26FC  4E 80 00 20 */	blr 
 
-.global func_803F5900
-func_803F5900:
+.global TObjSetupMtx
+TObjSetupMtx:
 /* 803F5900 003F2700  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 803F5904 003F2704  7C 08 02 A6 */	mflr r0
 /* 803F5908 003F2708  90 01 00 C4 */	stw r0, 0xc4(r1)
@@ -1198,8 +1201,8 @@ lbl_803F5BCC:
 /* 803F5BE0 003F29E0  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 803F5BE4 003F29E4  4E 80 00 20 */	blr 
 
-.global func_803F5BE8
-func_803F5BE8:
+.global HSD_TObjSetupTextureCoordGen
+HSD_TObjSetupTextureCoordGen:
 /* 803F5BE8 003F29E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F5BEC 003F29EC  7C 08 02 A6 */	mflr r0
 /* 803F5BF0 003F29F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1300,7 +1303,7 @@ lbl_803F5D48:
 /* 803F5D50 003F2B50  3B E0 00 00 */	li r31, 0
 lbl_803F5D54:
 /* 803F5D54 003F2B54  80 7E 00 A4 */	lwz r3, 0xa4(r30)
-/* 803F5D58 003F2B58  48 00 17 79 */	bl func_803F74D0
+/* 803F5D58 003F2B58  48 00 17 79 */	bl HSD_TexCoordID2TexGenSrc
 /* 803F5D5C 003F2B5C  3C 80 80 50 */	lis r4, lbl_80501FBC@ha
 /* 803F5D60 003F2B60  80 DE 00 A4 */	lwz r6, 0xa4(r30)
 /* 803F5D64 003F2B64  57 E0 10 3A */	slwi r0, r31, 2
@@ -1381,8 +1384,8 @@ lbl_803F5E58:
 /* 803F5E70 003F2C70  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F5E74 003F2C74  4E 80 00 20 */	blr 
 
-.global func_803F5E78
-func_803F5E78:
+.global HSD_TObjSetupVolatileTev
+HSD_TObjSetupVolatileTev:
 /* 803F5E78 003F2C78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F5E7C 003F2C7C  7C 08 02 A6 */	mflr r0
 /* 803F5E80 003F2C80  3C 80 80 50 */	lis r4, lbl_80502050@ha
@@ -1463,8 +1466,8 @@ lbl_803F5F80:
 /* 803F5F90 003F2D90  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F5F94 003F2D94  4E 80 00 20 */	blr 
 
-.global func_803F5F98
-func_803F5F98:
+.global MakeColorGenTExp
+MakeColorGenTExp:
 /* 803F5F98 003F2D98  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 803F5F9C 003F2D9C  7C 08 02 A6 */	mflr r0
 /* 803F5FA0 003F2DA0  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -2092,8 +2095,8 @@ lbl_803F6848:
 /* 803F6858 003F3658  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 803F685C 003F365C  4E 80 00 20 */	blr 
 
-.global func_803F6860
-func_803F6860:
+.global TObjMakeTExp
+TObjMakeTExp:
 /* 803F6860 003F3660  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803F6864 003F3664  7C 08 02 A6 */	mflr r0
 /* 803F6868 003F3668  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2128,7 +2131,7 @@ func_803F6860:
 /* 803F68DC 003F36DC  7F C8 F3 78 */	mr r8, r30
 /* 803F68E0 003F36E0  38 A1 00 14 */	addi r5, r1, 0x14
 /* 803F68E4 003F36E4  38 C1 00 10 */	addi r6, r1, 0x10
-/* 803F68E8 003F36E8  4B FF F6 B1 */	bl func_803F5F98
+/* 803F68E8 003F36E8  4B FF F6 B1 */	bl MakeColorGenTExp
 lbl_803F68EC:
 /* 803F68EC 003F36EC  7F E3 FB 78 */	mr r3, r31
 /* 803F68F0 003F36F0  7F 44 D3 78 */	mr r4, r26
@@ -2532,8 +2535,8 @@ lbl_803F6EB0:
 /* 803F6EC0 003F3CC0  38 21 00 40 */	addi r1, r1, 0x40
 /* 803F6EC4 003F3CC4  4E 80 00 20 */	blr 
 
-.global func_803F6EC8
-func_803F6EC8:
+.global HSD_TObjAssignResources
+HSD_TObjAssignResources:
 /* 803F6EC8 003F3CC8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803F6ECC 003F3CCC  7C 08 02 A6 */	mflr r0
 /* 803F6ED0 003F3CD0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2722,8 +2725,8 @@ lbl_803F7140:
 /* 803F7150 003F3F50  38 21 00 30 */	addi r1, r1, 0x30
 /* 803F7154 003F3F54  4E 80 00 20 */	blr 
 
-.global func_803F7158
-func_803F7158:
+.global HSD_TObjSetup
+HSD_TObjSetup:
 /* 803F7158 003F3F58  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803F715C 003F3F5C  7C 08 02 A6 */	mflr r0
 /* 803F7160 003F3F60  90 01 00 94 */	stw r0, 0x94(r1)
@@ -2738,7 +2741,7 @@ func_803F7158:
 /* 803F7184 003F3F84  92 ED 10 9C */	stw r23, lbl_805DE17C@sda21(r13)
 /* 803F7188 003F3F88  3B 60 00 10 */	li r27, 0x10
 /* 803F718C 003F3F8C  41 82 02 98 */	beq lbl_803F7424
-/* 803F7190 003F3F90  4B FF FD 39 */	bl func_803F6EC8
+/* 803F7190 003F3F90  4B FF FD 39 */	bl HSD_TObjAssignResources
 /* 803F7194 003F3F94  2C 03 00 00 */	cmpwi r3, 0
 /* 803F7198 003F3F98  40 81 02 84 */	ble lbl_803F741C
 /* 803F719C 003F3F9C  38 03 FF FF */	addi r0, r3, -1
@@ -2753,7 +2756,7 @@ lbl_803F71B4:
 /* 803F71BC 003F3FBC  2C 00 00 FF */	cmpwi r0, 0xff
 /* 803F71C0 003F3FC0  41 82 02 58 */	beq lbl_803F7418
 /* 803F71C4 003F3FC4  7E E3 BB 78 */	mr r3, r23
-/* 803F71C8 003F3FC8  4B FF E7 39 */	bl func_803F5900
+/* 803F71C8 003F3FC8  4B FF E7 39 */	bl TObjSetupMtx
 /* 803F71CC 003F3FCC  28 1A 00 00 */	cmplwi r26, 0
 /* 803F71D0 003F3FD0  40 82 00 14 */	bne lbl_803F71E4
 /* 803F71D4 003F3FD4  38 BF 02 E8 */	addi r5, r31, 0x2e8
@@ -2934,6 +2937,9 @@ lbl_803F7424:
 /* 803F7430 003F4230  7C 08 03 A6 */	mtlr r0
 /* 803F7434 003F4234  38 21 00 90 */	addi r1, r1, 0x90
 /* 803F7438 003F4238  4E 80 00 20 */	blr 
+
+.global HSD_TGTex2Index
+HSD_TGTex2Index:
 /* 803F743C 003F423C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F7440 003F4240  7C 08 02 A6 */	mflr r0
 /* 803F7444 003F4244  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2974,8 +2980,8 @@ lbl_803F74C0:
 /* 803F74C8 003F42C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F74CC 003F42CC  4E 80 00 20 */	blr 
 
-.global func_803F74D0
-func_803F74D0:
+.global HSD_TexCoordID2TexGenSrc
+HSD_TexCoordID2TexGenSrc:
 /* 803F74D0 003F42D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F74D4 003F42D4  7C 08 02 A6 */	mflr r0
 /* 803F74D8 003F42D8  28 03 00 07 */	cmplwi r3, 7
@@ -3050,6 +3056,9 @@ lbl_803F75D8:
 /* 803F75DC 003F43DC  7C 08 03 A6 */	mtlr r0
 /* 803F75E0 003F43E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F75E4 003F43E4  4E 80 00 20 */	blr 
+
+.global HSD_TexMtx2Index
+HSD_TexMtx2Index:
 /* 803F75E8 003F43E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F75EC 003F43EC  7C 08 02 A6 */	mflr r0
 /* 803F75F0 003F43F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3097,8 +3106,8 @@ lbl_803F7688:
 /* 803F7690 003F4490  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F7694 003F4494  4E 80 00 20 */	blr 
 
-.global func_803F7698
-func_803F7698:
+.global HSD_Index2TexMtx
+HSD_Index2TexMtx:
 /* 803F7698 003F4498  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F769C 003F449C  7C 08 02 A6 */	mflr r0
 /* 803F76A0 003F44A0  28 03 00 0A */	cmplwi r3, 0xa
@@ -3187,8 +3196,8 @@ lbl_803F77D4:
 /* 803F77DC 003F45DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F77E0 003F45E0  4E 80 00 20 */	blr 
 
-.global func_803F77E4
-func_803F77E4:
+.global HSD_TObjRemoveAll
+HSD_TObjRemoveAll:
 /* 803F77E4 003F45E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F77E8 003F45E8  7C 08 02 A6 */	mflr r0
 /* 803F77EC 003F45EC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3222,8 +3231,8 @@ lbl_803F7838:
 /* 803F7850 003F4650  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F7854 003F4654  4E 80 00 20 */	blr 
 
-.global func_803F7858
-func_803F7858:
+.global HSD_TObjGetNext
+HSD_TObjGetNext:
 /* 803F7858 003F4658  28 03 00 00 */	cmplwi r3, 0
 /* 803F785C 003F465C  40 82 00 0C */	bne lbl_803F7868
 /* 803F7860 003F4660  38 60 00 00 */	li r3, 0
@@ -3291,8 +3300,8 @@ lbl_803F7914:
 /* 803F791C 003F471C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F7920 003F4720  4E 80 00 20 */	blr 
 
-.global func_803F7924
-func_803F7924:
+.global HSD_TlutAlloc
+HSD_TlutAlloc:
 /* 803F7924 003F4724  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F7928 003F4728  7C 08 02 A6 */	mflr r0
 /* 803F792C 003F472C  38 60 00 10 */	li r3, 0x10
@@ -3317,8 +3326,8 @@ lbl_803F7954:
 /* 803F7974 003F4774  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F7978 003F4778  4E 80 00 20 */	blr 
 
-.global func_803F797C
-func_803F797C:
+.global HSD_TlutFree
+HSD_TlutFree:
 /* 803F797C 003F477C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F7980 003F4780  7C 08 02 A6 */	mflr r0
 /* 803F7984 003F4784  28 03 00 00 */	cmplwi r3, 0
@@ -3332,8 +3341,8 @@ lbl_803F7998:
 /* 803F79A0 003F47A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F79A4 003F47A4  4E 80 00 20 */	blr 
 
-.global func_803F79A8
-func_803F79A8:
+.global HSD_TObjTevAlloc
+HSD_TObjTevAlloc:
 /* 803F79A8 003F47A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F79AC 003F47AC  7C 08 02 A6 */	mflr r0
 /* 803F79B0 003F47B0  38 60 00 20 */	li r3, 0x20
@@ -3396,8 +3405,8 @@ HSD_ImageDescFree:
 /* 803F7A74 003F4874  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F7A78 003F4878  4E 80 00 20 */	blr 
 
-.global func_803F7A7C
-func_803F7A7C:
+.global HSD_ImageDescCopyFromEFB
+HSD_ImageDescCopyFromEFB:
 /* 803F7A7C 003F487C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F7A80 003F4880  7C 08 02 A6 */	mflr r0
 /* 803F7A84 003F4884  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3445,8 +3454,8 @@ lbl_803F7B10:
 /* 803F7B24 003F4924  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F7B28 003F4928  4E 80 00 20 */	blr 
 
-.global func_803F7B2C
-func_803F7B2C:
+.global TObjInit
+TObjInit:
 /* 803F7B2C 003F492C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F7B30 003F4930  7C 08 02 A6 */	mflr r0
 /* 803F7B34 003F4934  3C 80 80 50 */	lis r4, lbl_80501E30@ha
@@ -3471,8 +3480,8 @@ lbl_803F7B70:
 /* 803F7B7C 003F497C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F7B80 003F4980  4E 80 00 20 */	blr 
 
-.global func_803F7B84
-func_803F7B84:
+.global TObjRelease
+TObjRelease:
 /* 803F7B84 003F4984  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F7B88 003F4988  7C 08 02 A6 */	mflr r0
 /* 803F7B8C 003F498C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3527,8 +3536,8 @@ lbl_803F7C0C:
 /* 803F7C38 003F4A38  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F7C3C 003F4A3C  4E 80 00 20 */	blr 
 
-.global func_803F7C40
-func_803F7C40:
+.global TObjAmnesia
+TObjAmnesia:
 /* 803F7C40 003F4A40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F7C44 003F4A44  7C 08 02 A6 */	mflr r0
 /* 803F7C48 003F4A48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3556,8 +3565,8 @@ lbl_803F7C78:
 /* 803F7C98 003F4A98  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F7C9C 003F4A9C  4E 80 00 20 */	blr 
 
-.global func_803F7CA0
-func_803F7CA0:
+.global TObjInfoInit
+TObjInfoInit:
 /* 803F7CA0 003F4AA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F7CA4 003F4AA4  7C 08 02 A6 */	mflr r0
 /* 803F7CA8 003F4AA8  3C 80 80 50 */	lis r4, lbl_80501E30@ha
@@ -3572,21 +3581,21 @@ func_803F7CA0:
 /* 803F7CCC 003F4ACC  38 BF 04 A8 */	addi r5, r31, 0x4a8
 /* 803F7CD0 003F4AD0  38 DF 04 C0 */	addi r6, r31, 0x4c0
 /* 803F7CD4 003F4AD4  48 02 88 6D */	bl hsdInitClassInfo
-/* 803F7CD8 003F4AD8  3D 20 80 3F */	lis r9, func_803F7B2C@ha
-/* 803F7CDC 003F4ADC  3D 00 80 3F */	lis r8, func_803F7B84@ha
-/* 803F7CE0 003F4AE0  3C E0 80 3F */	lis r7, func_803F7C40@ha
-/* 803F7CE4 003F4AE4  3C C0 80 3F */	lis r6, func_803F5404@ha
-/* 803F7CE8 003F4AE8  3C A0 80 3F */	lis r5, func_803F6860@ha
-/* 803F7CEC 003F4AEC  3C 80 80 3F */	lis r4, func_803F572C@ha
-/* 803F7CF0 003F4AF0  3C 60 80 3F */	lis r3, func_803F4DA4@ha
-/* 803F7CF4 003F4AF4  39 49 7B 2C */	addi r10, r9, func_803F7B2C@l
+/* 803F7CD8 003F4AD8  3D 20 80 3F */	lis r9, TObjInit@ha
+/* 803F7CDC 003F4ADC  3D 00 80 3F */	lis r8, TObjRelease@ha
+/* 803F7CE0 003F4AE0  3C E0 80 3F */	lis r7, TObjAmnesia@ha
+/* 803F7CE4 003F4AE4  3C C0 80 3F */	lis r6, TObjLoad@ha
+/* 803F7CE8 003F4AE8  3C A0 80 3F */	lis r5, TObjMakeTExp@ha
+/* 803F7CEC 003F4AEC  3C 80 80 3F */	lis r4, MakeTextureMtx@ha
+/* 803F7CF0 003F4AF0  3C 60 80 3F */	lis r3, TObjUpdateFunc@ha
+/* 803F7CF4 003F4AF4  39 49 7B 2C */	addi r10, r9, TObjInit@l
 /* 803F7CF8 003F4AF8  39 3F 00 00 */	addi r9, r31, 0
-/* 803F7CFC 003F4AFC  39 08 7B 84 */	addi r8, r8, func_803F7B84@l
-/* 803F7D00 003F4B00  38 E7 7C 40 */	addi r7, r7, func_803F7C40@l
-/* 803F7D04 003F4B04  38 C6 54 04 */	addi r6, r6, func_803F5404@l
-/* 803F7D08 003F4B08  38 A5 68 60 */	addi r5, r5, func_803F6860@l
-/* 803F7D0C 003F4B0C  38 84 57 2C */	addi r4, r4, func_803F572C@l
-/* 803F7D10 003F4B10  38 03 4D A4 */	addi r0, r3, func_803F4DA4@l
+/* 803F7CFC 003F4AFC  39 08 7B 84 */	addi r8, r8, TObjRelease@l
+/* 803F7D00 003F4B00  38 E7 7C 40 */	addi r7, r7, TObjAmnesia@l
+/* 803F7D04 003F4B04  38 C6 54 04 */	addi r6, r6, TObjLoad@l
+/* 803F7D08 003F4B08  38 A5 68 60 */	addi r5, r5, TObjMakeTExp@l
+/* 803F7D0C 003F4B0C  38 84 57 2C */	addi r4, r4, MakeTextureMtx@l
+/* 803F7D10 003F4B10  38 03 4D A4 */	addi r0, r3, TObjUpdateFunc@l
 /* 803F7D14 003F4B14  91 49 00 2C */	stw r10, 0x2c(r9)
 /* 803F7D18 003F4B18  91 09 00 30 */	stw r8, 0x30(r9)
 /* 803F7D1C 003F4B1C  90 E9 00 38 */	stw r7, 0x38(r9)

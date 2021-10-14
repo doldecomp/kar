@@ -1329,8 +1329,8 @@ func_803AE1BC:
 /* 803AE1BC 003AAFBC  7C 43 13 78 */	mr r3, r2
 /* 803AE1C0 003AAFC0  4E 80 00 20 */	blr 
 
-.global func_803AE1C4
-func_803AE1C4:
+.global __fini_cpp_exceptions
+__fini_cpp_exceptions:
 /* 803AE1C4 003AAFC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803AE1C8 003AAFC8  7C 08 02 A6 */	mflr r0
 /* 803AE1CC 003AAFCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1345,6 +1345,9 @@ lbl_803AE1E8:
 /* 803AE1EC 003AAFEC  7C 08 03 A6 */	mtlr r0
 /* 803AE1F0 003AAFF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803AE1F4 003AAFF4  4E 80 00 20 */	blr 
+
+.global ___init_cpp_exceptions
+___init_cpp_exceptions:
 /* 803AE1F8 003AAFF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803AE1FC 003AAFFC  7C 08 02 A6 */	mflr r0
 /* 803AE200 003AB000  90 01 00 14 */	stw r0, 0x14(r1)
