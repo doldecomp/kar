@@ -58,6 +58,7 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/aobj.o							\
 	$(BUILD_DIR)/asm/lobj.o							\
 	$(BUILD_DIR)/asm/cobj.o							\
+	$(BUILD_DIR)/src/sysdolphin/fobj.o				\
 	$(BUILD_DIR)/asm/fobj.o							\
 	$(BUILD_DIR)/src/sysdolphin/pobj.o				\
 	$(BUILD_DIR)/asm/pobj.o							\
