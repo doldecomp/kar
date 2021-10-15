@@ -661,8 +661,8 @@ lbl_803ADA08:
 /* 803ADA24 003AA824  38 63 B5 FC */	addi r3, r3, lbl_8048B5FC@l
 /* 803ADA28 003AA828  4E 80 00 20 */	blr 
 
-.global func_803ADA2C
-func_803ADA2C:
+.global __cvt_fp2unsigned
+__cvt_fp2unsigned:
 /* 803ADA2C 003AA82C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803ADA30 003AA830  3C 80 80 48 */	lis r4, lbl_8048B608@h
 /* 803ADA34 003AA834  60 84 B6 08 */	ori r4, r4, lbl_8048B608@l

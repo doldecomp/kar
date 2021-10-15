@@ -1332,8 +1332,8 @@ lbl_8040F668:
 /* 8040F67C 0040C47C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040F680 0040C480  4E 80 00 20 */	blr 
 
-.global func_8040F684
-func_8040F684:
+.global _HSD_ZListSort
+_HSD_ZListSort:
 /* 8040F684 0040C484  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040F688 0040C488  7C 08 02 A6 */	mflr r0
 /* 8040F68C 0040C48C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1356,8 +1356,8 @@ lbl_8040F6C4:
 /* 8040F6CC 0040C4CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040F6D0 0040C4D0  4E 80 00 20 */	blr 
 
-.global func_8040F6D4
-func_8040F6D4:
+.global _HSD_ZListDisp
+_HSD_ZListDisp:
 /* 8040F6D4 0040C4D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040F6D8 0040C4D8  7C 08 02 A6 */	mflr r0
 /* 8040F6DC 0040C4DC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1409,7 +1409,7 @@ lbl_8040F754:
 lbl_8040F778:
 /* 8040F778 0040C578  28 1E 00 00 */	cmplwi r30, 0
 /* 8040F77C 0040C57C  40 82 FF C4 */	bne lbl_8040F740
-/* 8040F780 0040C580  48 00 00 1D */	bl func_8040F79C
+/* 8040F780 0040C580  48 00 00 1D */	bl _HSD_ZListClear
 /* 8040F784 0040C584  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8040F788 0040C588  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8040F78C 0040C58C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -1417,8 +1417,8 @@ lbl_8040F778:
 /* 8040F794 0040C594  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040F798 0040C598  4E 80 00 20 */	blr 
 
-.global func_8040F79C
-func_8040F79C:
+.global _HSD_ZListClear
+_HSD_ZListClear:
 /* 8040F79C 0040C59C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040F7A0 0040C5A0  7C 08 02 A6 */	mflr r0
 /* 8040F7A4 0040C5A4  3C 60 80 59 */	lis r3, lbl_80589A18@ha
@@ -1502,8 +1502,8 @@ func_8040F89C:
 /* 8040F89C 0040C69C  80 6D FA A8 */	lwz r3, lbl_805DCB88@sda21(r13)
 /* 8040F8A0 0040C6A0  4E 80 00 20 */	blr 
 
-.global func_8040F8A4
-func_8040F8A4:
+.global HSD_EraseRect
+HSD_EraseRect:
 /* 8040F8A4 0040C6A4  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8040F8A8 0040C6A8  7C 08 02 A6 */	mflr r0
 /* 8040F8AC 0040C6AC  90 01 00 74 */	stw r0, 0x74(r1)

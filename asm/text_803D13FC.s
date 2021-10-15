@@ -462,8 +462,8 @@ func_803D19D4:
 /* 803D1A70 003CE870  F1 63 00 20 */	psq_st f11, 32(r3), 0, qr0
 /* 803D1A74 003CE874  4E 80 00 20 */	blr 
 
-.global func_803D1A78
-func_803D1A78:
+.global C_MTXLookAt
+C_MTXLookAt:
 /* 803D1A78 003CE878  7C 08 02 A6 */	mflr r0
 /* 803D1A7C 003CE87C  90 01 00 04 */	stw r0, 4(r1)
 /* 803D1A80 003CE880  94 21 FF B0 */	stwu r1, -0x50(r1)

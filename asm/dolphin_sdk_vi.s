@@ -2061,8 +2061,8 @@ lbl_803DF468:
 /* 803DF468 003DC268  38 60 00 00 */	li r3, 0
 /* 803DF46C 003DC26C  4E 80 00 20 */	blr 
 
-.global func_803DF470
-func_803DF470:
+.global VIGetNextField
+VIGetNextField:
 /* 803DF470 003DC270  7C 08 02 A6 */	mflr r0
 /* 803DF474 003DC274  90 01 00 04 */	stw r0, 4(r1)
 /* 803DF478 003DC278  94 21 FF E0 */	stwu r1, -0x20(r1)

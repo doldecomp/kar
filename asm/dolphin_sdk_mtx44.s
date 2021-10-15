@@ -2,8 +2,8 @@
 
 .section .text
 
-.global func_803D1E94
-func_803D1E94:
+.global C_MTXFrustum
+C_MTXFrustum:
 /* 803D1E94 003CEC94  ED 24 18 28 */	fsubs f9, f4, f3
 /* 803D1E98 003CEC98  C1 42 F1 D0 */	lfs f10, lbl_805E58D0@sda21(r2)
 /* 803D1E9C 003CEC9C  EC 01 10 28 */	fsubs f0, f1, f2
@@ -44,8 +44,8 @@ func_803D1E94:
 /* 803D1F28 003CED28  D0 83 00 3C */	stfs f4, 0x3c(r3)
 /* 803D1F2C 003CED2C  4E 80 00 20 */	blr 
 
-.global func_803D1F30
-func_803D1F30:
+.global C_MTXPerspective
+C_MTXPerspective:
 /* 803D1F30 003CED30  7C 08 02 A6 */	mflr r0
 /* 803D1F34 003CED34  90 01 00 04 */	stw r0, 4(r1)
 /* 803D1F38 003CED38  94 21 FF C0 */	stwu r1, -0x40(r1)
