@@ -20,7 +20,8 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/text_8028B974.o				\
 	$(BUILD_DIR)/asm/text_8034D384.o				\
 	$(BUILD_DIR)/asm/__va_arg.o						\
-	$(BUILD_DIR)/asm/text_803AD168.o				\
+	$(BUILD_DIR)/asm/global_destructor_chain.o		\
+	$(BUILD_DIR)/asm/text_803AD248.o				\
 	$(BUILD_DIR)/asm/Gecko_ExceptionPPC.o			\
 	$(BUILD_DIR)/asm/GCN_mem_alloc.o				\
 	$(BUILD_DIR)/asm/abort_exit.o					\

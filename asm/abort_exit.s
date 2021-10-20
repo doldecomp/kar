@@ -15,7 +15,7 @@ exit:
 /* 803AF95C 003AC75C  48 00 3F 0D */	bl func_803B3868
 /* 803AF960 003AC760  38 60 00 00 */	li r3, 0
 /* 803AF964 003AC764  48 00 3F 01 */	bl func_803B3864
-/* 803AF968 003AC768  4B FF D8 01 */	bl ___destroy_global_chain
+/* 803AF968 003AC768  4B FF D8 01 */	bl __destroy_global_chain
 /* 803AF96C 003AC76C  3C 60 80 49 */	lis r3, lbl_80489460@ha
 /* 803AF970 003AC770  38 03 94 60 */	addi r0, r3, lbl_80489460@l
 /* 803AF974 003AC774  7C 1F 03 78 */	mr r31, r0
