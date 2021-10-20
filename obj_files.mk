@@ -23,7 +23,9 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/global_destructor_chain.o		\
 	$(BUILD_DIR)/asm/NMWException.o					\
 	$(BUILD_DIR)/asm/MWRTTI.o						\
-	$(BUILD_DIR)/asm/text_803ADA2C.o				\
+	$(BUILD_DIR)/asm/runtime.o						\
+	$(BUILD_DIR)/asm/__init_cpp_exceptions.o		\
+	$(BUILD_DIR)/asm/text_803AE238.o				\
 	$(BUILD_DIR)/asm/Gecko_ExceptionPPC.o			\
 	$(BUILD_DIR)/asm/GCN_mem_alloc.o				\
 	$(BUILD_DIR)/asm/abort_exit.o					\
