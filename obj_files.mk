@@ -19,14 +19,14 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/text_801D443C.o				\
 	$(BUILD_DIR)/asm/text_8028B974.o				\
 	$(BUILD_DIR)/asm/text_8034D384.o				\
-	$(BUILD_DIR)/asm/__va_arg.o						\
-	$(BUILD_DIR)/asm/global_destructor_chain.o		\
-	$(BUILD_DIR)/asm/NMWException.o					\
-	$(BUILD_DIR)/asm/MWRTTI.o						\
-	$(BUILD_DIR)/asm/runtime.o						\
-	$(BUILD_DIR)/asm/__init_cpp_exceptions.o		\
-	$(BUILD_DIR)/asm/Gecko_ExceptionPPC.o			\
-	$(BUILD_DIR)/asm/GCN_mem_alloc.o				\
+	$(BUILD_DIR)/asm/runtime/__va_arg.o				\
+	$(BUILD_DIR)/asm/runtime/global_destructor_chain.o	\
+	$(BUILD_DIR)/asm/runtime/NMWException.o			\
+	$(BUILD_DIR)/asm/runtime/MWRTTI.o				\
+	$(BUILD_DIR)/asm/runtime/runtime.o				\
+	$(BUILD_DIR)/asm/runtime/__init_cpp_exceptions.o	\
+	$(BUILD_DIR)/asm/runtime/Gecko_ExceptionPPC.o	\
+	$(BUILD_DIR)/asm/runtime/GCN_mem_alloc.o		\
 	$(BUILD_DIR)/asm/abort_exit.o					\
 	$(BUILD_DIR)/asm/text_803AFAC8.o				\
 	$(BUILD_DIR)/asm/cstring.o						\

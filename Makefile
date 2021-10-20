@@ -22,7 +22,7 @@ VERSION := kor
 BUILD_DIR := build/$(NAME).$(VERSION)
 
 SRC_DIRS := src src/sysdolphin
-ASM_DIRS := asm
+ASM_DIRS := asm asm/runtime
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
