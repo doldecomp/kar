@@ -55,45 +55,45 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/text_803EF1AC.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_mix.o				\
 	$(BUILD_DIR)/asm/dolphin_sdk_synth.o			\
-	$(BUILD_DIR)/asm/dobj.o							\
-	$(BUILD_DIR)/asm/tobj.o							\
-	$(BUILD_DIR)/asm/tev.o							\
-	$(BUILD_DIR)/asm/mobj.o							\
-	$(BUILD_DIR)/asm/aobj.o							\
-	$(BUILD_DIR)/asm/lobj.o							\
-	$(BUILD_DIR)/asm/cobj.o							\
-	$(BUILD_DIR)/asm/fobj.o							\
+	$(BUILD_DIR)/asm/sysdolphin/dobj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/tobj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/tev.o				\
+	$(BUILD_DIR)/asm/sysdolphin/mobj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/aobj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/lobj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/cobj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/fobj.o				\
 	$(BUILD_DIR)/src/sysdolphin/pobj.o				\
-	$(BUILD_DIR)/asm/pobj.o							\
-	$(BUILD_DIR)/asm/jobj.o							\
-	$(BUILD_DIR)/asm/displayfunc.o					\
-	$(BUILD_DIR)/asm/initialize.o					\
-	$(BUILD_DIR)/asm/video.o						\
-	$(BUILD_DIR)/asm/controller.o					\
-	$(BUILD_DIR)/asm/rumble.o						\
-	$(BUILD_DIR)/asm/spline.o						\
-	$(BUILD_DIR)/asm/mtx.o							\
-	$(BUILD_DIR)/asm/util.o							\
-	$(BUILD_DIR)/asm/objalloc.o						\
-	$(BUILD_DIR)/asm/robj.o							\
-	$(BUILD_DIR)/asm/id.o							\
-	$(BUILD_DIR)/asm/wobj.o							\
-	$(BUILD_DIR)/asm/fog.o							\
-	$(BUILD_DIR)/asm/pref.o							\
-	$(BUILD_DIR)/asm/list.o							\
-	$(BUILD_DIR)/asm/object.o						\
+	$(BUILD_DIR)/asm/sysdolphin/pobj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/jobj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/displayfunc.o		\
+	$(BUILD_DIR)/asm/sysdolphin/initialize.o		\
+	$(BUILD_DIR)/asm/sysdolphin/video.o				\
+	$(BUILD_DIR)/asm/sysdolphin/controller.o		\
+	$(BUILD_DIR)/asm/sysdolphin/rumble.o			\
+	$(BUILD_DIR)/asm/sysdolphin/spline.o			\
+	$(BUILD_DIR)/asm/sysdolphin/mtx.o				\
+	$(BUILD_DIR)/asm/sysdolphin/util.o				\
+	$(BUILD_DIR)/asm/sysdolphin/objalloc.o			\
+	$(BUILD_DIR)/asm/sysdolphin/robj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/id.o				\
+	$(BUILD_DIR)/asm/sysdolphin/wobj.o				\
+	$(BUILD_DIR)/asm/sysdolphin/fog.o				\
+	$(BUILD_DIR)/asm/sysdolphin/pref.o				\
+	$(BUILD_DIR)/asm/sysdolphin/list.o				\
+	$(BUILD_DIR)/asm/sysdolphin/object.o			\
 	$(BUILD_DIR)/asm/text_8041BF1C.o				\
-	$(BUILD_DIR)/asm/memory.o						\
-	$(BUILD_DIR)/asm/shadow.o						\
-	$(BUILD_DIR)/asm/archive.o						\
+	$(BUILD_DIR)/asm/sysdolphin/memory.o			\
+	$(BUILD_DIR)/asm/sysdolphin/shadow.o			\
+	$(BUILD_DIR)/asm/sysdolphin/archive.o			\
 	$(BUILD_DIR)/asm/text_8041E434.o				\
-	$(BUILD_DIR)/asm/random.o						\
-	$(BUILD_DIR)/asm/bytecode.o						\
-	$(BUILD_DIR)/asm/class.o						\
-	$(BUILD_DIR)/asm/hash.o							\
-	$(BUILD_DIR)/asm/texp.o							\
-	$(BUILD_DIR)/asm/texpdag.o						\
-	$(BUILD_DIR)/asm/debug.o						\
+	$(BUILD_DIR)/asm/sysdolphin/random.o			\
+	$(BUILD_DIR)/asm/sysdolphin/bytecode.o			\
+	$(BUILD_DIR)/asm/sysdolphin/class.o				\
+	$(BUILD_DIR)/asm/sysdolphin/hash.o				\
+	$(BUILD_DIR)/asm/sysdolphin/texp.o				\
+	$(BUILD_DIR)/asm/sysdolphin/texpdag.o			\
+	$(BUILD_DIR)/asm/sysdolphin/debug.o				\
 	$(BUILD_DIR)/asm/text_804285AC.o				\
 
 CTORS_O_FILES :=                                    \
