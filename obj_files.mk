@@ -1,7 +1,8 @@
 # Linker order for every file, passed to the Metrowerks linker.
 
 INIT_O_FILES := 						            \
-    $(BUILD_DIR)/asm/init.o							\
+    $(BUILD_DIR)/asm/init/init.o					\
+    $(BUILD_DIR)/asm/init/__start.o					\
 
 EXTAB_O_FILES :=                                    \
     $(BUILD_DIR)/asm/_extab.o						\
@@ -30,31 +31,30 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/abort_exit.o					\
 	$(BUILD_DIR)/asm/text_803AFAC8.o				\
 	$(BUILD_DIR)/asm/cstring.o						\
-	$(BUILD_DIR)/asm/dolphin_sdk_other.o			\
-	$(BUILD_DIR)/asm/TRK_MINNOW_DOLPHIN.o			\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_other.o	\
+	$(BUILD_DIR)/asm/MetroTRK/TRK_MINNOW_DOLPHIN.o	\
 	$(BUILD_DIR)/asm/PPCArch.o						\
-	$(BUILD_DIR)/asm/dolphin_sdk_db.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_dsp.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_dvd.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_gx.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_mtx.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_mtxvec.o			\
-	$(BUILD_DIR)/asm/dolphin_sdk_mtx44.o			\
-	$(BUILD_DIR)/asm/dolphin_sdk_vec.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_os.o				\
-	$(BUILD_DIR)/asm/__ppc_eabi_init.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_pad.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_vi.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_ai.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_ar.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_arq.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_card.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_si.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_exi.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_ax.o				\
-	$(BUILD_DIR)/asm/text_803EF1AC.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_mix.o				\
-	$(BUILD_DIR)/asm/dolphin_sdk_synth.o			\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_db.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_dsp.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_dvd.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_gx.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_mtx.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_mtxvec.o	\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_mtx44.o	\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_vec.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_os.o		\
+	$(BUILD_DIR)/asm/init/__ppc_eabi_init.o			\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_pad.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_vi.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_ai.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_ar.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_arq.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_card.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_si.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_exi.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_ax.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_mix.o		\
+	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_synth.o	\
 	$(BUILD_DIR)/asm/sysdolphin/dobj.o				\
 	$(BUILD_DIR)/asm/sysdolphin/tobj.o				\
 	$(BUILD_DIR)/asm/sysdolphin/tev.o				\
@@ -82,11 +82,9 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/sysdolphin/pref.o				\
 	$(BUILD_DIR)/asm/sysdolphin/list.o				\
 	$(BUILD_DIR)/asm/sysdolphin/object.o			\
-	$(BUILD_DIR)/asm/text_8041BF1C.o				\
 	$(BUILD_DIR)/asm/sysdolphin/memory.o			\
 	$(BUILD_DIR)/asm/sysdolphin/shadow.o			\
 	$(BUILD_DIR)/asm/sysdolphin/archive.o			\
-	$(BUILD_DIR)/asm/text_8041E434.o				\
 	$(BUILD_DIR)/asm/sysdolphin/random.o			\
 	$(BUILD_DIR)/asm/sysdolphin/bytecode.o			\
 	$(BUILD_DIR)/asm/sysdolphin/class.o				\
@@ -95,6 +93,10 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/sysdolphin/texpdag.o			\
 	$(BUILD_DIR)/asm/sysdolphin/debug.o				\
 	$(BUILD_DIR)/asm/text_804285AC.o				\
+	$(BUILD_DIR)/asm/IPSocket.o						\
+	$(BUILD_DIR)/asm/text_8047DB6C.o				\
+	$(BUILD_DIR)/asm/IPIgmp.o						\
+	$(BUILD_DIR)/asm/text_80482598.o				\
 
 CTORS_O_FILES :=                                    \
 	$(BUILD_DIR)/asm/ctors.o						\
