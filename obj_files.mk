@@ -18,8 +18,29 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/text_80060ED0.o				\
 	$(BUILD_DIR)/asm/text_801166B4.o				\
 	$(BUILD_DIR)/asm/text_801D443C.o				\
+	$(BUILD_DIR)/asm/a2d/a2d_game_lib.o				\
 	$(BUILD_DIR)/asm/text_8028B974.o				\
+	$(BUILD_DIR)/asm/a2d/a2d_gamehistory.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_gamesession.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_cpu_kirby.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_kirbyjointanim.o		\
+	$(BUILD_DIR)/asm/a2d/a2d_lavabomb.o				\
+	$(BUILD_DIR)/asm/a2d/a2d_grindrail.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_bg3000.o				\
+	$(BUILD_DIR)/asm/a2d/a2d_bg4000.o				\
+	$(BUILD_DIR)/asm/a2d/a2d_bg5000.o				\
+	$(BUILD_DIR)/asm/a2d/a2d_bg8000.o				\
 	$(BUILD_DIR)/asm/text_8034D384.o				\
+	$(BUILD_DIR)/asm/a2d/a2d_kurakko.o				\
+	$(BUILD_DIR)/asm/a2d/a2d_game_audio.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_soundhandle.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_game_effect.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_effecthandle.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_wipeeffect.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_effect_slideblur.o		\
+	$(BUILD_DIR)/asm/a2d/a2d_kirbydisp.o			\
+	$(BUILD_DIR)/asm/a2d/a2d_refract.o				\
+	$(BUILD_DIR)/asm/a2d/fl_indirectload.o			\
 	$(BUILD_DIR)/asm/runtime/__va_arg.o				\
 	$(BUILD_DIR)/asm/runtime/global_destructor_chain.o	\
 	$(BUILD_DIR)/asm/runtime/NMWException.o			\
