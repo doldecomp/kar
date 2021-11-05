@@ -1,8 +1,11 @@
 # Linker order for every file, passed to the Metrowerks linker.
 
 INIT_O_FILES := 						            \
-    $(BUILD_DIR)/asm/init/init.o					\
-    $(BUILD_DIR)/asm/init/__start.o					\
+    $(BUILD_DIR)/asm/Runtime.PPCEABI.H/__mem.o		\
+    $(BUILD_DIR)/asm/TRK_MINNOW_DOLPHIN/mem_TRK.o	\
+    $(BUILD_DIR)/asm/TRK_MINNOW_DOLPHIN/__exception.o	\
+    $(BUILD_DIR)/asm/os/__start.o					\
+    $(BUILD_DIR)/asm/os/__ppc_eabi_init.o			\
 
 EXTAB_O_FILES :=                                    \
     $(BUILD_DIR)/asm/_extab.o						\
@@ -65,7 +68,8 @@ TEXT_O_FILES := 						            \
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_vec.o		\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_os.o		\
 	$(BUILD_DIR)/asm/init/__ppc_eabi_init.o			\
-	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_pad.o		\
+	$(BUILD_DIR)/asm/pad/Padclamp.o					\
+	$(BUILD_DIR)/asm/pad/Pad.o						\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_vi.o		\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_ai.o		\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_ar.o		\

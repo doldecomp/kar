@@ -28,6 +28,8 @@ typedef volatile f64 vf64;
 
 typedef int                 BOOL;
 
+typedef unsigned int	size_t;
+	
 #else // dolphin
 
 typedef signed char         s8;
@@ -54,6 +56,8 @@ typedef volatile f32        vf32;
 typedef volatile f64        vf64;
 
 typedef int                 BOOL;
+
+typedef unsigned long	size_t;
 
 #endif // dolphin
 

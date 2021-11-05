@@ -1,6 +1,6 @@
 .section .bss, "wa"  # 0x80535300 - 0x805E6390
-.global lbl_80535300
-lbl_80535300:
+.global SoundBuffer
+SoundBuffer:
 	.skip 0x694
 .global lbl_80535994
 lbl_80535994:
