@@ -9,8 +9,6 @@ endif
 # Files
 #-------------------------------------------------------------------------------
 
-TARGET_COL := wii
-
 NAME := kar
 #VERSION := us
 VERSION := kor
@@ -78,10 +76,6 @@ CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O4,p -nodefaults -msgstyle 
 # for postprocess.py
 PROCFLAGS := -fprologue-fixup=old_stack
 
-# elf2dol needs to know these in order to calculate sbss correctly.
-SDATA_PDHR := 9
-SBSS_PDHR := 10
-
 #-------------------------------------------------------------------------------
 # Recipes
 #-------------------------------------------------------------------------------
@@ -103,7 +97,7 @@ $(LDSCRIPT): ldscript.lcf
 	$(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
 $(DOL): $(ELF) | tools
-	$(ELF2DOL) $< $@ $(SDATA_PDHR) $(SBSS_PDHR) $(TARGET_COL)
+	$(ELF2DOL) $< $@
 	$(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 
 clean:
