@@ -21,10 +21,10 @@ VERSION := kor
 
 BUILD_DIR := build/$(NAME).$(VERSION)
 
-SRC_DIRS := src src/sysdolphin src/init
+SRC_DIRS := src src/sysdolphin src/init src/dolphin/os
 ASM_DIRS := asm asm/runtime asm/runtime/ asm/Runtime.PPCEABI.H asm/sysdolphin		\
 			asm/dolphin asm/MetroTRK asm/init asm/a2d asm/os asm/TRK_MINNOW_DOLPHIN	\
-			asm/pad src/dolphin/os
+			asm/pad
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
