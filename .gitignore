@@ -1,7 +1,5 @@
 .vscode
 *.dat
-*.exe
-*.dll
 *.idb
 *.id0
 *.id1
@@ -15,7 +13,6 @@
 *.a
 *.d
 *.map
-*.exe
 *.dump
 build
 out.txt
