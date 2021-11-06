@@ -17,3 +17,6 @@
 build
 out.txt
 *.dmp
+*.bat
+include/lmgr326b.dll
+include/mwldeppc.exe
