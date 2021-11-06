@@ -55,11 +55,11 @@ MWLD_VERSION := 2.7
 ifeq ($(WINDOWS),1)
   WINE :=
 else
-  WINE := wine
+  WINE ?= wine
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
-CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
+CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
 CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwLinkPatch.exe
 ELF2DOL := tools/elf2dol
