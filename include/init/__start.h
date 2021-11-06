@@ -45,18 +45,3 @@ typedef struct __bss_init_info {
 } __bss_init_info;
 
 __declspec(section ".init") extern __bss_init_info _bss_init_info[];
-
-inline static void __copy_rom_section(void* dst, const void* src, unsigned long size)
-{
-	if (size && (dst != src)) {
-		memcpy(dst, src, size);
-		__flush_cache(dst, size);
-	}
-}
-
-inline static void __init_bss_section(void* dst, unsigned long size)
-{
-	if (size) {
-		memset(dst, 0, size);
-	}
-}
