@@ -267,7 +267,7 @@ def postprocess_elf(f, do_ctor_realign, do_old_stack, do_symbol_fixup):
             print("Patched ctors + dtors")
 
     f.seek(0)
-    f.write(bytes(source_bytes))
+    f.write(bytearray(source_bytes))
 
 def frontend(args):
     inplace = ""
