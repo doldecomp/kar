@@ -4,7 +4,7 @@ INIT_O_FILES := 						            \
     $(BUILD_DIR)/asm/Runtime.PPCEABI.H/__mem.o		\
     $(BUILD_DIR)/asm/TRK_MINNOW_DOLPHIN/mem_TRK.o	\
     $(BUILD_DIR)/asm/TRK_MINNOW_DOLPHIN/__exception.o	\
-    $(BUILD_DIR)/src/init/__start.o\
+    $(BUILD_DIR)/asm/os/__start.o					\
     $(BUILD_DIR)/asm/os/__ppc_eabi_init.o			\
 
 EXTAB_O_FILES :=                                    \
