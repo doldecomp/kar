@@ -51,4 +51,3 @@ _ExitProcess:
 /* 803DBA1C 003D881C  38 21 00 08 */	addi r1, r1, 8
 /* 803DBA20 003D8820  7C 08 03 A6 */	mtlr r0
 /* 803DBA24 003D8824  4E 80 00 20 */	blr 
-

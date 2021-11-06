@@ -1,9 +1,7 @@
 # Small read/write Data
 .section .sbss, "wa"  # 805DD520 - 0x805DE700
+.balign 0x8
 
-.global lbl_805DD520
-lbl_805DD520:
-	.skip 0x8
 .global lbl_805DD528
 lbl_805DD528:
 	.skip 0x4
