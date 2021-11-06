@@ -18,7 +18,5 @@
 *.exe
 *.dump
 build
-tools/mwcc_compiler/
-!tools/mwcc_compiler/2.7/mwLinkPatch.exe
 out.txt
 *.dmp

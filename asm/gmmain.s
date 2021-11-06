@@ -2,8 +2,8 @@
 
 .section .text  # 0x80005800 - 80010BBC
 
-.global func_80005800
-func_80005800:
+.global Pad_InitCallback
+Pad_InitCallback:
 /* 80005800 00002600  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80005804 00002604  7C 08 02 A6 */	mflr r0
 /* 80005808 00002608  3C 80 80 53 */	lis r4, SoundBuffer@ha
@@ -181,8 +181,8 @@ lbl_800059D4:
 /* 80005A7C 0000287C  38 63 59 94 */	addi r3, r3, lbl_80535994@l
 /* 80005A80 00002880  48 3D A6 C9 */	bl func_803E0148
 /* 80005A84 00002884  48 3D C1 D9 */	bl func_803E1C5C
-/* 80005A88 00002888  3C 60 80 00 */	lis r3, func_80005800@ha
-/* 80005A8C 0000288C  38 63 58 00 */	addi r3, r3, func_80005800@l
+/* 80005A88 00002888  3C 60 80 00 */	lis r3, Pad_InitCallback@ha
+/* 80005A8C 0000288C  38 63 58 00 */	addi r3, r3, Pad_InitCallback@l
 /* 80005A90 00002890  48 05 D0 8D */	bl func_80062B1C
 /* 80005A94 00002894  3C 60 80 00 */	lis r3, lbl_80005894@ha
 /* 80005A98 00002898  38 63 58 94 */	addi r3, r3, lbl_80005894@l
