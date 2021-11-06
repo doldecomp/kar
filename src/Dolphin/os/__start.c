@@ -1,5 +1,5 @@
 #include "dolphin/os.h"
-#include "init/__start.h"
+#include "dolphin/os/__start.h"
 
 #pragma section code_type ".init"
 
@@ -168,44 +168,17 @@ asm static void __init_registers(void)
 	li r29, 0
 	li r30, 0
 	li r31, 0
-	lis r1, 0x805F6390@h
-	ori r1, r1, 0x805F6390@l
-	lis r2, 0x805E6700@h
-	ori r2, r2, 0x805E6700@l
-	lis r13, 0x805DD0E0@h
-	ori r13, r13, 0x805DD0E0@l
+	lis r1, _stack_addr@h
+	ori r1, r1, _stack_addr@l
+	lis r2, _SDA2_BASE_@h
+	ori r2, r2, _SDA2_BASE_@l
+	lis r13, _SDA_BASE_@h
+	ori r13, r13, _SDA_BASE_@l
 	blr
 }
 
 __declspec(section ".init") extern __rom_copy_info _rom_copy_info[];
 __declspec(section ".init") extern __bss_init_info _bss_init_info[];
-
-//void __init_data(void)
-//{
-//    __rom_copy_info *dci;
-//    __bss_init_info *bii;
-//
-//    dci = _rom_copy_info;
-//    while (TRUE) {
-//		//dci = (*_rom_copy_info).size;
-//        if ((*dci).size == 0) break;
-//		dci = _rom_copy_info;
-//		if ((*dci).size && ((*dci).addr != (*dci).rom)) {
-//			memcpy((*dci).addr, (*dci).rom, (*dci).size);
-//			__flush_cache( (*dci).addr, (*dci).size );
-//		}
-//        dci++;
-//    }
-//
-//    bii = _bss_init_info;
-//    while (TRUE) {
-//        if ((*bii).size == 0) break;
-//		if ((*bii).size) {
-//			memset((*bii).addr, 0, (*bii).size);
-//		}
-//        bii++;
-//    }
-//}
 
 inline static void __copy_rom_section(void* dst, const void* src, unsigned long size)
 {

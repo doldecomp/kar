@@ -1,14 +1,12 @@
-extern void __OSCacheInit   ( void );
-extern void __OSFPRInit     ( void );
-extern void __OSPSInit      ( void );
+#include "dolphin/os/__ppc_eabi_init.h"
 
+#pragma section code_type ".init"
 
 asm void __init_hardware(void)
 {
     nofralloc
     mfmsr r0
-//    ori  r0,r0,MSR_FP
-    ori  r0,r0,0x2000
+    ori  r0,r0,MSR_FP
     mtmsr r0
     mflr    r31
     bl      __OSPSInit
