@@ -6,6 +6,7 @@ INIT_O_FILES := 						            \
     $(BUILD_DIR)/asm/TRK_MINNOW_DOLPHIN/__exception.o	\
     $(BUILD_DIR)/src/dolphin/os/__start.o			\
     $(BUILD_DIR)/src/dolphin/os/__ppc_eabi_init.o	\
+    $(BUILD_DIR)/asm/init/__ppc_eabi_init.o	\
 
 EXTAB_O_FILES :=                                    \
     $(BUILD_DIR)/asm/_extab.o						\
