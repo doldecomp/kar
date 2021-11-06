@@ -28,4 +28,4 @@ Contributions and PRs are welcome.
 
 ## TODO
 
-1. texpdag.s and texopt.s are in the same file, find where they split and split them.
+Make a TODO list
