@@ -17,3 +17,4 @@
 build
 out.txt
 *.dmp
+tools/mwcc_compiler/
