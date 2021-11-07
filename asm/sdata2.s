@@ -20444,7 +20444,3 @@ lbl_805E62C8:
 .global lbl_805E62CC
 lbl_805E62CC:
 	.4byte 0x3A2F2F00
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
