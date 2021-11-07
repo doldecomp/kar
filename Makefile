@@ -19,10 +19,10 @@ VERSION := kor
 
 BUILD_DIR := build/$(NAME).$(VERSION)
 
-SRC_DIRS := src src/sysdolphin src/init
+SRC_DIRS := src src/sysdolphin src/init src/dolphin/os
 ASM_DIRS := asm asm/runtime asm/runtime/ asm/Runtime.PPCEABI.H asm/sysdolphin		\
 			asm/dolphin asm/MetroTRK asm/init asm/a2d asm/os asm/TRK_MINNOW_DOLPHIN	\
-			asm/pad src/dolphin/os
+			asm/pad
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
@@ -46,7 +46,7 @@ O_FILES := $(INIT_O_FILES) $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(TEXT_O_FILES
 # Tools
 #-------------------------------------------------------------------------------
 
-MWCC_VERSION := 1.1
+MWCC_VERSION := 1.0
 MWLD_VERSION := 1.1
 
 # Programs
@@ -67,7 +67,8 @@ PYTHON  := python
 POSTPROC := tools/postprocess.py
 
 # Options
-INCLUDES := -i include/ -i include/dolphin/ -i src/sysdolphin/ -i include/dolphin/mtx/
+INCLUDES := -i include/ -i include/dolphin/ -i src/sysdolphin/ -i include/dolphin/mtx/ \
+			-i include/init
 
 ASFLAGS := -mgekko -I include/ 
 LDFLAGS := -map $(MAP) -fp hard -nodefaults
