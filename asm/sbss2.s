@@ -1,6 +1,6 @@
 .include "macros.inc"
 
-.section .sbss2  # 0x805E62E0 - 805e6390
+.section .sbss2, "", @nobits  # 0x805E62E0 - 805e6390
 
 .global lbl_805E62E0
 lbl_805E62E0:

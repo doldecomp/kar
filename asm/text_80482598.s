@@ -7991,10 +7991,3 @@ func_804893F8:
 /* 80489418 00486218  7C 08 03 A6 */	mtlr r0
 /* 8048941C 0048621C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80489420 00486220  4E 80 00 20 */	blr 
-/* 80489424 00486224  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80489428 00486228  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8048942C 0048622C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80489430 00486230  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80489434 00486234  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 80489438 00486238  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8048943C 0048623C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */

@@ -1018,4 +1018,4 @@ lbl_805CC3C8:
 	.skip 0x678
 .global lbl_805CCA40
 lbl_805CCA40:
-	.skip 0x86A0
+	.skip 0x8690

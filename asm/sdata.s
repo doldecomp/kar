@@ -13556,5 +13556,4 @@ lbl_805DD514:
 .global lbl_805DD518               
 lbl_805DD518:                      
 	.4byte 0x53455256
-	.4byte 0x45520000
-	
+	.byte 0x45, 0x52, 0x00

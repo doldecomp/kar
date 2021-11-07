@@ -25,3 +25,10 @@ GROUP:{
     __ArenaLo = (_db_stack_addr + 0x1f) & ~0x1f;
     __ArenaHi = 0x81700000;
 }
+
+FORCEFILES {
+    _extab.o
+    _exidx.o
+    __init_cpp_exceptions.o
+    object.o
+}
