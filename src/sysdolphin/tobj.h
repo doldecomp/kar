@@ -1,7 +1,7 @@
 #ifndef _tobj_h_
 #define _tobj_h_
 
-#include "include/dolphin/mtx/mtxtypes.h"
+#include "dolphin/mtx/mtxtypes.h"
 
 #include "src/sysdolphin/object.h"
 
