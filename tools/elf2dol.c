@@ -255,7 +255,7 @@ void read_elf_segments(DOL_map *map, const char *elf)
 					map->text_cnt++;
 				} else {
 					// DATA or BSS segment
-					if(!(flags & PF_R))
+					if(!(flags & PF_R) & (i!=5))
 						fprintf(stderr, "Warning: non-readable segment %d\n", i);
 					if(filesz == 0) {
 						// BSS segment
