@@ -1,5 +1,8 @@
 # Linker order for every file, passed to the Metrowerks linker.
 
+SBSS_O_FILES :=\
+	$(BUILD_DIR)/asm/sbss.o\
+
 INIT_O_FILES :=\
 	$(BUILD_DIR)/asm/Runtime.PPCEABI.H/__mem.o\
 	$(BUILD_DIR)/asm/TRK_MINNOW_DOLPHIN/mem_TRK.o\
@@ -141,8 +144,8 @@ BSS_O_FILES :=\
 SDATA_O_FILES :=\
 	$(BUILD_DIR)/asm/sdata.o\
 
-SBSS_O_FILES :=\
-	$(BUILD_DIR)/asm/sbss.o\
+SBSS_O_FILES_1 :=\
+	$(BUILD_DIR)/asm/sbss_1.o\
 
 SDATA2_O_FILES :=\
 	$(BUILD_DIR)/asm/sdata2.o\

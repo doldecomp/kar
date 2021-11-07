@@ -14,7 +14,7 @@
 extern void InitMetroTRK();
 
 u16 Pad3Button: PAD3_BUTTON_ADDR;
-//static u8 Debug_BBA = 0;
+static u8 Debug_BBA = 0;
 
 extern void memset(void*,int,int);
 extern int main(int argc, char* argv[]);
