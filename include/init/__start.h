@@ -45,3 +45,7 @@ typedef struct __bss_init_info {
 } __bss_init_info;
 
 __declspec(section ".init") extern __bss_init_info _bss_init_info[];
+
+__declspec(section ".init") extern char		 	_stack_addr[];
+__declspec(section ".init") extern char			_SDA_BASE_[];																
+__declspec(section ".init") extern char			_SDA2_BASE_[];
