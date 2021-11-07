@@ -372,6 +372,16 @@ void fcpy(FILE *dst, FILE *src, uint32_t dst_off, uint32_t src_off, uint32_t siz
 	free(blockbuf);
 }
 
+void fpad(FILE *dst, uint32_t dst_off, uint32_t size)
+{
+	uint32_t i;
+
+	if(fseek(dst, dst_off, SEEK_SET) < 0)
+		ferrordie(dst, "writing DOL segment data");
+	for(i=0; i<size; i++)
+		fputc(0, dst);
+}
+
 void write_dol(DOL_map *map, const char *dol)
 {
 	FILE *dolf;
@@ -413,16 +423,22 @@ void write_dol(DOL_map *map, const char *dol)
 		ferrordie(dolf, "writing DOL header");
 	
 	for(i=0; i<map->text_cnt; i++) {
+		uint32_t size = swap32(map->header.text_size[i]);
+		uint32_t padded_size = DOL_ALIGN(size);
 		if(verbosity >= 2)
 			fprintf(stderr, "Writing TEXT segment %d...\n", i);
-		fcpy(dolf, map->elf, swap32(map->header.text_off[i]), map->text_elf_off[i],
-		     swap32(map->header.text_size[i]));
+		fcpy(dolf, map->elf, swap32(map->header.text_off[i]), map->text_elf_off[i], size);
+		if (padded_size > size)
+			fpad(dolf, swap32(map->header.text_off[i]) + size, padded_size - size);
 	}
 	for(i=0; i<map->data_cnt; i++) {
+		uint32_t size = swap32(map->header.data_size[i]);
+		uint32_t padded_size = DOL_ALIGN(size);
 		if(verbosity >= 2)
 			fprintf(stderr, "Writing DATA segment %d...\n", i);
-		fcpy(dolf, map->elf, swap32(map->header.data_off[i]), map->data_elf_off[i],
-		     swap32(map->header.data_size[i]));
+		fcpy(dolf, map->elf, swap32(map->header.data_off[i]), map->data_elf_off[i], size);
+		if (padded_size > size)
+			fpad(dolf, swap32(map->header.data_off[i]) + size, padded_size - size);
 	}
 	
 	if(verbosity >= 2)
