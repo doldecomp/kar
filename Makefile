@@ -19,7 +19,7 @@ VERSION := kor
 
 BUILD_DIR := build/$(NAME).$(VERSION)
 
-SRC_DIRS := src src/sysdolphin src/init src/dolphin/os
+SRC_DIRS := src src/sysdolphin src/os src/dolphin/os
 ASM_DIRS := asm asm/runtime asm/runtime/ asm/Runtime.PPCEABI.H asm/sysdolphin		\
 			asm/dolphin asm/MetroTRK asm/init asm/a2d asm/os asm/TRK_MINNOW_DOLPHIN	\
 			asm/pad
@@ -109,7 +109,8 @@ tools:
 	$(MAKE) -C tools
 
 $(ELF): $(O_FILES) $(LDSCRIPT)
-	$(LD) $(LDFLAGS) -lcf $(LDSCRIPT) $(O_FILES) -o $@
+	@echo $(O_FILES) > build/o_files
+	$(LD) $(LDFLAGS) -lcf $(LDSCRIPT) @build/o_files -o $@
 # The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
 	$(OBJCOPY) $@ $@
 
