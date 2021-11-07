@@ -24,7 +24,7 @@ u8 __get_debug_bba(void)
 }
 
 
-asm void __start(void)
+__declspec (weak) asm void __start(void)
 {
     nofralloc
 	bl __init_registers
