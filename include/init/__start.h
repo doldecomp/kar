@@ -1,4 +1,4 @@
-#include "include/dolphin/types.h"
+#include "dolphin/types.h"
 
 #define PAD3_BUTTON_ADDR 0x800030E4
 #define OS_RESET_RESTART 0
@@ -12,7 +12,7 @@
 #define DVD_DEVICECODE_ADDR 0x800030E6
 
 u16 Pad3Button: PAD3_BUTTON_ADDR;
-static u8 Debug_BBA = 0;
+//static u8 Debug_BBA = 0;
 
 extern void memset(void*,int,int);
 extern int main(int argc, char* argv[]);

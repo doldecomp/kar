@@ -12,6 +12,7 @@ void __check_pad3(void)
 	return;
 }
 
+/*
 void __set_debug_bba(void)
 {
     Debug_BBA = 1;
@@ -20,6 +21,21 @@ void __set_debug_bba(void)
 u8 __get_debug_bba(void)
 {
     return Debug_BBA;
+}
+*/
+asm void __set_debug_bba(void)
+{
+	nofralloc
+	li r0, 1
+	stb r0, 0xe58(r13)
+	blr 
+}
+
+asm u8 __get_debug_bba(void)
+{
+	nofralloc
+	lbz r3, 0xe58(r13)
+	blr 
 }
 
 asm void __start(void)
