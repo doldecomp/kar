@@ -86,8 +86,8 @@ _check_debug_flag:
 	b _goto_main
 
 _goto_inittrk:
-	lis r6, -0x7FC4@ha
-	addi r6, r6, 0x1EA0@l
+	lis r6, InitMetroTRK@ha
+	addi r6, r6, InitMetroTRK@l
 	mtlr r6
 	blrl
 	
@@ -188,8 +188,8 @@ asm static void __init_registers(void)
 	ori r1, r1,  _stack_addr@l
 	lis r2, _SDA2_BASE_@h
 	ori r2, r2, _SDA2_BASE_@l
-	lis r13, _SDA2_BASE_@h
-	ori r13, r13, _SDA2_BASE_@l
+	lis r13, _SDA_BASE_@h
+	ori r13, r13, _SDA_BASE_@l
 	blr
 }
 
@@ -211,6 +211,7 @@ inline static void __init_bss_section(void* dst, unsigned long size)
 	}
 }
 
+#pragma scheduling off
 void __init_data(void)
 {
     __rom_copy_info *dci;
