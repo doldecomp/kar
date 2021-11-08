@@ -1443,17 +1443,35 @@ lbl_805D5C08:
 	.4byte 0x63320000
 	.4byte 0x4D757369
 	.4byte 0x63330000
+.global sp_Lap
+sp_Lap:
 	.4byte 0x4C617000
+# "Lap"
+.global sp_Time
+sp_Time:
 	.4byte 0x54696D65
 	.4byte 0x00000000
+# "Time"
+.global sp_Coin
+sp_Coin:
 	.4byte 0x436F696E
 	.4byte 0x00000000
+# "Coin"
+.global sp_Freerun
+sp_Freerun:
 	.4byte 0x46726565
 	.4byte 0x72756E00
+# "Freerun"
+.global sp_Zeroyon
+sp_Zeroyon:
 	.4byte 0x5A65726F
 	.4byte 0x796F6E00
+# "Zeroyon"
+.global sp_Chicken
+sp_Chicken:
 	.4byte 0x43686963
 	.4byte 0x6B656E00
+# "Chicken"
 	.4byte 0x44656661
 	.4byte 0x756C7400
 	.4byte 0x31000000
@@ -2469,10 +2487,11 @@ lbl_805D6608:
 .global lbl_805D660C
 lbl_805D660C:
 	.4byte 0x25640000
-.global lbl_805D6610
-lbl_805D6610:
+.global sp_Time_
+sp_Time_:
 	.4byte 0x54696D65
 	.4byte 0x81460000
+# "Time: "
 .global lbl_805D6618
 lbl_805D6618:
 	.4byte 0x6D696E00

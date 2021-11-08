@@ -11685,21 +11685,36 @@ lbl_8049F898:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
+.global sp_Timeattack
+sp_Timeattack:
 	.4byte 0x54696D65
 	.4byte 0x61747461
 	.4byte 0x636B0000
+# "Timeattack"
+.global sp_Freecity
+sp_Freecity:
 	.4byte 0x46726565
 	.4byte 0x63697479
 	.4byte 0x00000000
+# "Freecity"
+.global sp_Timecity
+sp_Timecity:
 	.4byte 0x54696D65
 	.4byte 0x63697479
 	.4byte 0x00000000
+# "Timecity"
+.global sp_Air_Glider
+sp_Air_Glider:
 	.4byte 0x41697220
 	.4byte 0x476C6964
 	.4byte 0x65720000
+# "Air Glider"
+.global sp_Sky_Darts
+sp_Sky_Darts:
 	.4byte 0x536B7920
 	.4byte 0x44617274
 	.4byte 0x73000000
+# "Sky Darts"
 	.4byte 0x466C6963
 	.4byte 0x6B20526F
 	.4byte 0x79616C00
@@ -11736,16 +11751,16 @@ lbl_8049F898:
 	.4byte 0x436F6E74
 	.4byte 0x61696E65
 	.4byte 0x72000000
-	.4byte 0x805D5C40
-	.4byte 0x805D5C44
-	.4byte 0x805D5C4C
-	.4byte 0x805D5C54
-	.4byte 0x8049F9A8
-	.4byte 0x8049F9B4
-	.4byte 0x8049F9C0
-	.4byte 0x805D5C5C
-	.4byte 0x8049F9CC
-	.4byte 0x8049F9D8
+	.4byte sp_Lap
+	.4byte sp_Time
+	.4byte sp_Coin
+	.4byte sp_Freerun
+	.4byte sp_Timeattack
+	.4byte sp_Freecity
+	.4byte sp_Timecity
+	.4byte sp_Zeroyon
+	.4byte sp_Air_Glider
+	.4byte sp_Sky_Darts
 	.4byte 0x8049F9E4
 	.4byte 0x8049F9F0
 	.4byte 0x8049F9FC
