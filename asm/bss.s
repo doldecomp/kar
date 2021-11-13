@@ -701,8 +701,8 @@ lbl_805892FC:
 .global lbl_805893BC
 lbl_805893BC:
 	.skip 0x5C4
-.global alloc_data
-alloc_data:
+.global aobj_alloc_data
+aobj_alloc_data:
 	.skip 0x30
 .global lbl_805899B0
 lbl_805899B0:
