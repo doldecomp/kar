@@ -58,8 +58,10 @@ MWLD_VERSION := 1.1
 # Programs
 ifeq ($(WINDOWS),1)
   WINE :=
+  PYTHON  := python
 else
   WINE ?= wine
+  PYTHON  := python3
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
@@ -67,7 +69,6 @@ CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
-PYTHON  := python
 
 POSTPROC := tools/postprocess.py
 
