@@ -620,8 +620,8 @@ lbl_8056E350:
 .global lbl_8056E360
 lbl_8056E360:
 	.skip 0x40
-.global lbl_8056E3A0
-lbl_8056E3A0:
+.global regs
+regs:
 	.skip 0xF0
 .global lbl_8056E490
 lbl_8056E490:
