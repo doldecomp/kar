@@ -6605,6 +6605,8 @@ lbl_8049AE00:
 	.4byte 0x6F772E68
 	.4byte 0x00000000
 	.4byte 0x00000000
+.global lbl_8049AE10
+lbl_8049AE10:
 	.4byte 0x3C3F786D
 	.4byte 0x6C207665
 	.4byte 0x7273696F

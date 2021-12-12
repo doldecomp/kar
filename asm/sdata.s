@@ -415,7 +415,7 @@ lbl_805D53FC:
 	.4byte 0x00000000
 .global lbl_805D5408
 lbl_805D5408:
-	.4byte 0x8049AE10
+	.4byte lbl_8049AE10
 .global lbl_805D540C
 lbl_805D540C:
 	.4byte 0x6C626E65
