@@ -5,6 +5,12 @@ ifneq ($(findstring MSYS,$(shell uname)),)
   WINDOWS := 1
 endif
 
+VERBOSE ?= 0
+
+ifeq ($(VERBOSE),0)
+  QUIET := @
+endif
+
 #-------------------------------------------------------------------------------
 # Files
 #-------------------------------------------------------------------------------
@@ -61,7 +67,7 @@ CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
-PYTHON  := python
+PYTHON  := python3
 
 POSTPROC := tools/postprocess.py
 
@@ -73,8 +79,10 @@ ASFLAGS := -mgekko -I include/
 LDFLAGS := -map $(MAP) -fp hard -nodefaults
 CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O4,p -nodefaults -msgstyle gcc $(INCLUDES)
 
-# for postprocess.py
-PROCFLAGS := -fprologue-fixup=old_stack
+ifeq ($(VERBOSE),0)
+# this set of ASFLAGS generates no warnings.
+ASFLAGS += -W
+endif
 
 #-------------------------------------------------------------------------------
 # Recipes
@@ -97,9 +105,10 @@ $(LDSCRIPT): ldscript.lcf
 	$(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
 $(DOL): $(ELF) | tools
-	$(ELF2DOL) $< $@
-	$(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
-	$(PYTHON) calcprogress.py $@
+	@echo Linking ELF $@
+	$(QUIET) $(ELF2DOL) $< $@
+	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
+	$(QUIET) $(PYTHON) calcprogress.py $@
 
 clean:
 	rm -f -d -r build
@@ -110,14 +119,16 @@ tools:
 
 $(ELF): $(O_FILES) $(LDSCRIPT)
 	@echo $(O_FILES) > build/o_files
-	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
+	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
 
 $(BUILD_DIR)/%.o: %.s
-	$(AS) $(ASFLAGS) -o $@ $<
+	@echo Assembling $<
+	$(QUIET) $(AS) $(ASFLAGS) -o $@ $<
 
 $(BUILD_DIR)/%.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
-	$(PYTHON) $(POSTPROC) $(PROCFLAGS) $@
+	@echo Compiling $<
+	$(QUIET) $(CC) $(CFLAGS) -c -o $@ $<
+	$(QUIET) $(PYTHON) $(POSTPROC) $(PROCFLAGS) $@
 
 ### Debug Print ###
 
