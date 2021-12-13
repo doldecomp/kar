@@ -18,4 +18,5 @@ build
 out.txt
 *.dmp
 tools/mwcc_compiler/
+tools/yychr/
 test.bat
