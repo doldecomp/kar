@@ -4,7 +4,7 @@
 
 .global HSD_DObjSetCurrent
 HSD_DObjSetCurrent:
-/* 803F43D8 003F11D8  90 6D 10 94 */	stw r3, lbl_805DE174@sda21(r13)
+/* 803F43D8 003F11D8  90 6D 10 94 */	stw r3, current_dobj@sda21(r13)
 /* 803F43DC 003F11DC  4E 80 00 20 */	blr 
 
 .global HSD_DObjGetFlags
@@ -273,7 +273,7 @@ lbl_803F4730:
 /* 803F4730 003F1530  3C 60 80 50 */	lis r3, lbl_80501D58@ha
 /* 803F4734 003F1534  38 63 1D 58 */	addi r3, r3, lbl_80501D58@l
 /* 803F4738 003F1538  4C C6 31 82 */	crclr 6
-/* 803F473C 003F153C  4B FE 05 AD */	bl func_803D4CE8
+/* 803F473C 003F153C  4B FE 05 AD */	bl OSReport
 /* 803F4740 003F1540  38 6D F9 58 */	addi r3, r13, lbl_805DCA38@sda21
 /* 803F4744 003F1544  38 80 01 3F */	li r4, 0x13f
 /* 803F4748 003F1548  38 AD F9 60 */	addi r5, r13, lbl_805DCA40@sda21
