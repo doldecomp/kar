@@ -22,6 +22,8 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/text_80007808.o\
 	$(BUILD_DIR)/asm/text_80010BBC.o\
 	$(BUILD_DIR)/asm/text_80060ED0.o\
+	$(BUILD_DIR)/asm/grcity1.o\
+	$(BUILD_DIR)/asm/text_8010F854.o\
 	$(BUILD_DIR)/asm/text_801166B4.o\
 	$(BUILD_DIR)/asm/text_801D443C.o\
 	$(BUILD_DIR)/asm/a2d/a2d_game_lib.o\

@@ -20090,8 +20090,8 @@ lbl_804A7770:
 	.4byte 0x6E746572
 	.4byte 0x4E756D00
 	.4byte 0x00000000
-	.4byte 0x8010F114
-	.4byte 0x8010F268
+	.4byte func_8010F114
+	.4byte grYakuUpdate
 	.4byte 0x00000000
 .global lbl_804A77E4
 lbl_804A77E4:
