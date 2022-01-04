@@ -647,8 +647,8 @@ lbl_803DFF00:
 /* 803DFF30 003DCD30  7C 08 03 A6 */	mtlr r0
 /* 803DFF34 003DCD34  4E 80 00 20 */	blr 
 
-.global AIRegisterDMACallback
-AIRegisterDMACallback:
+.global __tmp_aid_callback
+__tmp_aid_callback:
 /* 803DFF38 003DCD38  7C 08 02 A6 */	mflr r0
 /* 803DFF3C 003DCD3C  90 01 00 04 */	stw r0, 4(r1)
 /* 803DFF40 003DCD40  94 21 FF E8 */	stwu r1, -0x18(r1)
