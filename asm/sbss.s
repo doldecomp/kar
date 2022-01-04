@@ -1283,8 +1283,8 @@ lbl_805DDD18:
 .global lbl_805DDD1C
 lbl_805DDD1C:
 	.skip 0x4
-.global lbl_805DDD20
-lbl_805DDD20:
+.global __DSP_init_flag
+__DSP_init_flag:
 	.skip 0x8
 .global lbl_805DDD28
 lbl_805DDD28:
@@ -1298,8 +1298,8 @@ lbl_805DDD30:
 .global lbl_805DDD34
 lbl_805DDD34:
 	.skip 0x4
-.global lbl_805DDD38
-lbl_805DDD38:
+.global __DSP_first_task
+__DSP_first_task:
 	.skip 0x4
 .global lbl_805DDD3C
 lbl_805DDD3C:

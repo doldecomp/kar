@@ -12035,8 +12035,8 @@ lbl_805DC968:
 lbl_805DC96C:
 	.4byte 0x25303878
 	.4byte 0x0A000000
-.global lbl_805DC974
-lbl_805DC974:
+.global msg
+msg:
 	.4byte 0x25730A00
 .global lbl_805DC978
 lbl_805DC978:

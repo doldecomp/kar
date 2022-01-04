@@ -64,7 +64,6 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/MetroTRK/TRK_MINNOW_DOLPHIN.o\
 	$(BUILD_DIR)/asm/PPCArch.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_db.o\
-	$(BUILD_DIR)/src/Dolphin/dsp/dsp.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_dsp.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_dvd.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_gx.o\

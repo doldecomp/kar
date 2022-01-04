@@ -107087,8 +107087,8 @@ lbl_804F92F0:
 	.4byte 0x65737469
 	.4byte 0x6E617469
 	.4byte 0x6F6E0A00
-.global lbl_804F9308
-lbl_804F9308:
+.global Dolphin_SDK_DSP_release_build
+Dolphin_SDK_DSP_release_build:
 	.4byte 0x3C3C2044
 	.4byte 0x6F6C7068
 	.4byte 0x696E2053

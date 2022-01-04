@@ -33,7 +33,7 @@ lbl_8041E254:
 /* 8041E288 0041B088  3C 60 80 50 */	lis r3, lbl_805046C0@ha
 /* 8041E28C 0041B08C  38 63 46 C0 */	addi r3, r3, lbl_805046C0@l
 /* 8041E290 0041B090  4C C6 31 82 */	crclr 6
-/* 8041E294 0041B094  4B FB 6A 55 */	bl OSReport
+/* 8041E294 0041B094  4B FB 6A 55 */	bl _OSReport
 /* 8041E298 0041B098  38 60 FF FF */	li r3, -1
 /* 8041E29C 0041B09C  48 00 00 D8 */	b lbl_8041E374
 lbl_8041E2A0:
@@ -154,8 +154,8 @@ lbl_8041E414:
 /* 8041E42C 0041B22C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041E430 0041B230  4E 80 00 20 */	blr 
 
-.global func_8041E434
-func_8041E434:
+.global HSD_ArchiveGetExtern
+HSD_ArchiveGetExtern:
 /* 8041E434 0041B234  2C 04 00 00 */	cmpwi r4, 0
 /* 8041E438 0041B238  41 80 00 10 */	blt lbl_8041E448
 /* 8041E43C 0041B23C  80 03 00 10 */	lwz r0, 0x10(r3)
@@ -173,8 +173,8 @@ lbl_8041E450:
 /* 8041E464 0041B264  7C 64 02 14 */	add r3, r4, r0
 /* 8041E468 0041B268  4E 80 00 20 */	blr 
 
-.global func_8041E46C
-func_8041E46C:
+.global HSD_ArchiveLocateExtern
+HSD_ArchiveLocateExtern:
 /* 8041E46C 0041B26C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041E470 0041B270  7C 08 02 A6 */	mflr r0
 /* 8041E474 0041B274  90 01 00 24 */	stw r0, 0x24(r1)
