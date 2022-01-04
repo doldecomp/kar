@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+   <specVersion>
+       <major>1</major>
+       <minor>0</minor>
+   </specVersion>
+   <device>
+       <deviceType>urn:schemas-upnp-org:device:Basic:1</deviceType>
+       <friendlyName>Kirby AIR RIDE</friendlyName>
+       <manufacturer>Nintendo of Europe GmbH</manufacturer>
+       <manufacturerURL>http://www.nintendo-europe.com/</manufacturerURL>
+       <modelDescription>NINTENDO GAMECUBE Title</modelDescription>
+       <modelName>DOL-GKYP-EUR</modelName>
+       <modelURL>http://www.nintendo-europe.com/gcn/gkyp/index.html</modelURL>
+       <UDN>uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</UDN>
+   </device>
+</root>

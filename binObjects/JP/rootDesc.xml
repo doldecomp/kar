@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+   <specVersion>
+       <major>1</major>
+       <minor>0</minor>
+   </specVersion>
+   <device>
+       <deviceType>urn:schemas-upnp-org:device:Basic:1</deviceType>
+       <friendlyName>Kirby's Airride</friendlyName>
+       <manufacturer>Nintendo Co., Ltd.</manufacturer>
+       <manufacturerURL>http://www.nintendo.co.jp/</manufacturerURL>
+       <modelDescription>NINTENDO GAMECUBE Title</modelDescription>
+       <modelName>DOL-GKYJ-JPN</modelName>
+       <modelURL>http://www.nintendo.co.jp/ngc/gkyj/index.html</modelURL>
+       <UDN>uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</UDN>
+       <UPC>490237050659</UPC>
+   </device>
+</root>
