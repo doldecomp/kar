@@ -6607,7 +6607,7 @@ lbl_8049AE00:
 	.4byte 0x00000000
 .global root_xml
 root_xml:
-	.incbin "binObjects/US/root.xml", 0x0, 0x2B4
+	.incbin "binObjects/US/rootDesc.xml", 0x0, 0x2B4
 	.4byte 0x00000000
 .global lbl_8049B0C8
 lbl_8049B0C8:

@@ -2,8 +2,8 @@
 
 .section .text
 
-.global func_803DFF7C
-func_803DFF7C:
+.global ARStartDMA
+ARStartDMA:
 /* 803DFF7C 003DCD7C  7C 08 02 A6 */	mflr r0
 /* 803DFF80 003DCD80  90 01 00 04 */	stw r0, 4(r1)
 /* 803DFF84 003DCD84  94 21 FF D8 */	stwu r1, -0x28(r1)
@@ -65,8 +65,8 @@ func_803DFF7C:
 /* 803E0064 003DCE64  7C 08 03 A6 */	mtlr r0
 /* 803E0068 003DCE68  4E 80 00 20 */	blr 
 
-.global func_803E006C
-func_803E006C:
+.global ARAlloc
+ARAlloc:
 /* 803E006C 003DCE6C  7C 08 02 A6 */	mflr r0
 /* 803E0070 003DCE70  90 01 00 04 */	stw r0, 4(r1)
 /* 803E0074 003DCE74  94 21 FF E8 */	stwu r1, -0x18(r1)
@@ -94,8 +94,8 @@ func_803E006C:
 /* 803E00CC 003DCECC  7C 08 03 A6 */	mtlr r0
 /* 803E00D0 003DCED0  4E 80 00 20 */	blr 
 
-.global func_803E00D4
-func_803E00D4:
+.global ARFree
+ARFree:
 /* 803E00D4 003DCED4  7C 08 02 A6 */	mflr r0
 /* 803E00D8 003DCED8  90 01 00 04 */	stw r0, 4(r1)
 /* 803E00DC 003DCEDC  94 21 FF E8 */	stwu r1, -0x18(r1)
@@ -127,8 +127,8 @@ lbl_803E010C:
 /* 803E0140 003DCF40  7C 08 03 A6 */	mtlr r0
 /* 803E0144 003DCF44  4E 80 00 20 */	blr 
 
-.global func_803E0148
-func_803E0148:
+.global ARInit
+ARInit:
 /* 803E0148 003DCF48  7C 08 02 A6 */	mflr r0
 /* 803E014C 003DCF4C  90 01 00 04 */	stw r0, 4(r1)
 /* 803E0150 003DCF50  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -147,10 +147,10 @@ lbl_803E017C:
 /* 803E0180 003DCF80  4B FF 2C 89 */	bl OSRegisterVersion
 /* 803E0184 003DCF84  4B FF 6F 25 */	bl OSDisableInterrupts
 /* 803E0188 003DCF88  38 00 00 00 */	li r0, 0
-/* 803E018C 003DCF8C  3C 80 80 3E */	lis r4, lbl_803E0220@ha
+/* 803E018C 003DCF8C  3C 80 80 3E */	lis r4, __ARHandler@ha
 /* 803E0190 003DCF90  90 0D 0F 20 */	stw r0, lbl_805DE000@sda21(r13)
 /* 803E0194 003DCF94  3B E3 00 00 */	addi r31, r3, 0
-/* 803E0198 003DCF98  38 84 02 20 */	addi r4, r4, lbl_803E0220@l
+/* 803E0198 003DCF98  38 84 02 20 */	addi r4, r4, __ARHandler@l
 /* 803E019C 003DCF9C  38 60 00 06 */	li r3, 6
 /* 803E01A0 003DCFA0  4B FF 6F 55 */	bl __OSSetInterruptHandler
 /* 803E01A4 003DCFA4  3C 60 02 00 */	lis r3, 0x200
@@ -181,17 +181,19 @@ lbl_803E01F0:
 /* 803E0204 003DD004  7C 08 03 A6 */	mtlr r0
 /* 803E0208 003DD008  4E 80 00 20 */	blr 
 
-.global func_803E020C
-func_803E020C:
+.global ARReset
+ARReset:
 /* 803E020C 003DD00C  38 00 00 00 */	li r0, 0
 /* 803E0210 003DD010  90 0D 0F 3C */	stw r0, lbl_805DE01C@sda21(r13)
 /* 803E0214 003DD014  4E 80 00 20 */	blr 
 
-.global func_803E0218
-func_803E0218:
+.global ARGet_BaseAddressOrSizeOrInternalSize
+ARGet_BaseAddressOrSizeOrInternalSize:
 /* 803E0218 003DD018  80 6D 0F 24 */	lwz r3, lbl_805DE004@sda21(r13)
 /* 803E021C 003DD01C  4E 80 00 20 */	blr 
-lbl_803E0220:
+
+.global __ARHandler
+__ARHandler:
 /* 803E0220 003DD020  7C 08 02 A6 */	mflr r0
 /* 803E0224 003DD024  3C 60 CC 00 */	lis r3, 0xCC005000@ha
 /* 803E0228 003DD028  90 01 00 04 */	stw r0, 4(r1)
