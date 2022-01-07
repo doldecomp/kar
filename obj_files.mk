@@ -19,7 +19,7 @@ EXTABINDEX_O_FILES :=\
 TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/gmmain.o\
 	$(BUILD_DIR)/asm/gmglobal.o\
-	$(BUILD_DIR)/asm/text_80007808.o\
+	$(BUILD_DIR)/asm/gmautodemo.o\
 	$(BUILD_DIR)/asm/text_80010BBC.o\
 	$(BUILD_DIR)/asm/text_80060ED0.o\
 	$(BUILD_DIR)/asm/grcity1.o\
