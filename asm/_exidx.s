@@ -1,6 +1,7 @@
 .include "macros.inc"
 
 .section ._exidx, "wa"  # 0x80005700 - 0x80005800
+lbl_extabindex:
 	.4byte 0x803AD1C8
 	.4byte 0x00000074
 	.4byte 0x80005600

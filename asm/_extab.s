@@ -1,6 +1,7 @@
 .include "macros.inc"
 
 .section ._extab, "wa"  # 0x80005600 - 0x80005700
+lbl_extab:
 	.4byte 0x10180000
 	.4byte 0x00000040
 	.4byte 0x00000018
