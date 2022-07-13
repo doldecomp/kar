@@ -94,6 +94,8 @@ endif
 default: all
 
 all: $(DOL)
+	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
+	$(QUIET) $(PYTHON) calcprogress.py $(DOL)
 
 ALL_DIRS := build $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRC_DIRS) $(ASM_DIRS))
 
@@ -105,11 +107,9 @@ DUMMY != mkdir -p $(ALL_DIRS)
 $(LDSCRIPT): ldscript.lcf
 	$(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
-$(DOL): $(ELF) | tools
+$(DOL): $(ELF) tools
 	@echo Linking ELF $@
 	$(QUIET) $(ELF2DOL) $< $@
-	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
-	$(QUIET) $(PYTHON) calcprogress.py $@
 
 clean:
 	rm -f -d -r build
