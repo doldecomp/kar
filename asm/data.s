@@ -1,6 +1,7 @@
 .include "macros.inc"
 
 .section .data  # 0x80494E60 - 0x80535300
+	.balign 8
 .global lbl_80494E60
 lbl_80494E60:
 	.4byte 0x2F646562
@@ -6608,7 +6609,7 @@ lbl_8049AE00:
 .global root_xml
 root_xml:
 	.incbin "binObjects/US/rootDesc.xml", 0x0, 0x2B4
-	.4byte 0x00000000
+	.balign 8
 .global lbl_8049B0C8
 lbl_8049B0C8:
 	.4byte 0x8007B6F4
