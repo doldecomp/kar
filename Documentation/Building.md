@@ -9,6 +9,8 @@
  
 *Things you need to install in beforehand.*
 
+<br>
+
 - **[DevKitPro]**
 
 - **[Python3]**

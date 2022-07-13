@@ -21,17 +21,15 @@
 
 ## DOL
 
-*The* ***DOL*** *built with this repository.*
-
-**File** : `main.dol` <br>
-**SHA1** : `977533bb96e6a16e127946396489be1b4164ac42`
+**SHA1**  :  `977533bb96e6a16e127946396489be1b4164ac42` <br>
+**File**  :  `main.dol`
 
 <br>
 <br>
 
 ## Contributions
 
-*`Contributions` / `Pull Requests` are welcome !*
+***Contributions***  */  **Pull Requests** are welcome !*
 
 <br>
 
