@@ -4,6 +4,7 @@
 *How to compile this project from source.*
 
 <br>
+<br>
 
 ## Requirements
  
@@ -13,11 +14,15 @@
 
 - **[DevKitPro]**
 
+<br>
+
 - **[Python3]**
 
     ```sh
     pacman -S msys/python3
     ```
+
+<br>
 
 - **[GCC]**
 
