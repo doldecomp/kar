@@ -1,7 +1,7 @@
 
-# Kirby Air Ride   [![Discord Badge]][Discord]
+# Kirby Air Ride   [![Badge Discord]][Discord]   ![Badge Status]
 
-*A* ***WIP*** *decompilation of the* ***US*** / ***Korean*** *version.*
+*Decompilation of the **US** / **Korean** version.*
 
 <br>
 <br>
@@ -43,13 +43,15 @@
 
 <!----------------------------------[ Badges ]---------------------------------->
 
-[Discord Badge]: https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white
+[Badge Discord]: https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=Discord&logoColor=white
+[Badge Status]: https://img.shields.io/badge/Status-Work_In_Progress-02564e?style=for-the-badge&logo=GoogleAnalytics&logoColor=white&labelColor=00897B
+
 
 <!--
 Enable 'Discord Server Widgets' to use 
 this alternate badge with user count.
 
-[Discord Badge]: https://img.shields.io/discord/727908905392275526.svg?style=for-the-badge&label=&logo=Discord&logoColor=white&color=4f59c8&labelColor=7289DA
+[Badge Discord]: https://img.shields.io/discord/727908905392275526.svg?style=for-the-badge&label=&logo=Discord&logoColor=white&color=4f59c8&labelColor=7289DA
 -->
 
 
