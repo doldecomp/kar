@@ -4,6 +4,20 @@
 *A* ***WIP*** *decompilation of the* ***US*** / ***Korean*** *version.*
 
 <br>
+<br>
+
+<div align = center>
+
+---
+
+[![Button Building]][Building] 
+
+---
+
+</div>
+
+<br>
+<br>
 
 ## DOL
 
@@ -15,78 +29,16 @@
 <br>
 <br>
 
-## Building
-
-*How to compile this project from source.*
-
-<br>
-
-### Requirements
-
-- **[DevKitPro]**
-
-- **[Python3]**
-
-    ```sh
-    pacman -S msys/python3
-    ```
-
-- **[GCC]**
-
-    ```sh
-    pacman -S gcc
-    ```
-
-<br>
-
-### Instructions
-
-1. Download the **Gamecube SDK**.
-
-2. Create an **Environment Variable** called  <br>
-   `SDK_BASE_PATH` pointing to its root folder.
-
-   *The root folder should contain* <br>
-   *the `HW2` & `include` folders.*
-
-3. Install **Codewarrior** for the Gamecube.
-
-    *Preferrably use `v2.7` as it can be found in full.*
-
-4. Create an **Environment Variable** called <br>
-   `CW_BASE_PATH` pointing to the installation folder.
-
-5. Obtain a clean **DOL** of **KAR** **US** / **Korean**.
-
-6. Place it in the root folder with `baserom.dol` as its name.
-
-7. Download <kbd>**[GC_WII_COMPILERS.zip][GC]**</kbd>
-
-8. Extract it's content to `/tools/mwcc_compiler/`.
-
-9. Run the **Make** command :
-
-    ```sh
-    make
-    ```
-
-<br>
-
----
-
-<br>
-
 ## Contributions
 
 *`Contributions` / `Pull Requests` are welcome !*
 
+<br>
+
 
 <!----------------------------------------------------------------------------->
 
-[DevKitPro]: https://devkitpro.org/wiki/Getting_Started
-[Python3]: https://www.python.org/
-[GCC]: https://gcc.gnu.org/
-[GC]: https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip
+[Building]: Documentation/Building.md
 
 [Discord]: https://discord.gg/hKx3FJJgrV
 
@@ -101,3 +53,8 @@ this alternate badge with user count.
 
 [Discord Badge]: https://img.shields.io/discord/727908905392275526.svg?style=for-the-badge&label=&logo=Discord&logoColor=white&color=4f59c8&labelColor=7289DA
 -->
+
+
+<!---------------------------------[ Buttons ]--------------------------------->
+
+[Button Building]: https://img.shields.io/badge/Building-0099E5?style=for-the-badge&logoColor=white&logo=BookStack
