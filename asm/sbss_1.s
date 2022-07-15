@@ -509,20 +509,20 @@ lbl_805DE208:
 .global lbl_805DE20C
 lbl_805DE20C:
 	.skip 0x4
-.global lbl_805DE210
-lbl_805DE210:
+.global nb_active_lights
+nb_active_lights:
 	.skip 0x4
-.global lbl_805DE214
-lbl_805DE214:
+.global lightmask_diffuse
+lightmask_diffuse:
 	.skip 0x4
-.global lbl_805DE218
-lbl_805DE218:
+.global lightmask_specular
+lightmask_specular:
 	.skip 0x4
-.global lbl_805DE21C
-lbl_805DE21C:
+.global lightmask_attnfunc
+lightmask_attnfunc:
 	.skip 0x4
-.global lbl_805DE220
-lbl_805DE220:
+.global lightmask_alpha
+lightmask_alpha:
 	.skip 0x8
 .global lbl_805DE228
 lbl_805DE228:
