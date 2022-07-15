@@ -113,6 +113,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/mtx.o\
 	$(BUILD_DIR)/asm/sysdolphin/util.o\
 	$(BUILD_DIR)/asm/sysdolphin/objalloc.o\
+	$(BUILD_DIR)/src/sysdolphin/robj.o\
 	$(BUILD_DIR)/asm/sysdolphin/robj.o\
 	$(BUILD_DIR)/asm/sysdolphin/id.o\
 	$(BUILD_DIR)/src/sysdolphin/wobj.o\

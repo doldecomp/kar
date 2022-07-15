@@ -1201,9 +1201,9 @@ lbl_8048C4C4:
 	.4byte lbl_805DCBF4
 	.4byte func_80417D10
 	.4byte lbl_805DCBF8
-	.4byte func_804183D0
+	.4byte HSD_RObjGetAllocData
 	.4byte lbl_805DCBFC
-	.4byte func_804183DC
+	.4byte HSD_RvalueObjGetAllocData
 	.4byte lbl_805DCC04
 	.4byte HSD_ShadowGetAllocData
 	.4byte lbl_805DCC0C

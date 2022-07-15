@@ -746,11 +746,11 @@ lbl_8058BBB8:
 .global lbl_8058BBE4
 lbl_8058BBE4:
 	.skip 0x2C
-.global lbl_8058BC10
-lbl_8058BC10:
+.global robj_alloc_data
+robj_alloc_data:
 	.skip 0x2C
-.global lbl_8058BC3C
-lbl_8058BC3C:
+.global rvalue_alloc_data
+rvalue_alloc_data:
 	.skip 0x2C
 .global lbl_8058BC68
 lbl_8058BC68:
