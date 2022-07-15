@@ -119,6 +119,11 @@ void HSD_RObjRemoveAnimAllByFlags(HSD_RObj* robj, u32 flags)
     }
 }
 
+void HSD_RObjRemoveAnimAll(HSD_RObj* robj)
+{
+    HSD_RObjRemoveAnimAllByFlags(robj, 0x7FF);
+}
+
 void HSD_RObjReqAnimByFlags(HSD_RObj* robj, f32 startframe, u32 flags)
 {
     if (robj == NULL) {
