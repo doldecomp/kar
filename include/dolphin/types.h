@@ -72,4 +72,7 @@ typedef unsigned long	size_t;
 #endif // __cplusplus
 #endif // NULL
 
+#define assert_line(line, cond)                                                \
+    ((cond) ? ((void) 0) : __assert(__FILE__, line, #cond))
+
 #endif // __TYPES_H__

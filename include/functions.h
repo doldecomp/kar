@@ -31,4 +31,5 @@
 //
 //void Pad_InitCallback();
 
+void __assert(const char*, u32, const char*);
 void _OSReport(const char*, ...);

@@ -3,6 +3,6 @@
 
 #include "dolphin/types.h"
 
-#define HSD_GOBJ_USER_DATA_NONE -1
+#define HSD_GOBJ_USER_DATA_NONE 0xFF
 
 #endif

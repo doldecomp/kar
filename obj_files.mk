@@ -129,8 +129,8 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/gobjproc.o\
 	$(BUILD_DIR)/asm/sysdolphin/gobjplink.o\
 	$(BUILD_DIR)/asm/sysdolphin/gobjgxlink.o\
-	$(BUILD_DIR)/asm/sysdolphin/gobjobject.o\
-	$(BUILD_DIR)/asm/sysdolphin/gobjuserdata.o\
+	$(BUILD_DIR)/src/sysdolphin/gobjobject.o\
+	$(BUILD_DIR)/src/sysdolphin/gobjuserdata.o\
 	$(BUILD_DIR)/asm/sysdolphin/gobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/particle.o\
 	$(BUILD_DIR)/asm/text_804285AC.o\
