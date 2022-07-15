@@ -746,8 +746,8 @@ lbl_80415904:
 /* 80415950 00412750  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80415954 00412754  4E 80 00 20 */	blr 
 
-.global func_80415958
-func_80415958:
+.global splArcLengthPoint
+splArcLengthPoint:
 /* 80415958 00412758  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041595C 0041275C  7C 08 02 A6 */	mflr r0
 /* 80415960 00412760  90 01 00 14 */	stw r0, 0x14(r1)
