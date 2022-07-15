@@ -3827,8 +3827,8 @@ lbl_803B7EA8:
 /* 803B7EA8 003B4CA8  38 60 00 00 */	li r3, 0
 /* 803B7EAC 003B4CAC  4E 80 00 20 */	blr 
 
-.global func_803B7EB0
-func_803B7EB0:
+.global strcmp
+strcmp:
 /* 803B7EB0 003B4CB0  88 A3 00 00 */	lbz r5, 0(r3)
 /* 803B7EB4 003B4CB4  88 04 00 00 */	lbz r0, 0(r4)
 /* 803B7EB8 003B4CB8  7C 00 28 51 */	subf. r0, r0, r5
