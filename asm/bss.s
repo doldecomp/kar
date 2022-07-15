@@ -707,8 +707,8 @@ aobj_alloc_data:
 .global lbl_805899B0
 lbl_805899B0:
 	.skip 0x28
-.global lbl_805899D8
-lbl_805899D8:
+.global fobj_alloc_data
+fobj_alloc_data:
 	.skip 0x30
 .global lbl_80589A08
 lbl_80589A08:

@@ -183,8 +183,8 @@ func_803ADB88:
 func_803ADB8C:
 /* 803ADB8C 003AA98C  82 CB FF D8 */	lwz r22, -0x28(r11)
 
-.global func_803ADB90
-func_803ADB90:
+.global _restgpr_23
+_restgpr_23:
 /* 803ADB90 003AA990  82 EB FF DC */	lwz r23, -0x24(r11)
 
 .global func_803ADB94

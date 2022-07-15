@@ -99,6 +99,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/aobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/lobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/cobj.o\
+	$(BUILD_DIR)/src/sysdolphin/fobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/fobj.o\
 	$(BUILD_DIR)/src/sysdolphin/pobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/pobj.o\
