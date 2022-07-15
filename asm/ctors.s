@@ -1,7 +1,7 @@
 .section .ctors, "wa"  # 0x80489440 - 0x80489460
 .global lbl_80489440
 lbl_80489440:
-	.4byte 0x803AE1F8
-	.4byte 0x80383978
-	.4byte 0x8038814C
-	.4byte 0x00000000
+    .4byte __init_cpp_exceptions
+    .4byte func_80383978
+    .4byte func_8038814C
+    .4byte 0
