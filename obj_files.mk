@@ -126,6 +126,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/archive.o\
 	$(BUILD_DIR)/asm/sysdolphin/random.o\
 	$(BUILD_DIR)/asm/sysdolphin/bytecode.o\
+	$(BUILD_DIR)/src/sysdolphin/class.o\
 	$(BUILD_DIR)/asm/sysdolphin/class.o\
 	$(BUILD_DIR)/asm/sysdolphin/hash.o\
 	$(BUILD_DIR)/asm/sysdolphin/texp.o\
