@@ -2,8 +2,8 @@
 
 .section .text
 
-.global func_803D13FC
-func_803D13FC:
+.global PSMTXIdentity
+PSMTXIdentity:
 /* 803D13FC 003CE1FC  C0 02 F1 B4 */	lfs f0, lbl_805E58B4@sda21(r2)
 /* 803D1400 003CE200  C0 22 F1 B0 */	lfs f1, lbl_805E58B0@sda21(r2)
 /* 803D1404 003CE204  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
@@ -16,8 +16,8 @@ func_803D13FC:
 /* 803D1420 003CE220  F0 23 00 28 */	psq_st f1, 40(r3), 0, qr0
 /* 803D1424 003CE224  4E 80 00 20 */	blr 
 
-.global func_803D1428
-func_803D1428:
+.global PSMTXCopy
+PSMTXCopy:
 /* 803D1428 003CE228  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 803D142C 003CE22C  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
 /* 803D1430 003CE230  E0 23 00 08 */	psq_l f1, 8(r3), 0, qr0
