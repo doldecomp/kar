@@ -200,8 +200,8 @@ lbl_804185F0:
 /* 80418604 00415404  38 21 00 20 */	addi r1, r1, 0x20
 /* 80418608 00415408  4E 80 00 20 */	blr 
 
-.global func_8041860C
-func_8041860C:
+.global HSD_RObjReqAnimAll
+HSD_RObjReqAnimAll:
 /* 8041860C 0041540C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80418610 00415410  7C 08 02 A6 */	mflr r0
 /* 80418614 00415414  28 03 00 00 */	cmplwi r3, 0
@@ -234,8 +234,8 @@ lbl_80418660:
 /* 80418670 00415470  38 21 00 20 */	addi r1, r1, 0x20
 /* 80418674 00415474  4E 80 00 20 */	blr 
 
-.global func_80418678
-func_80418678:
+.global HSD_RObjAddAnimAll
+HSD_RObjAddAnimAll:
 /* 80418678 00415478  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041867C 0041547C  7C 08 02 A6 */	mflr r0
 /* 80418680 00415480  28 03 00 00 */	cmplwi r3, 0
