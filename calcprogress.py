@@ -31,7 +31,6 @@ import math
 #                                             #
 ###############################################
 
-DOL_PATH = "baserom.dol"
 MAP_PATH = "build/kar.kor/kar.map"
 
 MEM1_HI = 0x81200000
@@ -77,6 +76,12 @@ SECTION_DATA = 1
 ###############################################
 
 if __name__ == "__main__":
+    import sys
+    try:
+        DOL_PATH = sys.argv[1]
+    except:
+        DOL_PATH = "baserom.dol"
+
     # Sum up DOL section sizes
     dol_handle = open(DOL_PATH, "rb")
 
