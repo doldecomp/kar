@@ -2753,3 +2753,13 @@ lbl_80503F4C:
 	.4byte 0xFF000000
 	.4byte 0x00000000
 	.4byte 0x00000000
+
+
+.section .rodata
+    .balign 8
+.global lbl_8048C538
+lbl_8048C538:
+	.4byte 0x80000000
+	.4byte 0x40000000
+	.4byte 0x20000000
+	.4byte 0x10000000

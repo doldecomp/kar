@@ -7678,3 +7678,23 @@ lbl_80503A9C:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
+
+
+.section .rodata
+    .balign 8
+.global lbl_8048C470
+lbl_8048C470:
+	.4byte 0x3F800000
+	.4byte 0x3F800000
+	.4byte 0x3F800000
+.global lbl_8048C47C
+lbl_8048C47C:
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+.global lbl_8048C488
+lbl_8048C488:
+	.4byte 0x3F800000
+	.4byte 0x3F800000
+	.4byte 0x3F800000
+	.4byte 0x00000000

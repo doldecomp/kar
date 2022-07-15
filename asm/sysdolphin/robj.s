@@ -2567,3 +2567,19 @@ lbl_80504124:
 	.4byte 0x20746172
 	.4byte 0x6765742E
 	.4byte 0x0A000000
+
+
+.section .rodata
+    .balign 8
+.global lbl_8048C548
+lbl_8048C548:
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x3F800000
+	.4byte 0x3F800000
+	.4byte 0x3F800000
+	.4byte 0x00000000
+	.4byte 0x3F800000
+	.4byte 0x00000000
+	.4byte 0x00000000

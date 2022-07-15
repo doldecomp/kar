@@ -3358,3 +3358,17 @@ lbl_805032A0:
 	.4byte 0x6873645F
 	.4byte 0x6C6F626A
 	.4byte 0x00000000
+
+
+.section .rodata
+    .balign 8
+.global lbl_8048C458
+lbl_8048C458:
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+.global lbl_8048C464
+lbl_8048C464:
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000

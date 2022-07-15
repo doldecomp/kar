@@ -1172,3 +1172,47 @@ lbl_80503E58:
 	.4byte 0x80410928
 	.4byte 0x8041094C
 	.4byte 0x00000000
+
+
+.section .rodata
+    .balign 8
+.global lbl_8048C4A8
+lbl_8048C4A8:
+	.4byte 0x803FDAC0
+	.4byte 0x8040FBE8
+	.4byte 0x8041A7C8
+	.4byte 0x80418380
+	.4byte 0x8041E6A4
+	.4byte 0x8041A504
+	.4byte 0x00000000
+.global lbl_8048C4C4
+lbl_8048C4C4:
+	.4byte 0x803FB16C
+	.4byte 0x805DCBD0
+	.4byte 0x80403594
+	.4byte 0x805DCBD8
+	.4byte 0x8041A53C
+	.4byte 0x805DCBE0
+	.4byte 0x8041BC54
+	.4byte 0x805DCBE4
+	.4byte 0x8041BC60
+	.4byte 0x805DCBEC
+	.4byte 0x80417CD4
+	.4byte 0x805DCBF4
+	.4byte 0x80417D10
+	.4byte 0x805DCBF8
+	.4byte 0x804183D0
+	.4byte 0x805DCBFC
+	.4byte 0x804183DC
+	.4byte 0x805DCC04
+	.4byte 0x8041CF1C
+	.4byte 0x805DCC0C
+	.4byte 0x803F8A48
+	.4byte 0x805DCC14
+	.4byte 0x803F8A60
+	.4byte 0x805DCC1C
+	.4byte 0x803F8A54
+	.4byte 0x805DCC24
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
