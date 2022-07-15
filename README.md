@@ -1,92 +1,60 @@
 
-# Kirby Air Ride [![Discord Badge]][Discord]
+# Kirby Air Ride   [![Badge Discord]][Discord]   ![Badge Status]
 
-*A* ***WIP*** *decompilation of the* ***US*** / ***Korean*** *version.*
+*Decompilation of the **US** / **Korean** version.*
 
 <br>
+<br>
+
+<div align = center>
 
 ---
+
+[![Button Building]][Building] 
+
+---
+
+</div>
+
+<br>
+<br>
 
 ## DOL
 
-*The* ***DOL*** *built with this repository.*
-
-**File** : `main.dol` <br>
-**SHA1** : `977533bb96e6a16e127946396489be1b4164ac42`
-
----
-
+**SHA1**  :  `977533bb96e6a16e127946396489be1b4164ac42` <br>
+**File**  :  `main.dol`
 
 <br>
-
-## Building
-
-### Requirements
-
-- **[DevKitPro]**
-
-- **[Python3]**
-
-    ```sh
-    pacman -S msys/python3
-    ```
-
-- **[GCC]**
-
-    ```sh
-    pacman -S gcc
-    ```
-
-<br>
-
-### Instructions
-
-1. Download the **Gamecube SDK**.
-
-2. Create an **Environment Variable** called  <br>
-   `SDK_BASE_PATH` pointing to its root folder.
-
-   *The root folder should contain* <br>
-   *the `HW2` & `include` folders.*
-
-3. Install **Codewarrior** for the Gamecube.
-
-    *Preferrably use `v2.7` as it can be found in full.*
-
-4. Create an **Environment Variable** called <br>
-   `CW_BASE_PATH` pointing to the installation folder.
-
-5. Obtain a clean **DOL** of **KAR** **US** / **Korean**.
-
-6. Place it in the root folder with `baserom.dol` as its name.
-
-7. Download <kbd>**[GC_WII_COMPILERS.zip][GC]**</kbd>
-
-8. Extract it's content to `/tools/mwcc_compiler/`.
-
-9. Run the **Make** command :
-
-    ```sh
-    make
-    ```
-
-<br>
-
----
-
 <br>
 
 ## Contributions
 
-*`Contributions` / `Pull Requests` are welcome !*
+***Contributions***  */  **Pull Requests** are welcome !*
+
+<br>
 
 
 <!----------------------------------------------------------------------------->
 
-[DevKitPro]: https://devkitpro.org/wiki/Getting_Started
-[Python3]: https://www.python.org/
-[GCC]: https://gcc.gnu.org/
-[GC]: https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip
+[Building]: Documentation/Building.md
 
-[Discord Badge]: https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white
 [Discord]: https://discord.gg/hKx3FJJgrV
+
+
+<!----------------------------------[ Badges ]---------------------------------->
+
+[Badge Discord]: https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=Discord&logoColor=white
+[Badge Status]: https://img.shields.io/badge/Status-Work_In_Progress-02564e?style=for-the-badge&logo=GoogleAnalytics&logoColor=white&labelColor=00897B
+
+
+<!--
+Enable 'Discord Server Widgets' to use 
+this alternate badge with user count.
+
+[Badge Discord]: https://img.shields.io/discord/727908905392275526.svg?style=for-the-badge&label=&logo=Discord&logoColor=white&color=4f59c8&labelColor=7289DA
+-->
+
+
+<!---------------------------------[ Buttons ]--------------------------------->
+
+[Button Building]: https://img.shields.io/badge/Building-0099E5?style=for-the-badge&logoColor=white&logo=BookStack
