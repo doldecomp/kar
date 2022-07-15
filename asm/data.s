@@ -119040,24 +119040,8 @@ lbl_805046A8:
 	.4byte 0x00000000
 .global lbl_805046C0
 lbl_805046C0:
-	.4byte 0x4853445F
-	.4byte 0x41726368
-	.4byte 0x69766550
-	.4byte 0x61727365
-	.4byte 0x3A206279
-	.4byte 0x74652D6F
-	.4byte 0x72646572
-	.4byte 0x206D6973
-	.4byte 0x6D617463
-	.4byte 0x68212050
-	.4byte 0x6C656173
-	.4byte 0x65206368
-	.4byte 0x65636B20
-	.4byte 0x64617461
-	.4byte 0x20666F72
-	.4byte 0x6D61740A
-	.4byte 0x00000000
-	.4byte 0x00000000
+	.asciz "HSD_ArchiveParse: byte-order mismatch! Please check data format\n"
+	.balign 8
 .global lbl_80504708
 lbl_80504708:
 	.4byte 0x62797465

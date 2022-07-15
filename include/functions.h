@@ -30,3 +30,5 @@
 //#pragma section code_type ".text"
 //
 //void Pad_InitCallback();
+
+void _OSReport(const char*, ...);
