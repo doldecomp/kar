@@ -485,8 +485,8 @@ lbl_805DE1E0:
 .global lbl_805DE1E8
 lbl_805DE1E8:
 	.skip 0x4
-.global lbl_805DE1EC
-lbl_805DE1EC:
+.global current_mobj
+current_mobj:
 	.skip 0x4
 .global lbl_805DE1F0
 lbl_805DE1F0:

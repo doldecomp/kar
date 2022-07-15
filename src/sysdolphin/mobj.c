@@ -1,141 +1,139 @@
 #include "mobj.h"
 
+extern HSD_MObj* current_mobj;
+
+void func_803FB08C();
+HSD_MObjInfo lbl_80502AC0 = { func_803FB08C };
+
 void HSD_MObjSetCurrent(HSD_MObj *mobj)
 {
-  current_mobj = mobj;
+    current_mobj = mobj;
 }
 
 void HSD_MObjSetFlags(HSD_MObj *mobj, u32 flags)
 {
-  if (mobj) mobj->rendermode |= flags;
+    if (mobj != NULL)
+        mobj->rendermode |= flags;
 }
 
 void HSD_MObjClearFlags(HSD_MObj *mobj, u32 flags)
 {
-  if (mobj) mobj->rendermode &= ~flags;
+    if (mobj != NULL)
+        mobj->rendermode &= ~flags;
 }
 
 void HSD_MObjRemoveAnimByFlags(HSD_MObj *mobj, u32 flags)
 {
-  if (mobj == NULL)
-    return;
-  
-  if (flags & MOBJ_ANIM) {
-    HSD_AObjRemove(mobj->aobj);
-    mobj->aobj = NULL;
-  }
-  if (flags & TOBJ_ANIM) {
-    HSD_TObjRemoveAnimAll(mobj->tobj);
-  }
+    if (mobj == NULL)
+        return;
+
+    if (flags & MOBJ_ANIM) {
+        HSD_AObjRemove(mobj->aobj);
+        mobj->aobj = NULL;
+    }
+    if (flags & TOBJ_ANIM) {
+        HSD_TObjRemoveAnimAll(mobj->tobj);
+    }
 }
 
-void HSD_MObjAddAnim(HSD_MObj *mobj, HSD_MatAnim *matanim)
+void HSD_MObjAddAnim(HSD_MObj* mobj, HSD_MatAnim* matanim)
 {
-  if (mobj == NULL)
-    return;
+    if (mobj == NULL)
+        return;
 
-  if (matanim) {
-    if (mobj->aobj) {
-      HSD_AObjRemove(mobj->aobj);
+    if (matanim != NULL) {
+        if (mobj->aobj != NULL) {
+            HSD_AObjRemove(mobj->aobj);
+        }
+        mobj->aobj = HSD_AObjLoadDesc(matanim->aobjdesc);
+        HSD_TObjAddAnim(mobj->tobj, matanim->texanim);
     }
-    mobj->aobj = HSD_AObjLoadDesc(matanim->aobjdesc);
-    HSD_TObjAddAnimAll(mobj->tobj, matanim->texanim); 
-  }
 }
 
-void HSD_MObjReqAnimByFlags(HSD_MObj *mobj, float startframe, u32 flags)
+void HSD_MObjReqAnimByFlags(HSD_MObj* mobj, f32 startframe, u32 flags)
 {
-  if (mobj == NULL)
-    return;
-  if (flags & MOBJ_ANIM) {
-    HSD_AObjReqAnim(mobj->aobj, startframe);
-  }
-  HSD_TObjReqAnimAllByFlags(mobj->tobj, startframe, flags);
+    if (mobj == NULL)
+        return;
+    if (flags & MOBJ_ANIM) {
+        HSD_AObjReqAnim(mobj->aobj, startframe);
+    }
+    HSD_TObjReqAnimAllByFlags(mobj->tobj, startframe, flags);
 }
 
-static void MObjUpdateFunc(void *obj, u32 type, FObjData *val)
+inline f32 HSD_ClampFloat(f32 val, f32 min, f32 max)
 {
-  HSD_MObj *mobj = obj;
-
-  if (mobj == NULL)
-    return;
-  switch (type) {
-  case HSD_A_M_AMBIENT_R:
-    if (mobj->mat) {
-      mobj->mat->ambient.r = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_AMBIENT_G:
-    if (mobj->mat) {
-      mobj->mat->ambient.g = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_AMBIENT_B:
-    if (mobj->mat) {
-      mobj->mat->ambient.b = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_DIFFUSE_R:
-    if (mobj->mat) {
-      mobj->mat->diffuse.r = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_DIFFUSE_G:
-    if (mobj->mat) {
-      mobj->mat->diffuse.g = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_DIFFUSE_B:
-    if (mobj->mat) {
-      mobj->mat->diffuse.b = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_ALPHA:
-    if (mobj->mat) {
-      mobj->mat->alpha = HSD_ClampFloat(1.0F - val->fv, 0, 1);
-    }
-    break;
-  case HSD_A_M_SPECULAR_R:
-    if (mobj->mat) {
-      mobj->mat->specular.r = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_SPECULAR_G:
-    if (mobj->mat) {
-      mobj->mat->specular.g = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_SPECULAR_B:
-    if (mobj->mat) {
-      mobj->mat->specular.b = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_PE_REF0:
-    if (mobj->pe) {
-      mobj->pe->ref0 = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_PE_REF1:
-    if (mobj->pe) {
-      mobj->pe->ref1 = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  case HSD_A_M_PE_DSTALPHA:
-    if (mobj->pe) {
-      mobj->pe->dst_alpha = (u8)(255.0F * HSD_ClampFloat(val->fv, 0, 1));
-    }
-    break;
-  }
+    if (val <= min) return min;
+    if (val >= max) return max;
+    return val;
 }
 
-void HSD_MObjAnim(HSD_MObj *mobj)
+void MObjUpdateFunc(void* obj, u32 type, FObjData* val)
 {
-  if (mobj == NULL)
-    return;
-  HSD_AObjInterpretAnim(mobj->aobj, mobj, MObjUpdateFunc);
-  HSD_TObjAnimAll(mobj->tobj);
+    HSD_MObj* mobj = obj;
+
+    if (mobj == NULL)
+        return;
+
+    switch (type) {
+    case HSD_A_M_AMBIENT_R:
+        if (mobj->mat)
+            mobj->mat->ambient.r = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        break;
+    case HSD_A_M_AMBIENT_G:
+        if (mobj->mat)
+            mobj->mat->ambient.g = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        break;
+    case HSD_A_M_AMBIENT_B:
+        if (mobj->mat)
+            mobj->mat->ambient.b = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        break;
+    case HSD_A_M_DIFFUSE_R:
+        if (mobj->mat)
+            mobj->mat->diffuse.r = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        break;
+    case HSD_A_M_DIFFUSE_G:
+        if (mobj->mat)
+            mobj->mat->diffuse.g = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        break;
+    case HSD_A_M_DIFFUSE_B:
+        if (mobj->mat)
+            mobj->mat->diffuse.b = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        break;
+    case HSD_A_M_ALPHA:
+        if (mobj->mat)
+            mobj->mat->alpha = HSD_ClampFloat(1 - val->fv, 0, 1);
+        break;
+    case HSD_A_M_SPECULAR_R:
+        if (mobj->mat)
+            mobj->mat->specular.r = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        break;
+    case HSD_A_M_SPECULAR_G:
+        if (mobj->mat)
+            mobj->mat->specular.g = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        break;
+    case HSD_A_M_SPECULAR_B:
+        if (mobj->mat)
+            mobj->mat->specular.b = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        break;
+    case HSD_A_M_PE_REF0:
+        if (mobj->pe) {
+            mobj->pe->ref0 = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        }
+        break;
+    case HSD_A_M_PE_REF1:
+        if (mobj->pe) {
+            mobj->pe->ref1 = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        }
+        break;
+    case HSD_A_M_PE_DSTALPHA:
+        if (mobj->pe) {
+            mobj->pe->dst_alpha = 255 * HSD_ClampFloat(val->fv, 0, 1);
+        }
+        break;
+    }
 }
 
+/*
 static int MObjLoad(HSD_MObj *mobj, HSD_MObjDesc *desc)
 {
   mobj->rendermode = desc->rendermode;
@@ -187,3 +185,4 @@ HSD_MObj *HSD_MObjLoadDesc(HSD_MObjDesc *mobjdesc)
     return NULL;
   }
 }
+*/

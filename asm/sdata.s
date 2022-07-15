@@ -12380,27 +12380,53 @@ lbl_805DCBC4:
 lbl_805DCBC8:
 	.4byte 0x61646472
 	.4byte 0x00000000
+.global lbl_805DCBD0
+lbl_805DCBD0:
 	.4byte 0x616F626A
 	.4byte 0x00000000
+.global lbl_805DCBD8
+lbl_805DCBD8:
 	.4byte 0x666F626A
 	.4byte 0x00000000
+.global lbl_805DCBE0
+lbl_805DCBE0:
 	.4byte 0x69640000
+.global lbl_805DCBE4
+lbl_805DCBE4:
 	.4byte 0x736C6973
 	.4byte 0x74000000
+.global lbl_805DCBEC
+lbl_805DCBEC:
 	.4byte 0x646C6973
 	.4byte 0x74000000
+.global lbl_805DCBF4
+lbl_805DCBF4:
 	.4byte 0x76656300
+.global lbl_805DCBF8
+lbl_805DCBF8:
 	.4byte 0x6D747800
+.global lbl_805DCBFC
+lbl_805DCBFC:
 	.4byte 0x726F626A
 	.4byte 0x00000000
+.global lbl_805DCC04
+lbl_805DCC04:
 	.4byte 0x7276616C
 	.4byte 0x00000000
+.global lbl_805DCC0C
+lbl_805DCC0C:
 	.4byte 0x73686164
 	.4byte 0x6F770000
+.global lbl_805DCC14
+lbl_805DCC14:
 	.4byte 0x72656E64
 	.4byte 0x65720000
+.global lbl_805DCC1C
+lbl_805DCC1C:
 	.4byte 0x6368616E
 	.4byte 0x00000000
+.global lbl_805DCC24
+lbl_805DCC24:
 	.4byte 0x74657672
 	.4byte 0x65670000
 .global lbl_805DCC2C

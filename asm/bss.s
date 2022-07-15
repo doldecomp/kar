@@ -758,11 +758,11 @@ lbl_8058BC68:
 .global lbl_8058BC94
 lbl_8058BC94:
 	.skip 0x194
-.global lbl_8058BE28
-lbl_8058BE28:
+.global slist_alloc_data
+slist_alloc_data:
 	.skip 0x2C
-.global lbl_8058BE54
-lbl_8058BE54:
+.global dlist_alloc_data
+dlist_alloc_data:
 	.skip 0x2C
 .global lbl_8058BE80
 lbl_8058BE80:

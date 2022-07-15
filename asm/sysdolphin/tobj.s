@@ -610,8 +610,8 @@ lbl_803F5398:
 /* 803F53A0 003F21A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F53A4 003F21A4  4E 80 00 20 */	blr 
 
-.global func_803F53A8
-func_803F53A8:
+.global HSD_TObjAnimAll
+HSD_TObjAnimAll:
 /* 803F53A8 003F21A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F53AC 003F21AC  7C 08 02 A6 */	mflr r0
 /* 803F53B0 003F21B0  28 03 00 00 */	cmplwi r3, 0

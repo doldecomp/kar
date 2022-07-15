@@ -146,6 +146,7 @@ typedef struct _HSD_MObjInfo {
     HSD_TExp* (*make_texp)(HSD_MObj* mobj, HSD_TObj* tobj_top, HSD_TExp** list);
     void (*setup_tev)(HSD_MObj* mobj, HSD_TObj* tobj, u32 rendermode);
     void (*unset)(HSD_MObj* mobj, u32 rendermode);
+    u8 padding[4];
 } HSD_MObjInfo;
 
 #define HSD_MOBJ(o) ((HSD_MObj*)(o))

@@ -109,7 +109,7 @@ void HSD_DObjReqAnimAllByFlags(HSD_DObj* dobj, f32 startframe, u32 flags)
 
 // Not quite matching when copied from melee (SSBM).
 // Seems that HSD_ClassInfo was altered.
-extern void func_803F9EBC();
+extern void HSD_MObjAnim();
 extern void HSD_PObjAnimAll();
 #pragma push
 asm void HSD_DObjAnimAll(HSD_DObj* dobj)
@@ -134,7 +134,7 @@ lbl_803F4610:
 /* 803F462C 003F142C  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 803F4630 003F1430  48 01 0E C9 */	bl HSD_PObjAnimAll
 /* 803F4634 003F1434  80 7F 00 08 */	lwz r3, 8(r31)
-/* 803F4638 003F1438  48 00 58 85 */	bl func_803F9EBC
+/* 803F4638 003F1438  48 00 58 85 */	bl HSD_MObjAnim
 lbl_803F463C:
 /* 803F463C 003F143C  83 FF 00 04 */	lwz r31, 4(r31)
 lbl_803F4640:
@@ -274,7 +274,7 @@ void HSD_DObjResolveRefsAll(HSD_DObj* dobj, HSD_DObjDesc* desc)
 #pragma push
 void _restgpr_26();
 void _savegpr_26();
-void func_803F98BC();
+void HSD_MObjSetCurrent();
 asm void HSD_DObjDisp()
 {
     nofralloc
@@ -288,7 +288,7 @@ asm void HSD_DObjDisp()
 /* 803F49B4 003F17B4  80 63 00 08 */	lwz r3, 8(r3)
 /* 803F49B8 003F17B8  7C BC 2B 78 */	mr r28, r5
 /* 803F49BC 003F17BC  7C DD 33 78 */	mr r29, r6
-/* 803F49C0 003F17C0  48 00 4E FD */	bl func_803F98BC
+/* 803F49C0 003F17C0  48 00 4E FD */	bl HSD_MObjSetCurrent
 /* 803F49C4 003F17C4  57 BF 01 4B */	rlwinm. r31, r29, 0, 5, 5
 /* 803F49C8 003F17C8  40 82 00 1C */	bne lbl_803F49E4
 /* 803F49CC 003F17CC  80 7A 00 08 */	lwz r3, 8(r26)
@@ -323,7 +323,7 @@ lbl_803F4A10:
 /* 803F4A34 003F1834  4E 80 04 21 */	bctrl
 lbl_803F4A38:
 /* 803F4A38 003F1838  38 60 00 00 */	li r3, 0
-/* 803F4A3C 003F183C  48 00 4E 81 */	bl func_803F98BC
+/* 803F4A3C 003F183C  48 00 4E 81 */	bl HSD_MObjSetCurrent
 /* 803F4A40 003F1840  39 61 00 20 */	addi r11, r1, 0x20
 /* 803F4A44 003F1844  4B FB 91 59 */	bl _restgpr_26
 /* 803F4A48 003F1848  80 01 00 24 */	lwz r0, 0x24(r1)
