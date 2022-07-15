@@ -141,3 +141,33 @@ void HSD_RObjReqAnimAllByFlags(HSD_RObj* robj, f32 startframe, u32 flags)
     }
 }
 
+void HSD_RObjReqAnimAll(HSD_RObj* robj, f32 startframe)
+{
+    HSD_RObjReqAnimAllByFlags(robj, startframe, 0x7FF);
+}
+
+void HSD_RObjAddAnim(HSD_RObj* robj, HSD_RObjAnimJoint* anim)
+{
+    if (robj == NULL || anim == NULL) {
+        return;
+    }
+
+    if (robj->aobj != NULL) {
+        HSD_AObjRemove(robj->aobj);
+    }
+    robj->aobj = HSD_AObjLoadDesc(anim->aobjdesc);
+}
+
+void HSD_RObjAddAnimAll(HSD_RObj* robj, HSD_RObjAnimJoint* anim)
+{
+    HSD_RObj* i;
+    HSD_RObjAnimJoint* j;
+
+    if (robj == NULL || anim == NULL) {
+        return;
+    }
+
+    for (i = robj, j = anim; i != NULL && j != NULL; i = i->next, j = j->next) {
+        HSD_RObjAddAnim(i, j);
+    }
+}
