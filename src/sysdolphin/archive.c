@@ -56,3 +56,22 @@ s32 HSD_ArchiveParse(HSD_Archive* archive, u8* src, u32 file_size)
 
     return 0;
 }
+
+void* HSD_ArchiveGetPublicAddress(HSD_Archive* archive, char* symbols) {
+    int i;
+
+    for (i = 0; i < archive->header.nb_public; i++) {
+        if (strcmp(archive->symbols + archive->public_info[i].symbol, symbols) == 0) // If both strings are equal, we've found the node
+            return archive->data + archive->public_info[i].offset;;
+    }
+
+    return NULL;
+}
+
+char* HSD_ArchiveGetExtern(HSD_Archive* archive, s32 offset)
+{
+    if (offset < 0 || archive->header.nb_extern <= offset) {
+        return NULL;
+    }
+    return archive->symbols + archive->extern_info[offset].symbol;
+}
