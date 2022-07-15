@@ -271,67 +271,22 @@ void HSD_DObjResolveRefsAll(HSD_DObj* dobj, HSD_DObjDesc* desc)
     }
 }
 
-#pragma push
-void _restgpr_26();
-void _savegpr_26();
-void HSD_MObjSetCurrent();
-asm void HSD_DObjDisp()
+void HSD_DObjDisp(HSD_DObj* dobj, Mtx vmtx, Mtx pmtx, u32 rendermode)
 {
-    nofralloc
-/* 803F4998 003F1798  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 803F499C 003F179C  7C 08 02 A6 */	mflr r0
-/* 803F49A0 003F17A0  90 01 00 24 */	stw r0, 0x24(r1)
-/* 803F49A4 003F17A4  39 61 00 20 */	addi r11, r1, 0x20
-/* 803F49A8 003F17A8  4B FB 91 A9 */	bl _savegpr_26
-/* 803F49AC 003F17AC  7C 7A 1B 78 */	mr r26, r3
-/* 803F49B0 003F17B0  7C 9B 23 78 */	mr r27, r4
-/* 803F49B4 003F17B4  80 63 00 08 */	lwz r3, 8(r3)
-/* 803F49B8 003F17B8  7C BC 2B 78 */	mr r28, r5
-/* 803F49BC 003F17BC  7C DD 33 78 */	mr r29, r6
-/* 803F49C0 003F17C0  48 00 4E FD */	bl HSD_MObjSetCurrent
-/* 803F49C4 003F17C4  57 BF 01 4B */	rlwinm. r31, r29, 0, 5, 5
-/* 803F49C8 003F17C8  40 82 00 1C */	bne lbl_803F49E4
-/* 803F49CC 003F17CC  80 7A 00 08 */	lwz r3, 8(r26)
-/* 803F49D0 003F17D0  7F A4 EB 78 */	mr r4, r29
-/* 803F49D4 003F17D4  80 A3 00 00 */	lwz r5, 0(r3)
-/* 803F49D8 003F17D8  81 85 00 3C */	lwz r12, 0x3c(r5)
-/* 803F49DC 003F17DC  7D 89 03 A6 */	mtctr r12
-/* 803F49E0 003F17E0  4E 80 04 21 */	bctrl
-lbl_803F49E4:
-/* 803F49E4 003F17E4  83 DA 00 0C */	lwz r30, 0xc(r26)
-/* 803F49E8 003F17E8  48 00 00 28 */	b lbl_803F4A10
-lbl_803F49EC:
-/* 803F49EC 003F17EC  80 DE 00 00 */	lwz r6, 0(r30)
-/* 803F49F0 003F17F0  7F C3 F3 78 */	mr r3, r30
-/* 803F49F4 003F17F4  7F 64 DB 78 */	mr r4, r27
-/* 803F49F8 003F17F8  7F 85 E3 78 */	mr r5, r28
-/* 803F49FC 003F17FC  81 86 00 3C */	lwz r12, 0x3c(r6)
-/* 803F4A00 003F1800  7F A6 EB 78 */	mr r6, r29
-/* 803F4A04 003F1804  7D 89 03 A6 */	mtctr r12
-/* 803F4A08 003F1808  4E 80 04 21 */	bctrl
-/* 803F4A0C 003F180C  83 DE 00 04 */	lwz r30, 4(r30)
-lbl_803F4A10:
-/* 803F4A10 003F1810  28 1E 00 00 */	cmplwi r30, 0
-/* 803F4A14 003F1814  40 82 FF D8 */	bne lbl_803F49EC
-/* 803F4A18 003F1818  28 1F 00 00 */	cmplwi r31, 0
-/* 803F4A1C 003F181C  40 82 00 1C */	bne lbl_803F4A38
-/* 803F4A20 003F1820  80 7A 00 08 */	lwz r3, 8(r26)
-/* 803F4A24 003F1824  7F A4 EB 78 */	mr r4, r29
-/* 803F4A28 003F1828  80 A3 00 00 */	lwz r5, 0(r3)
-/* 803F4A2C 003F182C  81 85 00 50 */	lwz r12, 0x50(r5)
-/* 803F4A30 003F1830  7D 89 03 A6 */	mtctr r12
-/* 803F4A34 003F1834  4E 80 04 21 */	bctrl
-lbl_803F4A38:
-/* 803F4A38 003F1838  38 60 00 00 */	li r3, 0
-/* 803F4A3C 003F183C  48 00 4E 81 */	bl HSD_MObjSetCurrent
-/* 803F4A40 003F1840  39 61 00 20 */	addi r11, r1, 0x20
-/* 803F4A44 003F1844  4B FB 91 59 */	bl _restgpr_26
-/* 803F4A48 003F1848  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 803F4A4C 003F184C  7C 08 03 A6 */	mtlr r0
-/* 803F4A50 003F1850  38 21 00 20 */	addi r1, r1, 0x20
-/* 803F4A54 003F1854  4E 80 00 20 */	blr
+    HSD_PObj* p;
+
+    HSD_MObjSetCurrent(dobj->mobj);
+    if ((rendermode & 0x4000000) == 0) {
+        HSD_MOBJ_METHOD(dobj->mobj)->setup(dobj->mobj, rendermode);
+    }
+    for (p = dobj->pobj; p != NULL; p = p->next) {
+        HSD_POBJ_METHOD(p)->disp(p, vmtx, pmtx, rendermode);
+    }
+    if ((rendermode & 0x4000000) == 0) {
+        HSD_MOBJ_METHOD(dobj->mobj)->unset(dobj->mobj, rendermode);
+    }
+    HSD_MObjSetCurrent(NULL);
 }
-#pragma pop
 
 void DObjRelease(HSD_Class* o)
 {
