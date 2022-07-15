@@ -1,6 +1,8 @@
 .include "macros.inc"
 
 .section ._extab, "wa"  # 0x80005600 - 0x80005700
+
+.global lbl_extab
 lbl_extab:
 	.4byte 0x10180000
 	.4byte 0x00000040
@@ -12,35 +14,59 @@ lbl_extab:
 	.4byte 0x00000044
 	.4byte 0x00000008
 	.4byte 0x8D000008
+.global lbl_80005628
+lbl_80005628:
 	.4byte 0x20080000
 	.4byte 0x00000000
+.global lbl_80005630
+lbl_80005630:
 	.4byte 0x20080000
 	.4byte 0x00000060
 	.4byte 0x00000010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte 0x803AD3BC
+	.4byte __partial_array_destructor
+.global lbl_80005648
+lbl_80005648:
 	.4byte 0x18080000
 	.4byte 0x00000000
+.global lbl_80005650
+lbl_80005650:
 	.4byte 0x00080000
 	.4byte 0x00000000
+.global lbl_80005658
+lbl_80005658:
 	.4byte 0x00080000
 	.4byte 0x00000000
+.global lbl_80005660
+lbl_80005660:
 	.4byte 0x00080000
 	.4byte 0x00000000
+.global lbl_80005668
+lbl_80005668:
 	.4byte 0x00080000
 	.4byte 0x00000000
+.global lbl_80005670
+lbl_80005670:
 	.4byte 0x08080000
 	.4byte 0x00000000
+.global lbl_80005678
+lbl_80005678:
 	.4byte 0x08080000
 	.4byte 0x00000000
+.global lbl_80005680
+lbl_80005680:
 	.4byte 0x00080000
 	.4byte 0x00000000
+.global lbl_80005688
+lbl_80005688:
 	.4byte 0x30080000
 	.4byte 0x00000270
 	.4byte 0x00100010
 	.4byte 0x00000000
 	.4byte 0x8E000000
+.global lbl_8000569C
+lbl_8000569C:
 	.4byte 0x30180000
 	.4byte 0x00000028
 	.4byte 0x00000018
@@ -52,14 +78,22 @@ lbl_extab:
 	.4byte 0x0000002C
 	.4byte 0x0000001C
 	.4byte 0x8D00001C
+.global lbl_800056C8
+lbl_800056C8:
 	.4byte 0x08080000
 	.4byte 0x00000000
+.global lbl_800056D0
+lbl_800056D0:
 	.4byte 0x40080000
 	.4byte 0x00000034
 	.4byte 0x012C0010
 	.4byte 0x00000000
 	.4byte 0x8E000000
+.global lbl_800056E4
+lbl_800056E4:
 	.4byte 0x10080000
 	.4byte 0x00000000
+.global lbl_800056EC
+lbl_800056EC:
 	.4byte 0x00080000
 	.4byte 0x00000000

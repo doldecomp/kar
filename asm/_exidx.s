@@ -2,62 +2,62 @@
 
 .section ._exidx, "wa"  # 0x80005700 - 0x80005800
 lbl_extabindex:
-	.4byte 0x803AD1C8
+    .4byte __destroy_new_array2
 	.4byte 0x00000074
-	.4byte 0x80005600
-	.4byte 0x803AD248
+	.4byte lbl_extab
+    .4byte __destroy_arr
 	.4byte 0x00000078
-	.4byte 0x80005628
-	.4byte 0x803AD2C0
+	.4byte lbl_80005628
+    .4byte __construct_array
 	.4byte 0x000000FC
-	.4byte 0x80005630
-	.4byte 0x803AD3BC
+	.4byte lbl_80005630
+    .4byte __partial_array_destructor
 	.4byte 0x000000B8
-	.4byte 0x80005648
-	.4byte 0x803AD6A0
+	.4byte lbl_80005648
+    .4byte unexpected
 	.4byte 0x00000028
-	.4byte 0x80005650
-	.4byte 0x803AD6C8
+	.4byte lbl_80005650
+	.4byte terminate
 	.4byte 0x00000028
-	.4byte 0x80005658
-	.4byte 0x803AD6F0
+	.4byte lbl_80005658
+	.4byte set_terminate
 	.4byte 0x00000028
-	.4byte 0x80005660
-	.4byte 0x803AD718
+	.4byte lbl_80005660
+	.4byte dthandler
 	.4byte 0x00000020
-	.4byte 0x80005668
-	.4byte 0x803AD760
+	.4byte lbl_80005668
+	.4byte func_803AD760
 	.4byte 0x00000264
-	.4byte 0x80005670
-	.4byte 0x803AD9C4
+	.4byte lbl_80005670
+	.4byte lbl_803AD9C4
 	.4byte 0x0000005C
-	.4byte 0x80005678
-	.4byte 0x803AE694
+	.4byte lbl_80005678
+	.4byte __end__catch
 	.4byte 0x00000044
-	.4byte 0x80005680
-	.4byte 0x803AE6D8
+	.4byte lbl_80005680
+	.4byte ExPPC_ThrowHandler
 	.4byte 0x00000410
-	.4byte 0x80005688
-	.4byte 0x803AEAE8
+	.4byte lbl_80005688
+	.4byte __unexpected
 	.4byte 0x000001B4
-	.4byte 0x8000569C
-	.4byte 0x803AEC9C
+	.4byte lbl_8000569C
+	.4byte lbl_803AEC9C
 	.4byte 0x0000005C
-	.4byte 0x800056C8
-	.4byte 0x803AECF8
+	.4byte lbl_800056C8
+	.4byte func_803AECF8
 	.4byte 0x0000050C
-	.4byte 0x800056D0
-	.4byte 0x803AF44C
+	.4byte lbl_800056D0
+	.4byte func_803AF44C
 	.4byte 0x000001C0
-	.4byte 0x800056E4
-	.4byte 0x803AF60C
+	.4byte lbl_800056E4
+	.4byte func_803AF60C
 	.4byte 0x00000204
-	.4byte 0x800056EC
+	.4byte lbl_800056EC
 .global lbl_800057CC
 lbl_800057CC:
-	.4byte 0x80005700
-	.4byte 0x800057CC
-	.4byte 0x803AD1C8
+	.4byte lbl_extabindex
+	.4byte lbl_800057CC
+	.4byte __destroy_new_array2
 	.4byte 0x00002648
 	.4byte 0x00000000
 	.4byte 0x00000000
