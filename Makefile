@@ -52,7 +52,7 @@ O_FILES := $(SBSS_O_FILES) $(INIT_O_FILES) $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES
 # Tools
 #-------------------------------------------------------------------------------
 
-MWCC_VERSION := 1.0
+MWCC_VERSION := 1.3.2
 MWLD_VERSION := 1.1
 
 # Programs
@@ -66,6 +66,7 @@ endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
 CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
+CC10    := $(WINE) tools/mwcc_compiler/1.0/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
 ELF2DOL := tools/elf2dol
 SHA1SUM := sha1sum
@@ -73,12 +74,11 @@ SHA1SUM := sha1sum
 POSTPROC := tools/postprocess.py
 
 # Options
-INCLUDES := -i include/ -i include/dolphin/ -i src/sysdolphin/ -i include/dolphin/mtx/ \
-			-i include/init
+INCLUDES := -I- -i include/ -i src/
 
 ASFLAGS := -mgekko -I include/ 
 LDFLAGS := -map $(MAP) -fp hard -nodefaults
-CFLAGS  := -Cpp_exceptions off -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
+CFLAGS  := -cwd source -Cpp_exceptions off -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
@@ -125,6 +125,8 @@ $(ELF): $(O_FILES) $(LDSCRIPT)
 $(BUILD_DIR)/%.o: %.s
 	@echo Assembling $<
 	$(QUIET) $(AS) $(ASFLAGS) -o $@ $<
+
+$(BUILD_DIR)/src/os/__start.o: CC := $(CC10)
 
 $(BUILD_DIR)/%.o: %.c
 	@echo Compiling $<
