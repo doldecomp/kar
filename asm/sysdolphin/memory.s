@@ -1149,15 +1149,8 @@ HSD_Alloc:
     .balign 8
 .global lbl_80504500
 lbl_80504500:
-	.4byte 0x6D656D6F
-	.4byte 0x72792E63
-	.4byte 0x00000000
+    .asciz "memory.c"
+    .balign 4
 .global lbl_8050450C
 lbl_8050450C:
-	.4byte 0x73697A65
-	.4byte 0x203D3D20
-	.4byte 0x73697A65
-	.4byte 0x6F66285F
-	.4byte 0x5F6D656D
-	.4byte 0x5F636229
-	.4byte 0x00000000
+    .asciz "size == sizeof(__mem_cb)"

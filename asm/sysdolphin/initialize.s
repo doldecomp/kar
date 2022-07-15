@@ -1053,67 +1053,34 @@ lbl_80410A78:
 	.balign 8
 .global lbl_80503C60
 lbl_80503C60:
-	.4byte 0x696E6974
-	.4byte 0x69616C69
-	.4byte 0x7A652E63
-	.4byte 0x00000000
+    .asciz "initialize.c"
+    .balign 4
 .global lbl_80503C70
 lbl_80503C70:
-	.4byte 0x4E6F206D
-	.4byte 0x656D6F72
-	.4byte 0x79207370
-	.4byte 0x61636520
-	.4byte 0x72656D61
-	.4byte 0x696E7320
-	.4byte 0x666F7220
-	.4byte 0x5846422E
-	.4byte 0x0A000000
+    .asciz "No memory space remains for XFB.\n"
+    .balign 4
 .global lbl_80503C94
 lbl_80503C94:
-	.4byte 0x6E6F2073
-	.4byte 0x70616365
-	.4byte 0x2072656D
-	.4byte 0x61696E73
-	.4byte 0x20666F72
-	.4byte 0x20677820
-	.4byte 0x6669666F
-	.4byte 0x2E0A0000
+    .asciz "no space remains for gx fifo.\n"
+    .balign 4
 .global lbl_80503CB4
 lbl_80503CB4:
-	.4byte 0x21697061
-	.4byte 0x72616D5F
-	.4byte 0x6D656D6F
-	.4byte 0x72795F63
-	.4byte 0x616C6C62
-	.4byte 0x61636B73
-	.4byte 0x00000000
-	.4byte 0x6D697373
-	.4byte 0x696E6720
-	.4byte 0x61726775
-	.4byte 0x6D656E74
-	.4byte 0x2E0A0000
+    .asciz "!iparam_memory_callbacks"
+    .balign 4
+    .asciz "missing argument.\n"
+    .balign 4
 .global lbl_80503CE4
 lbl_80503CE4:
-	.4byte 0x73797364
-	.4byte 0x6F6C7068
-	.4byte 0x696E5F62
-	.4byte 0x6173655F
-	.4byte 0x6C696272
-	.4byte 0x61727900
+    .asciz "sysdolphin_base_library"
+    .balign 4
 .global lbl_80503CFC
 lbl_80503CFC:
-	.4byte 0x7069785F
-	.4byte 0x666D7420
-	.4byte 0x213D2047
-	.4byte 0x585F5046
-	.4byte 0x5F524742
-	.4byte 0x3536355F
-	.4byte 0x5A313600
+    .asciz "pix_fmt != GX_PF_RGB565_Z16"
+    .balign 4
 .global lbl_80503D18
 lbl_80503D18:
-	.4byte 0x6F626A61
-	.4byte 0x6C6C6F63
-	.4byte 0x2E680000
+    .asciz "objalloc.h"
+    .balign 4
 .global lbl_80503D24
 lbl_80503D24:
 	.4byte 0x6F626A61
