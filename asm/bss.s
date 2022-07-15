@@ -752,11 +752,11 @@ robj_alloc_data:
 .global rvalue_alloc_data
 rvalue_alloc_data:
 	.skip 0x2C
-.global lbl_8058BC68
-lbl_8058BC68:
+.global hsd_iddata
+hsd_iddata:
 	.skip 0x2C
-.global lbl_8058BC94
-lbl_8058BC94:
+.global default_table
+default_table:
 	.skip 0x194
 .global slist_alloc_data
 slist_alloc_data:

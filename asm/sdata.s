@@ -12480,11 +12480,3 @@ lbl_805DCC7C:
 .global lbl_805DCC84
 lbl_805DCC84:
 	.4byte 0x30000000
-.global lbl_805DCC88
-lbl_805DCC88:
-	.4byte 0x69642E63
-	.4byte 0x00000000
-.global lbl_805DCC90
-lbl_805DCC90:
-	.4byte 0x656E7472
-	.4byte 0x79000000
