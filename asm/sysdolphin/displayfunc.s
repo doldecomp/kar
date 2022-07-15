@@ -1730,3 +1730,61 @@ lbl_8040FBC4:
 /* 8040FC10 0040CA10  90 0D FA B4 */	stw r0, lbl_805DCB94@sda21(r13)
 /* 8040FC14 0040CA14  90 AD 11 A8 */	stw r5, lbl_805DE288@sda21(r13)
 /* 8040FC18 0040CA18  4E 80 00 20 */	blr 
+
+
+.section .data
+	.balign 8
+.global lbl_80503BA0
+lbl_80503BA0:
+	.4byte 0x64697370
+	.4byte 0x6C617966
+	.4byte 0x756E632E
+	.4byte 0x63000000
+.global lbl_80503BB0
+lbl_80503BB0:
+	.4byte 0x756E6B6F
+	.4byte 0x776E2074
+	.4byte 0x79706520
+	.4byte 0x6F662062
+	.4byte 0x696C6C62
+	.4byte 0x6F617264
+	.4byte 0x2E0A0000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+.global lbl_80503BE0
+lbl_80503BE0:
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF

@@ -21,3 +21,33 @@ ObjInfoInit:
 /* 8041BF10 00418D10  7C 08 03 A6 */	mtlr r0
 /* 8041BF14 00418D14  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041BF18 00418D18  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global objInfo
+objInfo:
+	.4byte 0x8041BED8
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+.global sysdolphin_base_library
+sysdolphin_base_library:
+	.4byte 0x73797364
+	.4byte 0x6F6C7068
+	.4byte 0x696E5F62
+	.4byte 0x6173655F
+	.4byte 0x6C696272
+	.4byte 0x61727900
+	.4byte 0x00000000

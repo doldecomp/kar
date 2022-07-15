@@ -3250,3 +3250,111 @@ lbl_8040062C:
 /* 804006C8 003FD4C8  7C 08 03 A6 */	mtlr r0
 /* 804006CC 003FD4CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804006D0 003FD4D0  4E 80 00 20 */	blr 
+
+
+.section .data
+	.balign 8
+.global lbl_80503188
+lbl_80503188:
+	.4byte 0x80400654
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+.global lbl_805031CC
+lbl_805031CC:
+	.4byte 0x803FDCC8
+	.4byte 0x803FDD14
+	.4byte 0x803FDD60
+	.4byte 0x803FDBE0
+	.4byte 0x803FDC14
+	.4byte 0x803FDC38
+	.4byte 0x803FDC5C
+	.4byte 0x803FDC80
+	.4byte 0x803FDC98
+	.4byte 0x803FDCB0
+	.4byte 0x803FDC14
+	.4byte 0x803FDC38
+	.4byte 0x803FDC5C
+	.4byte 0x803FDDAC
+.global lbl_80503204
+lbl_80503204:
+	.4byte 0x6F626A65
+	.4byte 0x63742E68
+	.4byte 0x00000000
+.global lbl_80503210
+lbl_80503210:
+	.4byte 0x4853445F
+	.4byte 0x4F424A28
+	.4byte 0x6F292D3E
+	.4byte 0x7265665F
+	.4byte 0x636F756E
+	.4byte 0x7420213D
+	.4byte 0x20485344
+	.4byte 0x5F4F424A
+	.4byte 0x5F4E4F52
+	.4byte 0x45460000
+.global lbl_80503238
+lbl_80503238:
+	.4byte 0x803FF9F0
+	.4byte 0x803FF9F8
+	.4byte 0x803FFA00
+	.4byte 0x803FFA08
+	.4byte 0x803FFA10
+	.4byte 0x803FFA18
+	.4byte 0x803FFA20
+	.4byte 0x803FFA28
+	.4byte 0x803FFA30
+.global lbl_8050325C
+lbl_8050325C:
+	.4byte 0x6C6F626A
+	.4byte 0x2D3E706F
+	.4byte 0x73697469
+	.4byte 0x6F6E0000
+.global lbl_8050326C
+lbl_8050326C:
+	.4byte 0x6C6F626A
+	.4byte 0x2D3E696E
+	.4byte 0x74657265
+	.4byte 0x73740000
+	.4byte 0x68736449
+	.4byte 0x73446573
+	.4byte 0x63656E64
+	.4byte 0x616E744F
+	.4byte 0x6628696E
+	.4byte 0x666F2C20
+	.4byte 0x26687364
+	.4byte 0x4C4F626A
+	.4byte 0x29000000
+.global lbl_805032A0
+lbl_805032A0:
+	.4byte 0x756E6578
+	.4byte 0x70656374
+	.4byte 0x6564206C
+	.4byte 0x69676874
+	.4byte 0x64657363
+	.4byte 0x20666C61
+	.4byte 0x67732028
+	.4byte 0x2578290A
+	.4byte 0x00000000
+	.4byte 0x73797364
+	.4byte 0x6F6C7068
+	.4byte 0x696E5F62
+	.4byte 0x6173655F
+	.4byte 0x6C696272
+	.4byte 0x61727900
+	.4byte 0x6873645F
+	.4byte 0x6C6F626A
+	.4byte 0x00000000

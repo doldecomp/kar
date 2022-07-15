@@ -2116,3 +2116,29 @@ HSD_FObjFree:
 /* 80405310 00402110  7C 08 03 A6 */	mtlr r0
 /* 80405314 00402114  38 21 00 10 */	addi r1, r1, 0x10
 /* 80405318 00402118  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_80503440
+lbl_80503440:
+	.4byte 0x7374203D
+	.4byte 0x3D20464F
+	.4byte 0x424A5F4C
+	.4byte 0x4F41445F
+	.4byte 0x57414954
+	.4byte 0x00000000
+.global lbl_80503458
+lbl_80503458:
+	.4byte 0x7374203D
+	.4byte 0x3D20464F
+	.4byte 0x424A5F4C
+	.4byte 0x4F41445F
+	.4byte 0x44415441
+	.4byte 0x30207C7C
+	.4byte 0x20737420
+	.4byte 0x3D3D2046
+	.4byte 0x4F424A5F
+	.4byte 0x4C4F4144
+	.4byte 0x5F444154
+	.4byte 0x41000000

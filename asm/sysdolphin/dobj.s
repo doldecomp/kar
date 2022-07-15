@@ -594,3 +594,65 @@ DObjInfoInit:
 /* 803F4B70 003F1970  7C 08 03 A6 */	mtlr r0
 /* 803F4B74 003F1974  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F4B78 003F1978  4E 80 00 20 */	blr 
+
+
+.section .data
+	.balign 8
+.global lbl_80501D58
+lbl_80501D58:
+	.4byte 0x6D6F626A
+	.4byte 0x20686173
+	.4byte 0x20756E65
+	.4byte 0x78706563
+	.4byte 0x74656420
+	.4byte 0x626C656E
+	.4byte 0x64696E67
+	.4byte 0x20666C61
+	.4byte 0x67732028
+	.4byte 0x30782578
+	.4byte 0x292E0000
+.global lbl_80501D84
+lbl_80501D84:
+	.4byte 0x68736449
+	.4byte 0x73446573
+	.4byte 0x63656E64
+	.4byte 0x616E744F
+	.4byte 0x6628696E
+	.4byte 0x666F2C20
+	.4byte 0x26687364
+	.4byte 0x444F626A
+	.4byte 0x29000000
+	.4byte 0x63616E20
+	.4byte 0x6E6F7420
+	.4byte 0x66696E64
+	.4byte 0x20737065
+	.4byte 0x63696669
+	.4byte 0x65642070
+	.4byte 0x6F626A20
+	.4byte 0x696E206C
+	.4byte 0x696E6B2E
+	.4byte 0x0A000000
+	.4byte 0x63616E20
+	.4byte 0x6E6F7420
+	.4byte 0x66696E64
+	.4byte 0x20737065
+	.4byte 0x63696669
+	.4byte 0x65642070
+	.4byte 0x6F626A20
+	.4byte 0x696E206C
+	.4byte 0x696E6B2E
+	.4byte 0x00000000
+	.4byte 0x646F626A
+	.4byte 0x2D3E6D6F
+	.4byte 0x626A203D
+	.4byte 0x3D206D6F
+	.4byte 0x626A0000
+	.4byte 0x73797364
+	.4byte 0x6F6C7068
+	.4byte 0x696E5F62
+	.4byte 0x6173655F
+	.4byte 0x6C696272
+	.4byte 0x61727900
+	.4byte 0x6873645F
+	.4byte 0x646F626A
+	.4byte 0x00000000

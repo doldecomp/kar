@@ -64,3 +64,10 @@ lbl_8041E528:
 /* 8041E534 0041B334  7C 08 03 A6 */	mtlr r0
 /* 8041E538 0041B338  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041E53C 0041B33C  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_805046C0
+lbl_805046C0:
+	.asciz "HSD_ArchiveParse: byte-order mismatch! Please check data format\n"

@@ -1304,3 +1304,84 @@ lbl_804216A8:
 /* 804216B4 0041E4B4  7C 08 03 A6 */	mtlr r0
 /* 804216B8 0041E4B8  38 21 00 30 */	addi r1, r1, 0x30
 /* 804216BC 0041E4BC  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global hsdClass
+hsdClass:
+	.4byte 0x80420BF8
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+.global lbl_805047E4
+lbl_805047E4:
+	.asciz "class_info->head.obj_size >= parent_info->head.obj_size"
+	.balign 4
+.global lbl_8050481C
+lbl_8050481C:
+	.asciz "class_info->head.info_size >= parent_info->head.info_size"
+	.balign 4
+	.asciz "entry %d <null>\n"
+	.balign 4
+	.asciz "entry %d - %d <null>\n"
+	.balign 4
+	.asciz "entry %d(%d)"
+	.balign 4
+	.asciz "  nb_alloc %d nb_free %d\n"
+	.balign 4
+.global lbl_805048B0
+lbl_805048B0:
+	.4byte 0x69647820
+	.4byte 0x3E3D2030
+	.4byte 0x00000000
+.global lbl_805048BC
+lbl_805048BC:
+	.4byte 0x73797364
+	.4byte 0x6F6C7068
+	.4byte 0x696E5F62
+	.4byte 0x6173655F
+	.4byte 0x6C696272
+	.4byte 0x61727900
+	.4byte 0x6873645F
+	.4byte 0x636C6173
+	.4byte 0x73000000
+.global lbl_805048E0
+lbl_805048E0:
+	.4byte 0x636C6173
+	.4byte 0x735F696E
+	.4byte 0x666F0000
+	.4byte 0x696E666F
+	.4byte 0x5F686173
+	.4byte 0x68000000
+.global lbl_805048F8
+lbl_805048F8:
+	.4byte 0x3C636C61
+	.4byte 0x73732025
+	.4byte 0x733E0A00
+.global lbl_80504904
+lbl_80504904:
+	.4byte 0x20202020
+	.4byte 0x696E666F
+	.4byte 0x20256420
+	.4byte 0x6F626A65
+	.4byte 0x63742025
+	.4byte 0x64206E62
+	.4byte 0x5F657869
+	.4byte 0x73742025
+	.4byte 0x64206E62
+	.4byte 0x5F706561
+	.4byte 0x6B202564
+	.4byte 0x0A000000
+	.4byte 0x00000000

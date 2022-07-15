@@ -2198,3 +2198,23 @@ lbl_80420530:
 lbl_80420538:
 /* 80420538 0041D338  FC 20 00 90 */	fmr f1, f0
 /* 8042053C 0041D33C  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_80504708
+lbl_80504708:
+	.asciz "bytecode.c"
+	.balign 4
+	.asciz "operand < nb_args"
+	.balign 4
+	.asciz "specified stack doesn't exist (%d).\n"
+	.balign 4
+	.asciz "not yet implemented.\n"
+	.balign 4
+	.asciz "unexpected byte code.\n"
+	.balign 4
+	.asciz "stack->next"
+	.balign 4
+	.asciz "unexpected opcode 0x%x.\n"
+	.balign 4

@@ -370,3 +370,29 @@ lbl_8041833C:
 /* 80418380 00415180  38 00 00 00 */	li r0, 0
 /* 80418384 00415184  90 0D 11 F0 */	stw r0, lbl_805DE2D0@sda21(r13)
 /* 80418388 00415188  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global heap
+heap:
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFFFFFF
+.global lbl_80504028
+lbl_80504028:
+	.4byte 0x6F626A61
+	.4byte 0x6C6C6F63
+	.4byte 0x2E630000
+	.4byte 0x616C6967
+	.4byte 0x6E203C3D
+	.4byte 0x20333200
+	.4byte 0x4853445F
+	.4byte 0x4765744E
+	.4byte 0x62426974
+	.4byte 0x7328616C
+	.4byte 0x69676E29
+	.4byte 0x203D3D20
+	.4byte 0x31000000
+	.4byte 0x00000000

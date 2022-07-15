@@ -76,3 +76,15 @@ lbl_804217A0:
 /* 804217B4 0041E5B4  7C 08 03 A6 */	mtlr r0
 /* 804217B8 0041E5B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 804217BC 0041E5BC  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_80504938
+lbl_80504938:
+	.4byte 0x69647820
+	.4byte 0x3C206861
+	.4byte 0x73682D3E
+	.4byte 0x7461626C
+	.4byte 0x655F7369
+	.4byte 0x7A650000

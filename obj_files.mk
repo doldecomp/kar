@@ -84,6 +84,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_ax.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_mix.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_synth.o\
+	$(BUILD_DIR)/asm/data.o\
 	$(BUILD_DIR)/asm/sysdolphin/dobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tev.o\
@@ -138,9 +139,6 @@ DTORS_O_FILES :=\
 
 RODATA_O_FILES :=\
 	$(BUILD_DIR)/asm/rodata.o\
-
-DATA_O_FILES :=\
-	$(BUILD_DIR)/asm/data.o\
 
 BSS_O_FILES :=\
 	$(BUILD_DIR)/asm/bss.o\

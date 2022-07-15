@@ -1764,3 +1764,107 @@ lbl_803FB064:
 /* 803FB130 003F7F30  7C 08 03 A6 */	mtlr r0
 /* 803FB134 003F7F34  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FB138 003F7F38  4E 80 00 20 */	blr 
+
+
+.section .data
+	.balign 8
+.global lbl_80502AC0
+lbl_80502AC0:
+	.4byte 0x803FB08C
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+.global lbl_80502B14
+lbl_80502B14:
+	.4byte 0x803F9EB4
+	.4byte 0x803F9A4C
+	.4byte 0x803F9AA4
+	.4byte 0x803F9AFC
+	.4byte 0x803F9B54
+	.4byte 0x803F9BAC
+	.4byte 0x803F9C04
+	.4byte 0x803F9CA8
+	.4byte 0x803F9D00
+	.4byte 0x803F9D58
+	.4byte 0x803F9C5C
+	.4byte 0x803F9DB0
+	.4byte 0x803F9E08
+	.4byte 0x803F9E60
+.global lbl_80502B4C
+lbl_80502B4C:
+	.4byte 0x68736449
+	.4byte 0x73446573
+	.4byte 0x63656E64
+	.4byte 0x616E744F
+	.4byte 0x6628696E
+	.4byte 0x666F2C20
+	.4byte 0x26687364
+	.4byte 0x4D4F626A
+	.4byte 0x29000000
+.global lbl_80502B70
+lbl_80502B70:
+	.4byte 0x6D6F626A
+	.4byte 0x2D3E7465
+	.4byte 0x76646573
+	.4byte 0x63000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000007
+	.4byte 0x00000013
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000004
+	.4byte 0x3F800000
+	.4byte 0x00000001
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x00000000
+	.4byte 0x63616E6E
+	.4byte 0x6F742061
+	.4byte 0x6C6C6F63
+	.4byte 0x61746520
+	.4byte 0x746F626A
+	.4byte 0x20666F72
+	.4byte 0x20746F6F
+	.4byte 0x6E2E0000
+	.4byte 0x746F626A
+	.4byte 0x5F746F6F
+	.4byte 0x6E000000
+	.4byte 0x73797364
+	.4byte 0x6F6C7068
+	.4byte 0x696E5F62
+	.4byte 0x6173655F
+	.4byte 0x6C696272
+	.4byte 0x61727900
+	.4byte 0x6873645F
+	.4byte 0x6D6F626A
+	.4byte 0x00000000
+	.4byte 0x00000000

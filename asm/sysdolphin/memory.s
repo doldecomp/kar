@@ -1143,3 +1143,21 @@ HSD_Alloc:
 /* 8041CF10 00419D10  7C 08 03 A6 */	mtlr r0
 /* 8041CF14 00419D14  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041CF18 00419D18  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_80504500
+lbl_80504500:
+	.4byte 0x6D656D6F
+	.4byte 0x72792E63
+	.4byte 0x00000000
+.global lbl_8050450C
+lbl_8050450C:
+	.4byte 0x73697A65
+	.4byte 0x203D3D20
+	.4byte 0x73697A65
+	.4byte 0x6F66285F
+	.4byte 0x5F6D656D
+	.4byte 0x5F636229
+	.4byte 0x00000000

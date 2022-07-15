@@ -148,3 +148,23 @@ lbl_8042857C:
 /* 804285A0 004253A0  7C 08 03 A6 */	mtlr r0
 /* 804285A4 004253A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804285A8 004253A8  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_80504D70
+lbl_80504D70:
+	.4byte 0x61737365
+	.4byte 0x7274696F
+	.4byte 0x6E202225
+	.4byte 0x73222066
+	.4byte 0x61696C65
+	.4byte 0x64000000
+.global lbl_80504D88
+lbl_80504D88:
+	.4byte 0x25732069
+	.4byte 0x6E202573
+	.4byte 0x206F6E20
+	.4byte 0x6C696E65
+	.4byte 0x2025642E
+	.4byte 0x0A000000
