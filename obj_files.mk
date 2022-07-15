@@ -126,6 +126,13 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/texp.o\
 	$(BUILD_DIR)/asm/sysdolphin/texpdag.o\
 	$(BUILD_DIR)/asm/sysdolphin/debug.o\
+	$(BUILD_DIR)/asm/sysdolphin/gobjproc.o\
+	$(BUILD_DIR)/asm/sysdolphin/gobjplink.o\
+	$(BUILD_DIR)/asm/sysdolphin/gobjgxlink.o\
+	$(BUILD_DIR)/asm/sysdolphin/gobjobject.o\
+	$(BUILD_DIR)/asm/sysdolphin/gobjuserdata.o\
+	$(BUILD_DIR)/asm/sysdolphin/gobj.o\
+	$(BUILD_DIR)/asm/sysdolphin/particle.o\
 	$(BUILD_DIR)/asm/text_804285AC.o\
 	$(BUILD_DIR)/asm/IPSocket.o\
 	$(BUILD_DIR)/asm/text_8047DB6C.o\
