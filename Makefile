@@ -77,8 +77,11 @@ POSTPROC := tools/postprocess.py
 INCLUDES := -I- -i include/ -i src/
 
 ASFLAGS := -mgekko -I include/ 
-LDFLAGS := -map $(MAP) -fp hard -nodefaults
-CFLAGS  := -cwd source -Cpp_exceptions off -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
+LDFLAGS := -fp hard -nodefaults
+ifeq ($(GENERATE_MAP),1)
+  LDFLAGS += -map $(MAP)
+endif
+CFLAGS  := -cwd source -Cpp_exceptions off -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES) -inline all
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
@@ -95,7 +98,9 @@ default: all
 
 all: $(DOL)
 	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
+ifeq ($(GENERATE_MAP),1)
 	$(QUIET) $(PYTHON) calcprogress.py $(DOL)
+endif
 
 ALL_DIRS := build $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRC_DIRS) $(ASM_DIRS))
 

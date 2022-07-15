@@ -25,8 +25,8 @@ func_803F98DC:
 /* 803F98EC 003F66EC  90 03 00 04 */	stw r0, 4(r3)
 /* 803F98F0 003F66F0  4E 80 00 20 */	blr 
 
-.global func_803F98F4
-func_803F98F4:
+.global HSD_MObjRemoveAnimByFlags
+HSD_MObjRemoveAnimByFlags:
 /* 803F98F4 003F66F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F98F8 003F66F8  7C 08 02 A6 */	mflr r0
 /* 803F98FC 003F66FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -54,8 +54,8 @@ lbl_803F993C:
 /* 803F994C 003F674C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F9950 003F6750  4E 80 00 20 */	blr 
 
-.global func_803F9954
-func_803F9954:
+.global HSD_MObjAddAnim
+HSD_MObjAddAnim:
 /* 803F9954 003F6754  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F9958 003F6758  7C 08 02 A6 */	mflr r0
 /* 803F995C 003F675C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -85,8 +85,8 @@ lbl_803F99A4:
 /* 803F99B4 003F67B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F99B8 003F67B8  4E 80 00 20 */	blr 
 
-.global func_803F99BC
-func_803F99BC:
+.global HSD_MObjReqAnimByFlags
+HSD_MObjReqAnimByFlags:
 /* 803F99BC 003F67BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F99C0 003F67C0  7C 08 02 A6 */	mflr r0
 /* 803F99C4 003F67C4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -525,7 +525,7 @@ func_803F9FA4:
 /* 803F9FB8 003F6DB8  41 82 00 2C */	beq lbl_803F9FE4
 /* 803F9FBC 003F6DBC  3C 80 80 50 */	lis r4, lbl_80502AC0@ha
 /* 803F9FC0 003F6DC0  38 84 2A C0 */	addi r4, r4, lbl_80502AC0@l
-/* 803F9FC4 003F6DC4  48 02 6E D1 */	bl func_80420E94
+/* 803F9FC4 003F6DC4  48 02 6E D1 */	bl hsdIsDescendantOf
 /* 803F9FC8 003F6DC8  2C 03 00 00 */	cmpwi r3, 0
 /* 803F9FCC 003F6DCC  40 82 00 18 */	bne lbl_803F9FE4
 /* 803F9FD0 003F6DD0  3C 80 80 50 */	lis r4, lbl_80502B4C@ha
@@ -550,8 +550,8 @@ func_803F9FFC:
 /* 803FA00C 003F6E0C  38 63 2A C0 */	addi r3, r3, lbl_80502AC0@l
 /* 803FA010 003F6E10  4E 80 00 20 */	blr 
 
-.global func_803FA014
-func_803FA014:
+.global HSD_MObjLoadDesc
+HSD_MObjLoadDesc:
 /* 803FA014 003F6E14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FA018 003F6E18  7C 08 02 A6 */	mflr r0
 /* 803FA01C 003F6E1C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1503,8 +1503,8 @@ lbl_803FADB0:
 /* 803FADB0 003F7BB0  80 63 00 08 */	lwz r3, 8(r3)
 /* 803FADB4 003F7BB4  4E 80 00 20 */	blr 
 
-.global func_803FADB8
-func_803FADB8:
+.global HSD_MObjRemove
+HSD_MObjRemove:
 /* 803FADB8 003F7BB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FADBC 003F7BBC  7C 08 02 A6 */	mflr r0
 /* 803FADC0 003F7BC0  90 01 00 14 */	stw r0, 0x14(r1)

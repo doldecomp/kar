@@ -688,8 +688,8 @@ lbl_80420E74:
 /* 80420E8C 0041DC8C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80420E90 0041DC90  4E 80 00 20 */	blr 
 
-.global func_80420E94
-func_80420E94:
+.global hsdIsDescendantOf
+hsdIsDescendantOf:
 /* 80420E94 0041DC94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80420E98 0041DC98  7C 08 02 A6 */	mflr r0
 /* 80420E9C 0041DC9C  28 03 00 00 */	cmplwi r3, 0

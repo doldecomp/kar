@@ -386,8 +386,8 @@ lbl_805DE168:
 .global lbl_805DE16C
 lbl_805DE16C:
 	.skip 0x4
-.global lbl_805DE170
-lbl_805DE170:
+.global default_class
+default_class:
 	.skip 0x4
 .global current_dobj
 current_dobj:
