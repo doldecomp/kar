@@ -89,5 +89,6 @@ void HSD_RObjInitAllocData(void);
 HSD_ObjAllocData* HSD_RObjGetAllocData(void);
 HSD_ObjAllocData* HSD_RvalueObjGetAllocData(void);
 void HSD_RObjSetFlags(HSD_RObj* robj, u32 flags);
+HSD_RObj* HSD_RObjLoadDesc(HSD_RObjDesc*);
 
 #endif

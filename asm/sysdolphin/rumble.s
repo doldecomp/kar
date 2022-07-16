@@ -807,3 +807,13 @@ lbl_80414E18:
 /* 80414E78 00411C78  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80414E7C 00411C7C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80414E80 00411C80  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_80503FB0
+lbl_80503FB0:
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0

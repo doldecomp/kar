@@ -1143,3 +1143,14 @@ HSD_Alloc:
 /* 8041CF10 00419D10  7C 08 03 A6 */	mtlr r0
 /* 8041CF14 00419D14  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041CF18 00419D18  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_80504500
+lbl_80504500:
+    .asciz "memory.c"
+    .balign 4
+.global lbl_8050450C
+lbl_8050450C:
+    .asciz "size == sizeof(__mem_cb)"

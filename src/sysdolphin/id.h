@@ -5,8 +5,6 @@
 
 #include "objalloc.h"
 
-#define hash(s) (s % 0x65)
-
 typedef struct _IDEntry {
     struct _IDEntry* next;
     u32 id;
@@ -14,7 +12,7 @@ typedef struct _IDEntry {
 } IDEntry;
 
 typedef struct _HSD_IDTable {
-    struct _IDEntry table[101];
+    struct _IDEntry* table[101];
 } HSD_IDTable;
 
 HSD_ObjAllocData* HSD_IDGetAllocData(void);

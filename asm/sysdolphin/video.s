@@ -1337,3 +1337,49 @@ lbl_80411C70:
 /* 80411CA0 0040EAA0  7C 08 03 A6 */	mtlr r0
 /* 80411CA4 0040EAA4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80411CA8 0040EAA8  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_80503E80
+lbl_80503E80:
+	.4byte 0x69647820
+	.4byte 0x213D202D
+	.4byte 0x31000000
+.global lbl_80503E8C
+lbl_80503E8C:
+	.4byte 0x756E6578
+	.4byte 0x70656374
+	.4byte 0x65642074
+	.4byte 0x79706520
+	.4byte 0x6F662072
+	.4byte 0x656E6465
+	.4byte 0x72207061
+	.4byte 0x73732E0A
+	.4byte 0x00000000
+.global lbl_80503EB0
+lbl_80503EB0:
+	.4byte 0x5F702D3E
+	.4byte 0x7866625B
+	.4byte 0x6964785D
+	.4byte 0x2E737461
+	.4byte 0x74757320
+	.4byte 0x3D3D2048
+	.4byte 0x53445F56
+	.4byte 0x495F5846
+	.4byte 0x425F4452
+	.4byte 0x4157494E
+	.4byte 0x47000000
+.global lbl_80503EDC
+lbl_80503EDC:
+	.4byte 0x5F702D3E
+	.4byte 0x7866625B
+	.4byte 0x6964785D
+	.4byte 0x2E737461
+	.4byte 0x74757320
+	.4byte 0x3D3D2048
+	.4byte 0x53445F56
+	.4byte 0x495F5846
+	.4byte 0x425F5741
+	.4byte 0x4954444F
+	.4byte 0x4E450000

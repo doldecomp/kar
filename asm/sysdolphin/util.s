@@ -91,3 +91,33 @@ lbl_80417E68:
 /* 80417E6C 00414C6C  42 00 FF 60 */	bdnz lbl_80417DCC
 /* 80417E70 00414C70  7C A3 2B 78 */	mr r3, r5
 /* 80417E74 00414C74  4E 80 00 20 */	blr 
+
+
+.section .data
+    .balign 8
+.global lbl_80503FC0
+lbl_80503FC0:
+	.float 1
+	.float 0
+	.float 0
+	.float 0
+	.float 0
+	.float 1
+	.float 0
+	.float 0
+	.float 0
+	.float 0
+	.float 1
+	.float 0
+.global lbl_80503FF0
+lbl_80503FF0:
+	.4byte 0x00
+	.4byte 0x03
+	.4byte 0x06
+	.4byte 0x09
+	.4byte 0x0C
+	.4byte 0x0F
+	.4byte 0x12
+	.4byte 0x15
+	.4byte 0x18
+	.4byte 0x1B

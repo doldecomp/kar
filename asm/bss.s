@@ -707,8 +707,8 @@ aobj_alloc_data:
 .global lbl_805899B0
 lbl_805899B0:
 	.skip 0x28
-.global lbl_805899D8
-lbl_805899D8:
+.global fobj_alloc_data
+fobj_alloc_data:
 	.skip 0x30
 .global lbl_80589A08
 lbl_80589A08:
@@ -746,23 +746,23 @@ lbl_8058BBB8:
 .global lbl_8058BBE4
 lbl_8058BBE4:
 	.skip 0x2C
-.global lbl_8058BC10
-lbl_8058BC10:
+.global robj_alloc_data
+robj_alloc_data:
 	.skip 0x2C
-.global lbl_8058BC3C
-lbl_8058BC3C:
+.global rvalue_alloc_data
+rvalue_alloc_data:
 	.skip 0x2C
-.global lbl_8058BC68
-lbl_8058BC68:
+.global hsd_iddata
+hsd_iddata:
 	.skip 0x2C
-.global lbl_8058BC94
-lbl_8058BC94:
+.global default_table
+default_table:
 	.skip 0x194
-.global lbl_8058BE28
-lbl_8058BE28:
+.global slist_alloc_data
+slist_alloc_data:
 	.skip 0x2C
-.global lbl_8058BE54
-lbl_8058BE54:
+.global dlist_alloc_data
+dlist_alloc_data:
 	.skip 0x2C
 .global lbl_8058BE80
 lbl_8058BE80:

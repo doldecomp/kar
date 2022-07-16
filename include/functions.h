@@ -30,3 +30,8 @@
 //#pragma section code_type ".text"
 //
 //void Pad_InitCallback();
+
+void __assert(const char*, unsigned long, const char*);
+void _OSReport(const char*, ...);
+
+struct _HSD_ClassInfo* hsdSearchClassInfo(char*);

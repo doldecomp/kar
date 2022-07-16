@@ -74,7 +74,7 @@ HSD_InitComponent:
 /* 8040FD28 0040CB28  48 00 1D 5D */	bl func_80411A84
 /* 8040FD2C 0040CB2C  48 00 01 B5 */	bl func_8040FEE0
 /* 8040FD30 0040CB30  48 00 00 29 */	bl func_8040FD58
-/* 8040FD34 0040CB34  48 00 A8 45 */	bl func_8041A578
+/* 8040FD34 0040CB34  48 00 A8 45 */	bl HSD_IDSetup
 /* 8040FD38 0040CB38  4B FC E4 2D */	bl func_803DE164
 /* 8040FD3C 0040CB3C  48 00 09 21 */	bl func_8041065C
 /* 8040FD40 0040CB40  38 00 00 01 */	li r0, 1
@@ -766,7 +766,7 @@ func_8041065C:
 /* 80410668 0040D468  48 00 B5 A9 */	bl HSD_ListInitAllocData
 /* 8041066C 0040D46C  4B FE AA D1 */	bl HSD_AObjInitAllocData
 /* 80410670 0040D470  4B FF 2F 31 */	bl HSD_FObjInitAllocData
-/* 80410674 0040D474  48 00 9E D5 */	bl func_8041A548
+/* 80410674 0040D474  48 00 9E D5 */	bl HSD_IDInitAllocData
 /* 80410678 0040D478  48 00 76 69 */	bl func_80417CE0
 /* 8041067C 0040D47C  48 00 76 A1 */	bl func_80417D1C
 /* 80410680 0040D480  48 00 7D 0D */	bl HSD_RObjInitAllocData
@@ -1047,3 +1047,172 @@ lbl_80410A78:
 /* 80410A84 0040D884  7C 08 03 A6 */	mtlr r0
 /* 80410A88 0040D888  38 21 00 90 */	addi r1, r1, 0x90
 /* 80410A8C 0040D88C  4E 80 00 20 */	blr 
+
+
+.section .data
+	.balign 8
+.global lbl_80503C60
+lbl_80503C60:
+    .asciz "initialize.c"
+    .balign 4
+.global lbl_80503C70
+lbl_80503C70:
+    .asciz "No memory space remains for XFB.\n"
+    .balign 4
+.global lbl_80503C94
+lbl_80503C94:
+    .asciz "no space remains for gx fifo.\n"
+    .balign 4
+.global lbl_80503CB4
+lbl_80503CB4:
+    .asciz "!iparam_memory_callbacks"
+    .balign 4
+    .asciz "missing argument.\n"
+    .balign 4
+.global lbl_80503CE4
+lbl_80503CE4:
+    .asciz "sysdolphin_base_library"
+    .balign 4
+.global lbl_80503CFC
+lbl_80503CFC:
+    .asciz "pix_fmt != GX_PF_RGB565_Z16"
+    .balign 4
+.global lbl_80503D18
+lbl_80503D18:
+    .asciz "objalloc.h"
+    .balign 4
+.global lbl_80503D24
+lbl_80503D24:
+	.4byte 0x6F626A61
+	.4byte 0x6C6C6F63
+	.4byte 0x3A202573
+	.4byte 0x09757369
+	.4byte 0x6E672025
+	.4byte 0x64096672
+	.4byte 0x65656420
+	.4byte 0x25640970
+	.4byte 0x65616B20
+	.4byte 0x25640A00
+	.4byte 0x696E6974
+	.4byte 0x20706172
+	.4byte 0x616D6574
+	.4byte 0x65722073
+	.4byte 0x686F756C
+	.4byte 0x64206265
+	.4byte 0x20736574
+	.4byte 0x20626566
+	.4byte 0x6F726520
+	.4byte 0x696E766F
+	.4byte 0x6B696E67
+	.4byte 0x20485344
+	.4byte 0x5F496E69
+	.4byte 0x7428292E
+	.4byte 0x0A000000
+	.4byte 0x4552524F
+	.4byte 0x5220696E
+	.4byte 0x20485344
+	.4byte 0x5F536574
+	.4byte 0x496E6974
+	.4byte 0x50617261
+	.4byte 0x6D657465
+	.4byte 0x7228293A
+	.4byte 0x0A000000
+	.4byte 0x20204853
+	.4byte 0x445F494E
+	.4byte 0x49545F4D
+	.4byte 0x454D4F52
+	.4byte 0x595F4341
+	.4byte 0x4C4C4241
+	.4byte 0x434B5320
+	.4byte 0x77617320
+	.4byte 0x67697665
+	.4byte 0x6E20696E
+	.4byte 0x76616C69
+	.4byte 0x64206172
+	.4byte 0x67756D65
+	.4byte 0x6E74732E
+	.4byte 0x0A000000
+	.4byte 0x20204853
+	.4byte 0x445F494E
+	.4byte 0x49545F48
+	.4byte 0x4541505F
+	.4byte 0x4D41585F
+	.4byte 0x4E554D20
+	.4byte 0x6973206F
+	.4byte 0x62736F6C
+	.4byte 0x65746520
+	.4byte 0x73696E63
+	.4byte 0x6520312E
+	.4byte 0x332E302E
+	.4byte 0x302E200A
+	.4byte 0x00000000
+	.4byte 0x20204853
+	.4byte 0x445F494E
+	.4byte 0x49545F41
+	.4byte 0x5544494F
+	.4byte 0x5F484541
+	.4byte 0x505F5349
+	.4byte 0x5A452069
+	.4byte 0x73206F62
+	.4byte 0x736F6C65
+	.4byte 0x74652073
+	.4byte 0x696E6365
+	.4byte 0x20312E33
+	.4byte 0x2E302E30
+	.4byte 0x2E200A00
+.global lbl_80503E58
+lbl_80503E58:
+	.4byte 0x80410888
+	.4byte 0x804108AC
+	.4byte 0x80410A24
+	.4byte 0x80410A5C
+	.4byte 0x80410A00
+	.4byte 0x804108D0
+	.4byte 0x804108F8
+	.4byte 0x80410928
+	.4byte 0x8041094C
+	.4byte 0x00000000
+
+
+.section .rodata
+    .balign 8
+.global lbl_8048C4A8
+lbl_8048C4A8:
+	.4byte _HSD_AObjForgetMemory
+	.4byte func_8040FBE8
+	.4byte _HSD_IDForgetMemory
+	.4byte func_80418380
+	.4byte func_8041E6A4
+	.4byte func_8041A504
+	.4byte 0
+.global lbl_8048C4C4
+lbl_8048C4C4:
+	.4byte HSD_AObjGetAllocData
+	.4byte lbl_805DCBD0
+	.4byte HSD_FObjGetAllocData
+	.4byte lbl_805DCBD8
+	.4byte HSD_IDGetAllocData
+	.4byte lbl_805DCBE0
+	.4byte HSD_SListGetAllocData
+	.4byte lbl_805DCBE4
+	.4byte HSD_DListGetAllocData
+	.4byte lbl_805DCBEC
+	.4byte func_80417CD4
+	.4byte lbl_805DCBF4
+	.4byte func_80417D10
+	.4byte lbl_805DCBF8
+	.4byte HSD_RObjGetAllocData
+	.4byte lbl_805DCBFC
+	.4byte HSD_RvalueObjGetAllocData
+	.4byte lbl_805DCC04
+	.4byte HSD_ShadowGetAllocData
+	.4byte lbl_805DCC0C
+	.4byte func_803F8A48
+	.4byte lbl_805DCC14
+	.4byte func_803F8A60
+	.4byte lbl_805DCC1C
+	.4byte func_803F8A54
+	.4byte lbl_805DCC24
+	.4byte 0
+	.4byte 0
+	.4byte 0
