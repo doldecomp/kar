@@ -908,12 +908,13 @@ lbl_8041084C:
 /* 80410864 0040D664  90 81 00 6C */	stw r4, 0x6c(r1)
 /* 80410868 0040D668  90 01 00 70 */	stw r0, 0x70(r1)
 /* 8041086C 0040D66C  41 81 02 08 */	bgt lbl_80410A74
-/* 80410870 0040D670  3C 80 80 50 */	lis r4, lbl_80503E58@ha
+/* 80410870 0040D670  3C 80 80 50 */	lis r4, jtbl_80503E58@ha
 /* 80410874 0040D674  54 60 10 3A */	slwi r0, r3, 2
-/* 80410878 0040D678  38 64 3E 58 */	addi r3, r4, lbl_80503E58@l
+/* 80410878 0040D678  38 64 3E 58 */	addi r3, r4, jtbl_80503E58@l
 /* 8041087C 0040D67C  7C 03 00 2E */	lwzx r0, r3, r0
 /* 80410880 0040D680  7C 09 03 A6 */	mtctr r0
 /* 80410884 0040D684  4E 80 04 20 */	bctr 
+lbl_80410888:
 /* 80410888 0040D688  7C A3 2B 78 */	mr r3, r5
 /* 8041088C 0040D68C  38 80 00 01 */	li r4, 1
 /* 80410890 0040D690  4B F9 C8 11 */	bl __va_arg
@@ -923,6 +924,7 @@ lbl_8041084C:
 /* 804108A0 0040D6A0  90 0D FA DC */	stw r0, lbl_805DCBBC@sda21(r13)
 /* 804108A4 0040D6A4  3B C0 00 01 */	li r30, 1
 /* 804108A8 0040D6A8  48 00 01 CC */	b lbl_80410A74
+lbl_804108AC:
 /* 804108AC 0040D6AC  7C A3 2B 78 */	mr r3, r5
 /* 804108B0 0040D6B0  38 80 00 01 */	li r4, 1
 /* 804108B4 0040D6B4  4B F9 C7 ED */	bl __va_arg
@@ -932,6 +934,7 @@ lbl_8041084C:
 /* 804108C4 0040D6C4  90 0D FA E0 */	stw r0, lbl_805DCBC0@sda21(r13)
 /* 804108C8 0040D6C8  3B C0 00 01 */	li r30, 1
 /* 804108CC 0040D6CC  48 00 01 A8 */	b lbl_80410A74
+lbl_804108D0:
 /* 804108D0 0040D6D0  7C A3 2B 78 */	mr r3, r5
 /* 804108D4 0040D6D4  38 80 00 01 */	li r4, 1
 /* 804108D8 0040D6D8  4B F9 C7 C9 */	bl __va_arg
@@ -942,6 +945,7 @@ lbl_8041084C:
 /* 804108EC 0040D6EC  93 ED 11 D4 */	stw r31, lbl_805DE2B4@sda21(r13)
 /* 804108F0 0040D6F0  3B C0 00 01 */	li r30, 1
 /* 804108F4 0040D6F4  48 00 01 80 */	b lbl_80410A74
+lbl_804108F8:
 /* 804108F8 0040D6F8  7C A3 2B 78 */	mr r3, r5
 /* 804108FC 0040D6FC  38 80 00 01 */	li r4, 1
 /* 80410900 0040D700  4B F9 C7 A1 */	bl __va_arg
@@ -954,6 +958,7 @@ lbl_8041084C:
 /* 8041091C 0040D71C  93 ED 11 B8 */	stw r31, lbl_805DE298@sda21(r13)
 /* 80410920 0040D720  90 0D 11 BC */	stw r0, lbl_805DE29C@sda21(r13)
 /* 80410924 0040D724  48 00 01 50 */	b lbl_80410A74
+lbl_80410928:
 /* 80410928 0040D728  7C A3 2B 78 */	mr r3, r5
 /* 8041092C 0040D72C  38 80 00 01 */	li r4, 1
 /* 80410930 0040D730  4B F9 C7 71 */	bl __va_arg
@@ -963,6 +968,7 @@ lbl_8041084C:
 /* 80410940 0040D740  90 0D 11 C0 */	stw r0, lbl_805DE2A0@sda21(r13)
 /* 80410944 0040D744  90 6D 11 C4 */	stw r3, lbl_805DE2A4@sda21(r13)
 /* 80410948 0040D748  48 00 01 2C */	b lbl_80410A74
+lbl_8041094C:
 /* 8041094C 0040D74C  7C A3 2B 78 */	mr r3, r5
 /* 80410950 0040D750  38 80 00 01 */	li r4, 1
 /* 80410954 0040D754  4B F9 C7 4D */	bl __va_arg
@@ -1009,6 +1015,7 @@ lbl_804109E4:
 /* 804109F4 0040D7F4  3B C0 00 01 */	li r30, 1
 /* 804109F8 0040D7F8  90 0D 11 D8 */	stw r0, lbl_805DE2B8@sda21(r13)
 /* 804109FC 0040D7FC  48 00 00 78 */	b lbl_80410A74
+lbl_80410A00:
 /* 80410A00 0040D800  7C A3 2B 78 */	mr r3, r5
 /* 80410A04 0040D804  38 80 00 01 */	li r4, 1
 /* 80410A08 0040D808  4B F9 C6 99 */	bl __va_arg
@@ -1018,6 +1025,7 @@ lbl_804109E4:
 /* 80410A18 0040D818  90 0D FA D4 */	stw r0, lbl_805DCBB4@sda21(r13)
 /* 80410A1C 0040D81C  3B C0 00 01 */	li r30, 1
 /* 80410A20 0040D820  48 00 00 54 */	b lbl_80410A74
+lbl_80410A24:
 /* 80410A24 0040D824  38 7F 01 28 */	addi r3, r31, 0x128
 /* 80410A28 0040D828  4C C6 31 82 */	crclr 6
 /* 80410A2C 0040D82C  4B FC 42 BD */	bl _OSReport
@@ -1032,6 +1040,7 @@ lbl_804109E4:
 /* 80410A50 0040D850  40 82 00 24 */	bne lbl_80410A74
 /* 80410A54 0040D854  3B C0 00 01 */	li r30, 1
 /* 80410A58 0040D858  48 00 00 1C */	b lbl_80410A74
+lbl_80410A5C:
 /* 80410A5C 0040D85C  38 7F 01 28 */	addi r3, r31, 0x128
 /* 80410A60 0040D860  4C C6 31 82 */	crclr 6
 /* 80410A64 0040D864  4B FC 42 85 */	bl _OSReport
@@ -1083,95 +1092,29 @@ lbl_80503D18:
     .balign 4
 .global lbl_80503D24
 lbl_80503D24:
-	.4byte 0x6F626A61
-	.4byte 0x6C6C6F63
-	.4byte 0x3A202573
-	.4byte 0x09757369
-	.4byte 0x6E672025
-	.4byte 0x64096672
-	.4byte 0x65656420
-	.4byte 0x25640970
-	.4byte 0x65616B20
-	.4byte 0x25640A00
-	.4byte 0x696E6974
-	.4byte 0x20706172
-	.4byte 0x616D6574
-	.4byte 0x65722073
-	.4byte 0x686F756C
-	.4byte 0x64206265
-	.4byte 0x20736574
-	.4byte 0x20626566
-	.4byte 0x6F726520
-	.4byte 0x696E766F
-	.4byte 0x6B696E67
-	.4byte 0x20485344
-	.4byte 0x5F496E69
-	.4byte 0x7428292E
-	.4byte 0x0A000000
-	.4byte 0x4552524F
-	.4byte 0x5220696E
-	.4byte 0x20485344
-	.4byte 0x5F536574
-	.4byte 0x496E6974
-	.4byte 0x50617261
-	.4byte 0x6D657465
-	.4byte 0x7228293A
-	.4byte 0x0A000000
-	.4byte 0x20204853
-	.4byte 0x445F494E
-	.4byte 0x49545F4D
-	.4byte 0x454D4F52
-	.4byte 0x595F4341
-	.4byte 0x4C4C4241
-	.4byte 0x434B5320
-	.4byte 0x77617320
-	.4byte 0x67697665
-	.4byte 0x6E20696E
-	.4byte 0x76616C69
-	.4byte 0x64206172
-	.4byte 0x67756D65
-	.4byte 0x6E74732E
-	.4byte 0x0A000000
-	.4byte 0x20204853
-	.4byte 0x445F494E
-	.4byte 0x49545F48
-	.4byte 0x4541505F
-	.4byte 0x4D41585F
-	.4byte 0x4E554D20
-	.4byte 0x6973206F
-	.4byte 0x62736F6C
-	.4byte 0x65746520
-	.4byte 0x73696E63
-	.4byte 0x6520312E
-	.4byte 0x332E302E
-	.4byte 0x302E200A
-	.4byte 0x00000000
-	.4byte 0x20204853
-	.4byte 0x445F494E
-	.4byte 0x49545F41
-	.4byte 0x5544494F
-	.4byte 0x5F484541
-	.4byte 0x505F5349
-	.4byte 0x5A452069
-	.4byte 0x73206F62
-	.4byte 0x736F6C65
-	.4byte 0x74652073
-	.4byte 0x696E6365
-	.4byte 0x20312E33
-	.4byte 0x2E302E30
-	.4byte 0x2E200A00
-.global lbl_80503E58
-lbl_80503E58:
-	.4byte 0x80410888
-	.4byte 0x804108AC
-	.4byte 0x80410A24
-	.4byte 0x80410A5C
-	.4byte 0x80410A00
-	.4byte 0x804108D0
-	.4byte 0x804108F8
-	.4byte 0x80410928
-	.4byte 0x8041094C
-	.4byte 0x00000000
+    .asciz "objalloc: %s	using %d	freed %d	peak %d\n"
+    .balign 4
+    .asciz "init parameter should be set before invoking HSD_Init().\n"
+    .balign 4
+    .asciz "ERROR in HSD_SetInitParameter():\n"
+    .balign 4
+    .asciz "  HSD_INIT_MEMORY_CALLBACKS was given invalid arguments.\n"
+    .balign 4
+    .asciz "  HSD_INIT_HEAP_MAX_NUM is obsolete since 1.3.0.0. \n"
+    .balign 4
+    .asciz "  HSD_INIT_AUDIO_HEAP_SIZE is obsolete since 1.3.0.0. \n"
+    .balign 4
+.global jtbl_80503E58
+jtbl_80503E58:
+	.4byte lbl_80410888
+	.4byte lbl_804108AC
+	.4byte lbl_80410A24
+	.4byte lbl_80410A5C
+	.4byte lbl_80410A00
+	.4byte lbl_804108D0
+	.4byte lbl_804108F8
+	.4byte lbl_80410928
+	.4byte lbl_8041094C
 
 
 .section .rodata

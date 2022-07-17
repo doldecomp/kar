@@ -27,7 +27,7 @@ ObjInfoInit:
     .balign 8
 .global objInfo
 objInfo:
-	.4byte 0x8041BED8
+	.4byte ObjInfoInit
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -80,7 +80,7 @@ lbl_805DCD34:
 	.4byte 0x00008000
 .global lbl_805DCD38
 lbl_805DCD38:
-	.4byte 0x805DCD30
+	.4byte lbl_805DCD30
 	.4byte 0x00000000
 .global lbl_805DCD40
 lbl_805DCD40:
