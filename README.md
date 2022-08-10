@@ -1,60 +1,31 @@
+# Kirby Air Ride
 
-# Kirby Air Ride   [![Badge Discord]][Discord]   ![Badge Status]
+This repo contains a WIP decompilation of Kirby Air Ride (US/Kor).
 
-*Decompilation of the **US** / **Korean** version.*
+It builds the following DOL:
 
-<br>
-<br>
+main.dol: `sha1: 977533bb96e6a16e127946396489be1b4164ac42`
 
-<div align = center>
+## Building
 
----
+### Required packages
 
-[![Button Building]][Building] 
+* [devkitPro](https://devkitpro.org/wiki/Getting_Started)
+* python3
+* gcc
 
----
+### Instructions
 
-</div>
-
-<br>
-<br>
-
-## DOL
-
-**SHA1**  :  `977533bb96e6a16e127946396489be1b4164ac42` <br>
-**File**  :  `main.dol`
-
-<br>
-<br>
+1. Download the Gamecube SDK and make an environment variable called SDK_BASE_PATH that points to this folder such that the folder root has both the HW2 and include folders.
+2. Download the Codewarrior for Gamecube (preferrably 2.7 since it can be found in full) and install it and make CW_BASE_PATH point to this folder where it is installed.
+3. Obtain a clean DOL of KAR US/Kor and place it in the base working directory and name it `baserom.dol`.
+4. Download GC_WII_COMPILERS.zip and extract it to tools/mwcc_compiler/.
+5. Run the `make` command
 
 ## Contributions
 
-***Contributions***  */  **Pull Requests** are welcome !*
+Contributions and PRs are welcome.
 
-<br>
+## TODO
 
-
-<!----------------------------------------------------------------------------->
-
-[Building]: Documentation/Building.md
-
-[Discord]: https://discord.gg/hKx3FJJgrV
-
-
-<!----------------------------------[ Badges ]---------------------------------->
-
-[Badge Discord]: https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=Discord&logoColor=white
-[Badge Status]: https://img.shields.io/badge/Status-Work_In_Progress-02564e?style=for-the-badge&logo=GoogleAnalytics&logoColor=white&labelColor=00897B
-
-
-<!--
-Enable 'Discord Server Widgets' to use 
-this alternate badge with user count.
-
-[Badge Discord]: https://img.shields.io/discord/727908905392275526.svg?style=for-the-badge&label=&logo=Discord&logoColor=white&color=4f59c8&labelColor=7289DA
--->
-
-
-<!---------------------------------[ Buttons ]--------------------------------->
-
-[Button Building]: https://img.shields.io/badge/Building-0099E5?style=for-the-badge&logoColor=white&logo=BookStack
+Make a TODO list
