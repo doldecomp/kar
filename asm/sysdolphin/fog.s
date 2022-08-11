@@ -767,11 +767,11 @@ lbl_805DE2F0:
 .global lbl_805DE2F4
 lbl_805DE2F4:
 	.skip 0x4
-.global lbl_805DE2F8
-lbl_805DE2F8:
+.global memory_list
+memory_list:
 	.skip 0x4
-.global lbl_805DE2FC
-lbl_805DE2FC:
+.global nb_memory_list
+nb_memory_list:
 	.skip 0x4
 .global lbl_805DE300
 lbl_805DE300:

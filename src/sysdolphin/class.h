@@ -31,7 +31,7 @@ typedef struct _HSD_ClassInfoHead {
 typedef struct _HSD_ClassInfo {
     struct _HSD_ClassInfoHead head;
     HSD_Class* (*alloc)(struct _HSD_ClassInfo* c);
-    void (*init)(struct _HSD_Class* c);
+    int (*init)(struct _HSD_Class* c);
     void (*release)(struct _HSD_Class* c);
     void (*destroy)(struct _HSD_Class* c);
     void (*amnesia)(struct _HSD_ClassInfo* c);
@@ -48,5 +48,7 @@ typedef struct _HSD_MemoryEntry {
     struct _HSD_FreeList* free_list;
     struct _HSD_MemoryEntry* next;
 } HSD_MemoryEntry;
+
+void hsdFreeMemPiece(HSD_FreeList*, s32);
 
 #endif

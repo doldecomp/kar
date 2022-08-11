@@ -167,8 +167,8 @@ func_803ADB78:
 func_803ADB7C:
 /* 803ADB7C 003AA97C  82 4B FF C8 */	lwz r18, -0x38(r11)
 
-.global func_803ADB80
-func_803ADB80:
+.global _restgpr_19
+_restgpr_19:
 /* 803ADB80 003AA980  82 6B FF CC */	lwz r19, -0x34(r11)
 
 .global func_803ADB84
