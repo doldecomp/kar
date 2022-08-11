@@ -4,8 +4,11 @@
 
 void WObjInfoInit(void);
 
-extern HSD_WObjInfo lbl_805041C8;
+HSD_WObjInfo lbl_805041C8 = { WObjInfoInit };
+
 static HSD_WObjInfo* lbl_805DE2E0;
+
+extern HSD_ClassInfo objInfo;
 
 void HSD_WObjRemoveAnim(HSD_WObj* wobj)
 {
@@ -35,9 +38,6 @@ void HSD_WObjAddAnim(HSD_WObj* wobj, HSD_WObjAnim* anim)
     }
 }
 
-extern char lbl_8050420C[10];
-extern char lbl_80504218[10];
-
 void WObjUpdateFunc(void* obj, u32 type, f32* fval)
 {
     HSD_WObj* wobj;
@@ -55,16 +55,10 @@ void WObjUpdateFunc(void* obj, u32 type, f32* fval)
                 *fval = 1.0;
             }
 
-            if (wobj->aobj == NULL) {
-                __assert(__FILE__, 152, lbl_8050420C);
-            }
-
+            assert_line(152, wobj->aobj);
             jp = (HSD_JObj*)wobj->aobj->hsd_obj;
             assert_line(154, jp);
-
-            if (jp->u.spline == NULL) {
-                __assert(__FILE__, 155, lbl_80504218);
-            }
+            assert_line(155, jp->u.spline);
 
             splArcLengthPoint(&p, jp->u.spline, *fval);
             HSD_WObjSetPosition(wobj, &p);
@@ -261,4 +255,20 @@ void WObjAmnesia(HSD_ClassInfo* info)
         lbl_805DE2E0 = NULL;
     }
     HSD_OBJECT_PARENT_INFO(&lbl_805041C8)->amnesia(info);
+}
+
+#pragma push
+#pragma force_active on
+static char unused[] = "hsdIsDescendantOf(info, &hsdWObj)";
+#pragma pop
+
+void WObjInfoInit(void)
+{
+    hsdInitClassInfo(HSD_CLASS_INFO(&lbl_805041C8), &objInfo,
+        "sysdolphin_base_library", "had_wobj",
+        sizeof(HSD_WObjInfo), sizeof(HSD_WObj));
+    HSD_CLASS_INFO(&lbl_805041C8)->release = WObjRelease;
+    HSD_CLASS_INFO(&lbl_805041C8)->amnesia = WObjAmnesia;
+    lbl_805041C8.load = &WObjLoad;
+    lbl_805041C8.update = &WObjUpdateFunc;
 }
