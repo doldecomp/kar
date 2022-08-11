@@ -90,7 +90,6 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sdata.o\
 	$(BUILD_DIR)/asm/sdata2.o\
 	$(BUILD_DIR)/src/sysdolphin/dobj.o\
-	$(BUILD_DIR)/asm/sysdolphin/dobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tev.o\
 	$(BUILD_DIR)/src/sysdolphin/mobj.o\

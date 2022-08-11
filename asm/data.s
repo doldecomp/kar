@@ -116066,23 +116066,3 @@ lbl_80501150:
 	.4byte 0x5A65717F
 	.4byte 0x8FA0B4CA
 	.4byte 0xE3FF0000
-.global hsdDObj
-hsdDObj:
-	.4byte DObjInfoInit
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000

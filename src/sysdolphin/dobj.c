@@ -1,6 +1,11 @@
 #include "dobj.h"
 
 extern HSD_DObj* current_dobj;
+extern HSD_ClassInfo hsdClass;
+
+void DObjInfoInit(void);
+
+HSD_DObjInfo hsdDObj = { DObjInfoInit };
 
 void HSD_DObjSetCurrent(HSD_DObj* dobj)
 {
@@ -189,7 +194,6 @@ int DObjLoad(HSD_DObj* dobj, HSD_DObjDesc* desc)
     return 0;
 }
 
-extern HSD_DObjInfo hsdDObj;
 extern HSD_DObjInfo* default_class;
 
 void HSD_DObjSetDefaultClass(HSD_DObjInfo* info)
@@ -305,4 +309,23 @@ void DObjAmnesia(HSD_ClassInfo* info)
         default_class = NULL;
     }
     HSD_PARENT_INFO(&hsdDObj)->amnesia(info);
+}
+
+#pragma push
+#pragma force_active on
+static char unused1[] = "can not find specified pobj in link.\n";
+static char unused2[] = "can not find specified pobj in link.";
+static char unused3[] = "dobj->mobj == mobj";
+#pragma pop
+
+void DObjInfoInit(void)
+{
+    hsdInitClassInfo(HSD_CLASS_INFO(&hsdDObj), &hsdClass,
+        "sysdolphin_base_library", "hsd_dobj",
+        sizeof(HSD_DObjInfo), sizeof(HSD_DObj));
+
+    HSD_CLASS_INFO(&hsdDObj)->release = DObjRelease;
+    HSD_CLASS_INFO(&hsdDObj)->amnesia = DObjAmnesia;
+    hsdDObj.disp = HSD_DObjDisp;
+    hsdDObj.load = DObjLoad;
 }
