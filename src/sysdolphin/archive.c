@@ -1,7 +1,5 @@
 #include <sysdolphin/archive.h>
 
-extern char lbl_805046C0[];
-
 inline void Locate(HSD_Archive* archive)
 {
     int i;
@@ -26,7 +24,7 @@ s32 HSD_ArchiveParse(HSD_Archive* archive, u8* src, u32 file_size)
     memcpy(archive, src, sizeof(HSD_ArchiveHeader));
 
     if (archive->header.file_size != file_size) {
-        _OSReport(lbl_805046C0);
+        _OSReport("HSD_ArchiveParse: byte-order mismatch! Please check data format\n");
         return -1;
     }
 
@@ -74,4 +72,29 @@ char* HSD_ArchiveGetExtern(HSD_Archive* archive, s32 offset)
         return NULL;
     }
     return archive->symbols + archive->extern_info[offset].symbol;
+}
+
+void HSD_ArchiveLocateExtern(HSD_Archive* archive, char* symbols, void* addr)
+{
+    u32 next;
+    u32 offset;
+    int i;
+
+    offset = -1;
+    for (i = 0; i < archive->header.nb_extern; i++) {
+        if (strcmp(symbols, archive->symbols + archive->extern_info[i].symbol) == 0) {
+            offset = archive->extern_info[i].offset;
+            break;
+        }
+    }
+
+    if (offset == -1) {
+        return;
+    }
+
+    while (offset != -1 && offset < archive->header.data_size) {
+        next = *(u32*)((u32)archive->data + offset);
+        *(u32*)((u32)archive->data + offset) = (u32)addr;
+        offset = next;
+    }
 }
