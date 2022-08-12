@@ -1168,7 +1168,7 @@ lbl_805DCBB0:
     .4byte 0xFFFFFFFF
 .global lbl_805DCBB4
 lbl_805DCBB4:
-    .4byte 0x804F9C20
+    .4byte lbl_804F9C20
 .global lbl_805DCBB8
 lbl_805DCBB8:
     .4byte 0x00000002

@@ -1810,13 +1810,13 @@ lbl_805DCB88:
     .4byte 0x00000000
 .global lbl_805DCB8C
 lbl_805DCB8C:
-    .4byte 0x805DE278
+    .4byte lbl_805DE278
 .global lbl_805DCB90
 lbl_805DCB90:
-    .4byte 0x805DE27C
+    .4byte lbl_805DE27C
 .global lbl_805DCB94
 lbl_805DCB94:
-    .4byte 0x805DE284
+    .4byte lbl_805DE284
 .global lbl_805DCB98
 lbl_805DCB98:
     .4byte 0x6A6F626A
