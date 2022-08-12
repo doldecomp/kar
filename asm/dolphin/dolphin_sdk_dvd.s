@@ -1690,8 +1690,8 @@ lbl_803C5754:
 /* 803C5774 003C2574  4E 80 00 20 */	blr 
 /* 803C5778 003C2578  4E 80 00 20 */	blr 
 
-.global func_803C577C
-func_803C577C:
+.global HSD_OSInit
+HSD_OSInit:
 /* 803C577C 003C257C  7C 08 02 A6 */	mflr r0
 /* 803C5780 003C2580  90 01 00 04 */	stw r0, 4(r1)
 /* 803C5784 003C2584  94 21 FF F0 */	stwu r1, -0x10(r1)

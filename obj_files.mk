@@ -106,6 +106,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/pobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/jobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/displayfunc.o\
+	$(BUILD_DIR)/src/sysdolphin/initialize.o\
 	$(BUILD_DIR)/asm/sysdolphin/initialize.o\
 	$(BUILD_DIR)/asm/sysdolphin/video.o\
 	$(BUILD_DIR)/asm/sysdolphin/controller.o\

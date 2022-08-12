@@ -2429,8 +2429,8 @@ func_80417CD4:
 /* 80417CD8 00414AD8  38 63 BB B8 */	addi r3, r3, lbl_8058BBB8@l
 /* 80417CDC 00414ADC  4E 80 00 20 */	blr 
 
-.global func_80417CE0
-func_80417CE0:
+.global HSD_VecInitAllocData
+HSD_VecInitAllocData:
 /* 80417CE0 00414AE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80417CE4 00414AE4  7C 08 02 A6 */	mflr r0
 /* 80417CE8 00414AE8  3C 60 80 59 */	lis r3, lbl_8058BBB8@ha
@@ -2450,8 +2450,8 @@ func_80417D10:
 /* 80417D14 00414B14  38 63 BB E4 */	addi r3, r3, lbl_8058BBE4@l
 /* 80417D18 00414B18  4E 80 00 20 */	blr 
 
-.global func_80417D1C
-func_80417D1C:
+.global HSD_MtxInitAllocData
+HSD_MtxInitAllocData:
 /* 80417D1C 00414B1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80417D20 00414B20  7C 08 02 A6 */	mflr r0
 /* 80417D24 00414B24  3C 60 80 59 */	lis r3, lbl_8058BBE4@ha

@@ -2,8 +2,8 @@
 
 .section .text
 
-.global func_8040E360
-func_8040E360:
+.global HSD_ZListInitAllocData
+HSD_ZListInitAllocData:
 /* 8040E360 0040B160  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040E364 0040B164  7C 08 02 A6 */	mflr r0
 /* 8040E368 0040B168  3C 60 80 59 */	lis r3, lbl_80589A18@ha

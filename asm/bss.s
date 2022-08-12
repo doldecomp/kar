@@ -716,11 +716,11 @@ lbl_80589A08:
 .global lbl_80589A18
 lbl_80589A18:
 	.skip 0x30
-.global lbl_80589A48
-lbl_80589A48:
+.global FrameBuffer
+FrameBuffer:
 	.skip 0xC
-.global lbl_80589A54
-lbl_80589A54:
+.global memReport
+memReport:
 	.skip 0x2C
 .global lbl_80589A80
 lbl_80589A80:

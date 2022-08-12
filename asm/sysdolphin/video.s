@@ -1186,8 +1186,8 @@ func_80411A6C:
 /* 80411A7C 0040E87C  98 04 00 54 */	stb r0, 0x54(r4)
 /* 80411A80 0040E880  4E 80 00 20 */	blr 
 
-.global func_80411A84
-func_80411A84:
+.global HSD_VIInit
+HSD_VIInit:
 /* 80411A84 0040E884  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80411A88 0040E888  7C 08 02 A6 */	mflr r0
 /* 80411A8C 0040E88C  90 01 00 24 */	stw r0, 0x24(r1)
