@@ -3545,6 +3545,16 @@ lbl_80503410:
 	.4byte 0x00000000
 
 
+.section .sbss
+    .balign 8
+.global lbl_805DE228
+lbl_805DE228:
+    .skip 0x4
+.global lbl_805DE22C
+lbl_805DE22C:
+    .skip 0x4
+
+
 .section .sdata
     .balign 8
 .global lbl_805DCB00

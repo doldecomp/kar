@@ -2323,6 +2323,16 @@ lbl_8048C548:
 	.4byte 0x00000000
 
 
+.section .sbss
+    .balign 8
+.global lbl_805DE2D8
+lbl_805DE2D8:
+    .skip 0x4
+.global lbl_805DE2DC
+lbl_805DE2DC:
+    .skip 0x4
+
+
 .section .sdata
     .balign 8
 .global lbl_805DCC58

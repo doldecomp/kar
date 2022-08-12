@@ -1,7 +1,9 @@
 #include "dobj.h"
 
-extern HSD_DObj* current_dobj;
 extern HSD_ClassInfo hsdClass;
+
+static HSD_DObj* current_dobj;
+static HSD_DObjInfo* default_class;
 
 void DObjInfoInit(void);
 
@@ -154,8 +156,6 @@ lbl_803F4648:
 }
 #pragma pop
 
-extern char lbl_805DCA40[4];
-
 HSD_DObj* HSD_DObjLoadDesc(HSD_DObjDesc* desc);
 HSD_PObj* HSD_PObjLoadDesc(HSD_PObjDesc* desc);
 HSD_MObj* HSD_MObjLoadDesc(HSD_MObjDesc* desc);
@@ -192,8 +192,6 @@ int DObjLoad(HSD_DObj* dobj, HSD_DObjDesc* desc)
     }
     return 0;
 }
-
-extern HSD_DObjInfo* default_class;
 
 void HSD_DObjSetDefaultClass(HSD_DObjInfo* info)
 {

@@ -1390,6 +1390,22 @@ lbl_80502B70:
 	.4byte 0x00000000
 
 
+.section .sbss
+    .balign 8
+.global lbl_805DE1E8
+lbl_805DE1E8:
+    .skip 0x4
+.global current_mobj
+current_mobj:
+    .skip 0x4
+.global lbl_805DE1F0
+lbl_805DE1F0:
+    .skip 0x4
+.global lbl_805DE1F4
+lbl_805DE1F4:
+    .skip 0x4
+
+
 .section .sdata
     .balign 8
 .global lbl_805DCAA0

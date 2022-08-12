@@ -3374,6 +3374,31 @@ lbl_8050378C:
 	.4byte 0x00000000
 
 
+.section .sbss
+    .balign 8
+.global lbl_805DE230
+lbl_805DE230:
+    .skip 0x4
+.global lbl_805DE234
+lbl_805DE234:
+    .skip 0x4
+.global lbl_805DE238
+lbl_805DE238:
+    .skip 0x4
+.global lbl_805DE23C
+lbl_805DE23C:
+    .skip 0x4
+.global lbl_805DE240
+lbl_805DE240:
+    .skip 0x4
+.global lbl_805DE244
+lbl_805DE244:
+    .skip 0x4
+.global lbl_805DE248
+lbl_805DE248:
+    .skip 0x8
+
+
 .section .sdata
     .balign 8
 .global lbl_805DCB30

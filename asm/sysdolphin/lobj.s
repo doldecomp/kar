@@ -3309,6 +3309,31 @@ lbl_8048C464:
 	.4byte 0x00000000
 
 
+.section .sbss
+    .balign 8
+.global lbl_805DE208
+lbl_805DE208:
+    .skip 0x4
+.global lbl_805DE20C
+lbl_805DE20C:
+    .skip 0x4
+.global nb_active_lights
+nb_active_lights:
+    .skip 0x4
+.global lightmask_diffuse
+lightmask_diffuse:
+    .skip 0x4
+.global lightmask_specular
+lightmask_specular:
+    .skip 0x4
+.global lightmask_attnfunc
+lightmask_attnfunc:
+    .skip 0x4
+.global lightmask_alpha
+lightmask_alpha:
+    .skip 0x8
+
+
 .section .sdata
     .balign 8
 .global lbl_805DCAD8

@@ -1385,6 +1385,16 @@ lbl_80503EDC:
 	.4byte 0x4E450000
 
 
+.section .sbss
+    .balign 8
+.global lbl_805DE2C8
+lbl_805DE2C8:
+    .skip 0x4
+.global lbl_805DE2CC
+lbl_805DE2CC:
+    .skip 0x4
+
+
 .section .sdata
     .balign 8
 .global lbl_805DCC38
