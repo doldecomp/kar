@@ -1388,3 +1388,31 @@ lbl_80502B70:
 	.4byte 0x6D6F626A
 	.4byte 0x00000000
 	.4byte 0x00000000
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCAA0
+lbl_805DCAA0:
+    .4byte 0x6D6F626A
+    .4byte 0x2E630000
+.global lbl_805DCAA8
+lbl_805DCAA8:
+    .4byte 0x6D6F626A
+    .byte 0x00
+.global lbl_805DCAAD
+lbl_805DCAAD:
+    .2byte 0xFF00
+    .byte 0x00
+.global lbl_805DCAB0
+lbl_805DCAB0:
+    .4byte 0x6C697374
+    .4byte 0x00000000
+.global lbl_805DCAB8
+lbl_805DCAB8:
+    .4byte 0x6D617400
+.global lbl_805DCABC
+lbl_805DCABC:
+    .4byte 0x746F626A
+    .4byte 0x00000000
+    .4byte 0x00000000

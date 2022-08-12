@@ -1801,3 +1801,53 @@ lbl_8048C498:
 	.4byte 0x00000000
 	.4byte 0x3F800000
 	.4byte 0x00000000
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCB88
+lbl_805DCB88:
+    .4byte 0x00000000
+.global lbl_805DCB8C
+lbl_805DCB8C:
+    .4byte 0x805DE278
+.global lbl_805DCB90
+lbl_805DCB90:
+    .4byte 0x805DE27C
+.global lbl_805DCB94
+lbl_805DCB94:
+    .4byte 0x805DE284
+.global lbl_805DCB98
+lbl_805DCB98:
+    .4byte 0x6A6F626A
+    .4byte 0x00000000
+.global lbl_805DCBA0
+lbl_805DCBA0:
+    .4byte 0x78000000
+.global lbl_805DCBA4
+lbl_805DCBA4:
+    .4byte 0x6A6F626A
+    .4byte 0x2E680000
+    .4byte 0x00000000
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5B48
+lbl_805E5B48:
+    .4byte 0x3F800000
+.global lbl_805E5B4C
+lbl_805E5B4C:
+    .4byte 0x00000000
+.global lbl_805E5B50
+lbl_805E5B50:
+    .4byte 0x3FE00000
+    .4byte 0x00000000
+.global lbl_805E5B58
+lbl_805E5B58:
+    .4byte 0x40080000
+    .4byte 0x00000000
+.global lbl_805E5B60
+lbl_805E5B60:
+    .4byte 0xBF800000
+    .4byte 0x00000000

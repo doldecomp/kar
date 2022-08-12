@@ -2533,3 +2533,33 @@ lbl_80502A64:
 	.4byte 0x00000000
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCA88
+lbl_805DCA88:
+    .4byte 0x000000FF
+    .4byte 0x00000000
+.global lbl_805DCA90
+lbl_805DCA90:
+    .4byte 0x7465762E
+    .4byte 0x63000000
+.global lbl_805DCA98
+lbl_805DCA98:
+    .4byte 0x30000000
+    .4byte 0x00000000
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E59F8
+lbl_805E59F8:
+    .4byte 0x00000000
+.global lbl_805E59FC
+lbl_805E59FC:
+    .4byte 0x3F800000
+.global lbl_805E5A00
+lbl_805E5A00:
+    .4byte 0x437F0000
+    .4byte 0x00000000

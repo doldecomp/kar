@@ -766,3 +766,55 @@ splArcLengthPoint:
 /* 80415994 00412794  7C 08 03 A6 */	mtlr r0
 /* 80415998 00412798  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041599C 0041279C  4E 80 00 20 */	blr 
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5BE0
+lbl_805E5BE0:
+    .4byte 0x40000000
+.global lbl_805E5BE4
+lbl_805E5BE4:
+    .4byte 0x40400000
+.global lbl_805E5BE8
+lbl_805E5BE8:
+    .4byte 0x3F800000
+.global lbl_805E5BEC
+lbl_805E5BEC:
+    .4byte 0x3E2AAAAB
+.global lbl_805E5BF0
+lbl_805E5BF0:
+    .4byte 0x40800000
+.global lbl_805E5BF4
+lbl_805E5BF4:
+    .4byte 0x40C00000
+.global lbl_805E5BF8
+lbl_805E5BF8:
+    .4byte 0x00000000
+    .4byte 0x00000000
+.global lbl_805E5C00
+lbl_805E5C00:
+    .4byte 0x43300000
+    .4byte 0x80000000
+.global lbl_805E5C08
+lbl_805E5C08:
+    .4byte 0xBA83126F
+    .4byte 0x00000000
+.global lbl_805E5C10
+lbl_805E5C10:
+    .4byte 0x3FE00000
+    .4byte 0x00000000
+.global lbl_805E5C18
+lbl_805E5C18:
+    .4byte 0x40080000
+    .4byte 0x00000000
+.global lbl_805E5C20
+lbl_805E5C20:
+    .4byte 0x3E000000
+.global lbl_805E5C24
+lbl_805E5C24:
+    .4byte 0x3F000000
+.global lbl_805E5C28
+lbl_805E5C28:
+    .4byte 0x3727C5AC
+    .4byte 0x00000000

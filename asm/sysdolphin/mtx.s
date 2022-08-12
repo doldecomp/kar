@@ -2464,3 +2464,99 @@ func_80417D1C:
 /* 80417D40 00414B40  7C 08 03 A6 */	mtlr r0
 /* 80417D44 00414B44  38 21 00 10 */	addi r1, r1, 0x10
 /* 80417D48 00414B48  4E 80 00 20 */	blr 
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCC40
+lbl_805DCC40:
+    .4byte 0x6D74782E
+    .4byte 0x63000000
+.global lbl_805DCC48
+lbl_805DCC48:
+    .4byte 0x76656300
+.global lbl_805DCC4C
+lbl_805DCC4C:
+    .4byte 0x6D747800
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5C30
+lbl_805E5C30:
+    .4byte 0x3DDB7CDF
+    .4byte 0xE0000000
+.global lbl_805E5C38
+lbl_805E5C38:
+    .4byte 0x3F800000
+.global lbl_805E5C3C
+lbl_805E5C3C:
+    .4byte 0x00000000
+.global lbl_805E5C40
+lbl_805E5C40:
+    .4byte 0x3FE00000
+    .4byte 0x00000000
+.global lbl_805E5C48
+lbl_805E5C48:
+    .4byte 0x40080000
+    .4byte 0x00000000
+.global lbl_805E5C50
+lbl_805E5C50:
+    .4byte 0x3FC90FDB
+.global lbl_805E5C54
+lbl_805E5C54:
+    .4byte 0xBF800000
+.global lbl_805E5C58
+lbl_805E5C58:
+    .4byte 0xBFC90FDB
+    .4byte 0x00000000
+.global lbl_805E5C60
+lbl_805E5C60:
+    .4byte 0x3FF921FB
+    .4byte 0x54442D18
+.global lbl_805E5C68
+lbl_805E5C68:
+    .4byte 0x401921FB
+    .4byte 0x54442D18
+.global lbl_805E5C70
+lbl_805E5C70:
+    .4byte 0x400921FB
+    .4byte 0x54442D18
+.global lbl_805E5C78
+lbl_805E5C78:
+    .4byte 0x3E2AAAAC
+.global lbl_805E5C7C
+lbl_805E5C7C:
+    .4byte 0x3C088666
+.global lbl_805E5C80
+lbl_805E5C80:
+    .4byte 0x394D64B6
+.global lbl_805E5C84
+lbl_805E5C84:
+    .4byte 0x3F7FFFFD
+.global lbl_805E5C88
+lbl_805E5C88:
+    .4byte 0x3EFFFF35
+.global lbl_805E5C8C
+lbl_805E5C8C:
+    .4byte 0x3D2A8ADB
+.global lbl_805E5C90
+lbl_805E5C90:
+    .4byte 0x3AAFA553
+    .4byte 0x00000000
+.global lbl_805E5C98
+lbl_805E5C98:
+    .4byte 0x3FE921FB
+    .4byte 0x54442D18
+.global lbl_805E5CA0
+lbl_805E5CA0:
+    .4byte 0x2EDBE6FF
+    .4byte 0x00000000
+.global lbl_805E5CA8
+lbl_805E5CA8:
+    .4byte 0x00000000
+    .4byte 0x00000000
+.global lbl_805E5CB0
+lbl_805E5CB0:
+    .4byte 0xBFF00000
+    .4byte 0x00000000

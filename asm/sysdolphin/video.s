@@ -1383,3 +1383,23 @@ lbl_80503EDC:
 	.4byte 0x425F5741
 	.4byte 0x4954444F
 	.4byte 0x4E450000
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCC38
+lbl_805DCC38:
+    .4byte 0x76696465
+    .4byte 0x6F2E6300
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5B70
+lbl_805E5B70:
+    .4byte 0x3F800000
+    .4byte 0x00000000
+.global lbl_805E5B78
+lbl_805E5B78:
+    .4byte 0x43300000
+    .4byte 0x00000000
