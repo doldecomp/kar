@@ -107,16 +107,3 @@ lbl_805E6370:
 .global lbl_805E6374
 lbl_805E6374:
 	.skip 0x4
-.global lbl_805E6378
-lbl_805E6378:
-	.skip 0x8
-.global lbl_805E6380
-lbl_805E6380:
-	.skip 0x8
-.global lbl_805E6388
-lbl_805E6388:
-	.skip 0x4
-.global lbl_805E638C
-lbl_805E638C:
-	.skip 0x4
-	

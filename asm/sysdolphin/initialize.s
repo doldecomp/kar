@@ -1207,6 +1207,13 @@ lbl_805DE2C4:
     .skip 0x4
 
 
+.section .sbss2, "", @nobits
+    .balign 8
+.global lbl_805E6378
+lbl_805E6378:
+    .skip 0x8
+
+
 .section .sdata
     .balign 8
 .global lbl_805DCBB0

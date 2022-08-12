@@ -45,7 +45,7 @@ include obj_files.mk
 
 O_FILES := $(SBSS_O_FILES) $(INIT_O_FILES) $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(TEXT_O_FILES) \
            $(CTORS_O_FILES) $(DTORS_O_FILES) \
-           $(BSS_O_FILES) $(SDATA_O_FILES) $(SBSS2_O_FILES)
+           $(BSS_O_FILES) $(SDATA_O_FILES)
 
 #-------------------------------------------------------------------------------
 # Tools

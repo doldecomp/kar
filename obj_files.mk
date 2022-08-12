@@ -89,6 +89,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sbss_1.o\
 	$(BUILD_DIR)/asm/sdata.o\
 	$(BUILD_DIR)/asm/sdata2.o\
+	$(BUILD_DIR)/asm/sbss2.o\
 	$(BUILD_DIR)/src/sysdolphin/dobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tev.o\
@@ -153,6 +154,3 @@ DTORS_O_FILES :=\
 
 BSS_O_FILES :=\
 	$(BUILD_DIR)/asm/bss.o\
-
-SBSS2_O_FILES :=\
-	$(BUILD_DIR)/asm/sbss2.o\

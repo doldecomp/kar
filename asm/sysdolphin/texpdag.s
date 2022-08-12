@@ -4358,3 +4358,13 @@ lbl_80504D30:
 	.4byte lbl_80426274
 	.4byte lbl_804261CC
 	.4byte lbl_80426274
+
+
+.section .sbss2, "", @nobits
+    .balign 8
+.global lbl_805E6388
+lbl_805E6388:
+    .skip 0x4
+.global lbl_805E638C
+lbl_805E638C:
+    .skip 0x4
