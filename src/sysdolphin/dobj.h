@@ -28,6 +28,7 @@ typedef struct _HSD_DObjInfo {
     HSD_ClassInfo parent;
     void (*disp)(HSD_DObj* dobj, Mtx vmtx, Mtx pmtx, u32 rendermode); //0x3C
     int (*load)(HSD_DObj* dobj, HSD_DObjDesc* desc); //0x40
+    u32 unused; // 0x44
 } HSD_DObjInfo;
 
 typedef struct _HSD_ShapeAnimDObj {

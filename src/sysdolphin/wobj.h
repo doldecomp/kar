@@ -24,6 +24,7 @@ typedef struct _HSD_WObjDesc {
 typedef struct _HSD_WObjInfo {
     HSD_ObjInfo parent;
     int (*load)(HSD_WObj* wobj, HSD_WObjDesc* desc);
+    void (*update)(void* obj, u32 type, f32*);
 } HSD_WObjInfo;
 
 typedef struct _HSD_WObjAnim {

@@ -90,7 +90,6 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sdata.o\
 	$(BUILD_DIR)/asm/sdata2.o\
 	$(BUILD_DIR)/src/sysdolphin/dobj.o\
-	$(BUILD_DIR)/asm/sysdolphin/dobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tev.o\
 	$(BUILD_DIR)/src/sysdolphin/mobj.o\
@@ -118,7 +117,6 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/robj.o\
 	$(BUILD_DIR)/src/sysdolphin/id.o\
 	$(BUILD_DIR)/src/sysdolphin/wobj.o\
-	$(BUILD_DIR)/asm/sysdolphin/wobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/fog.o\
 	$(BUILD_DIR)/asm/sysdolphin/pref.o\
 	$(BUILD_DIR)/src/sysdolphin/list.o\
@@ -126,7 +124,6 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/memory.o\
 	$(BUILD_DIR)/asm/sysdolphin/shadow.o\
 	$(BUILD_DIR)/src/sysdolphin/archive.o\
-	$(BUILD_DIR)/asm/sysdolphin/archive.o\
 	$(BUILD_DIR)/asm/sysdolphin/random.o\
 	$(BUILD_DIR)/asm/sysdolphin/bytecode.o\
 	$(BUILD_DIR)/src/sysdolphin/class.o\
