@@ -704,8 +704,8 @@ lbl_805893BC:
 .global aobj_alloc_data
 aobj_alloc_data:
 	.skip 0x30
-.global lbl_805899B0
-lbl_805899B0:
+.global active_lights
+active_lights:
 	.skip 0x28
 .global fobj_alloc_data
 fobj_alloc_data:

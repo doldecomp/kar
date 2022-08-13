@@ -4,8 +4,12 @@ extern s32 lightmask_diffuse;
 extern s32 lightmask_attnfunc;
 extern s32 lightmask_alpha;
 extern s32 lightmask_specular;
-
 extern s32 nb_active_lights;
+
+extern HSD_LObjInfo hsdLObj;
+
+s32 HSD_LightID2Index(u32);
+extern HSD_LObj* active_lights[10];
 
 u32 HSD_LObjGetFlags(HSD_LObj* lobj)
 {
@@ -51,22 +55,29 @@ s32 HSD_LObjGetNbActive(void)
     return nb_active_lights;
 }
 
-s32 func_803FF8E4(void);
-extern s32 lbl_805899B0[10];
-
-s32 func_803FDB3C(void)
+HSD_LObj* HSD_LObjGetActiveByID(u32 id)
 {
-    s32 temp_r3 = func_803FF8E4();
-    if (temp_r3 >= 0 && temp_r3 < 9) {
-        return lbl_805899B0[temp_r3];
+    s32 idx = HSD_LightID2Index(id);
+    if (idx >= 0 && idx < 9) {
+        return active_lights[idx];
     }
-    return 0;
+    return NULL;
 }
 
-s32 func_803FDB84(s32 arg0)
+HSD_LObj* HSD_LObjGetActiveByIndex(s32 idx)
 {
-    if (arg0 >= 0 && arg0 < 8) {
-        return lbl_805899B0[arg0];
+    if (idx >= 0 && idx < 8) {
+        return active_lights[idx];
     }
-    return 0;
+    return NULL;
+}
+
+inline f32 HSD_ClampFloat(f32 val, f32 min, f32 max)
+{
+    if (val <= min) {
+        return min;
+    } else if (val >= max) {
+        return max;
+    }
+    return val;
 }
