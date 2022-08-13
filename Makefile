@@ -63,7 +63,7 @@ else
   PYTHON  := python3
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
-CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
+CPP     := cpp -P
 CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 CC10    := $(WINE) tools/mwcc_compiler/1.0/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
