@@ -59,34 +59,3 @@ sysdolphin_base_library:
 hsd_obj:
 	.4byte 0x6873645F
 	.4byte 0x6F626A00
-.global shadow
-shadow:
-#	.string "shadow"
-	.4byte 0x73686164
-	.4byte 0x6F770000
-.global lbl_805DCD20
-lbl_805DCD20:
-	.4byte 0x30000000
-.global lbl_805DCD24
-lbl_805DCD24:
-	.4byte 0x72656374
-	.4byte 0x00000000
-	.4byte 0x00000000
-.global lbl_805DCD30
-lbl_805DCD30:
-	.4byte 0x00000001
-.global lbl_805DCD34
-lbl_805DCD34:
-	.4byte 0x00008000
-.global lbl_805DCD38
-lbl_805DCD38:
-	.4byte lbl_805DCD30
-	.4byte 0x00000000
-.global lbl_805DCD40
-lbl_805DCD40:
-	.4byte 0x00000000
-.global lbl_805DCD44
-lbl_805DCD44:
-	.4byte 0x73746163
-	.4byte 0x6B000000
-	.4byte 0x00000000
