@@ -2044,7 +2044,7 @@ lbl_80413A4C:
 /* 80413A4C 0041084C  7E E3 BB 78 */	mr r3, r23
 /* 80413A50 00410850  4B FC 36 81 */	bl OSRestoreInterrupts
 /* 80413A54 00410854  39 61 00 C0 */	addi r11, r1, 0xc0
-/* 80413A58 00410858  4B F9 A1 2D */	bl func_803ADB84
+/* 80413A58 00410858  4B F9 A1 2D */	bl _restgpr_20
 /* 80413A5C 0041085C  80 01 00 C4 */	lwz r0, 0xc4(r1)
 /* 80413A60 00410860  7C 08 03 A6 */	mtlr r0
 /* 80413A64 00410864  38 21 00 C0 */	addi r1, r1, 0xc0
@@ -2763,3 +2763,57 @@ lbl_8048C538:
 	.4byte 0x40000000
 	.4byte 0x20000000
 	.4byte 0x10000000
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5B80
+lbl_805E5B80:
+    .4byte 0x3F000000
+    .4byte 0x00000000
+.global lbl_805E5B88
+lbl_805E5B88:
+    .4byte 0x43300000
+    .4byte 0x00000000
+.global lbl_805E5B90
+lbl_805E5B90:
+    .4byte 0x00000000
+    .4byte 0x00000000
+.global lbl_805E5B98
+lbl_805E5B98:
+    .4byte 0x3FE00000
+    .4byte 0x00000000
+.global lbl_805E5BA0
+lbl_805E5BA0:
+    .4byte 0x40080000
+    .4byte 0x00000000
+.global lbl_805E5BA8
+lbl_805E5BA8:
+    .4byte 0x2EDBE6FF
+    .4byte 0x00000000
+.global lbl_805E5BB0
+lbl_805E5BB0:
+    .4byte 0x43300000
+    .4byte 0x80000000
+.global lbl_805E5BB8
+lbl_805E5BB8:
+    .4byte 0x3FC90FDB
+.global lbl_805E5BBC
+lbl_805E5BBC:
+    .4byte 0xBFC90FDB
+.global lbl_805E5BC0
+lbl_805E5BC0:
+    .4byte 0xC002D97C
+    .4byte 0x7F3321D2
+.global lbl_805E5BC8
+lbl_805E5BC8:
+    .4byte 0xBFE921FB
+    .4byte 0x54442D18
+.global lbl_805E5BD0
+lbl_805E5BD0:
+    .4byte 0x3FE921FB
+    .4byte 0x54442D18
+.global lbl_805E5BD8
+lbl_805E5BD8:
+    .4byte 0x4002D97C
+    .4byte 0x7F3321D2

@@ -399,3 +399,18 @@ lbl_80504028:
 	.4byte 0x203D3D20
 	.4byte 0x31000000
 	.4byte 0x00000000
+
+
+.section .sbss
+    .balign 8
+.global lbl_805DE2D0
+lbl_805DE2D0:
+    .skip 0x8
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCC50
+lbl_805DCC50:
+    .4byte 0x64617461
+    .4byte 0x00000000

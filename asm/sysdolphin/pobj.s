@@ -1611,7 +1611,7 @@ lbl_80406988:
 /* 80406990 00403790  41 80 FD 2C */	blt lbl_804066BC
 lbl_80406994:
 /* 80406994 00403794  39 61 00 30 */	addi r11, r1, 0x30
-/* 80406998 00403798  4B FA 71 F5 */	bl func_803ADB8C
+/* 80406998 00403798  4B FA 71 F5 */	bl _restgpr_22
 /* 8040699C 0040379C  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 804069A0 004037A0  7C 08 03 A6 */	mtlr r0
 /* 804069A4 004037A4  38 21 00 30 */	addi r1, r1, 0x30
@@ -2113,7 +2113,7 @@ lbl_8040709C:
 /* 804070B4 00403EB4  E3 C1 00 F8 */	psq_l f30, 248(r1), 0, qr0
 /* 804070B8 00403EB8  39 61 00 F0 */	addi r11, r1, 0xf0
 /* 804070BC 00403EBC  CB C1 00 F0 */	lfd f30, 0xf0(r1)
-/* 804070C0 00403EC0  4B FA 6A D5 */	bl func_803ADB94
+/* 804070C0 00403EC0  4B FA 6A D5 */	bl _restgpr_24
 /* 804070C4 00403EC4  80 01 01 14 */	lwz r0, 0x114(r1)
 /* 804070C8 00403EC8  7C 08 03 A6 */	mtlr r0
 /* 804070CC 00403ECC  38 21 01 10 */	addi r1, r1, 0x110
@@ -2553,7 +2553,7 @@ lbl_804076D4:
 /* 804076D4 004044D4  E3 E1 00 E8 */	psq_l f31, 232(r1), 0, qr0
 /* 804076D8 004044D8  39 61 00 E0 */	addi r11, r1, 0xe0
 /* 804076DC 004044DC  CB E1 00 E0 */	lfd f31, 0xe0(r1)
-/* 804076E0 004044E0  4B FA 64 99 */	bl func_803ADB78
+/* 804076E0 004044E0  4B FA 64 99 */	bl _restgpr_17
 /* 804076E4 004044E4  80 01 00 F4 */	lwz r0, 0xf4(r1)
 /* 804076E8 004044E8  7C 08 03 A6 */	mtlr r0
 /* 804076EC 004044EC  38 21 00 F0 */	addi r1, r1, 0xf0
@@ -3372,3 +3372,80 @@ lbl_8050378C:
 	.4byte 0x706F626A
 	.4byte 0x00000000
 	.4byte 0x00000000
+
+
+.section .sbss
+    .balign 8
+.global lbl_805DE230
+lbl_805DE230:
+    .skip 0x4
+.global lbl_805DE234
+lbl_805DE234:
+    .skip 0x4
+.global lbl_805DE238
+lbl_805DE238:
+    .skip 0x4
+.global lbl_805DE23C
+lbl_805DE23C:
+    .skip 0x4
+.global lbl_805DE240
+lbl_805DE240:
+    .skip 0x4
+.global lbl_805DE244
+lbl_805DE244:
+    .skip 0x4
+.global lbl_805DE248
+lbl_805DE248:
+    .skip 0x8
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCB30
+lbl_805DCB30:
+    .4byte 0x706F626A
+    .4byte 0x2E630000
+.global lbl_805DCB38
+lbl_805DCB38:
+    .4byte 0x706F626A
+    .4byte 0x00000000
+.global lbl_805DCB40
+lbl_805DCB40:
+    .4byte 0x6A6F626A
+    .4byte 0x2E680000
+.global lbl_805DCB48
+lbl_805DCB48:
+    .4byte 0x6A6F626A
+    .4byte 0x00000000
+.global lbl_805DCB50
+lbl_805DCB50:
+    .4byte 0x6A702D3E
+    .4byte 0x6D747800
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5AC8
+lbl_805E5AC8:
+    .4byte 0x00000000
+    .4byte 0x00000000
+.global lbl_805E5AD0
+lbl_805E5AD0:
+    .4byte 0x43300000
+    .4byte 0x00000000
+.global lbl_805E5AD8
+lbl_805E5AD8:
+    .4byte 0x43300000
+    .4byte 0x80000000
+.global lbl_805E5AE0
+lbl_805E5AE0:
+    .4byte 0x00000000
+    .4byte 0x00000000
+.global lbl_805E5AE8
+lbl_805E5AE8:
+    .4byte 0x3FF00000
+    .4byte 0x00000000
+.global lbl_805E5AF0
+lbl_805E5AF0:
+    .4byte 0x3F800000
+    .4byte 0x00000000

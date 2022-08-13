@@ -1,7 +1,9 @@
 #include "dobj.h"
 
-extern HSD_DObj* current_dobj;
 extern HSD_ClassInfo hsdClass;
+
+static HSD_DObj* current_dobj;
+static HSD_DObjInfo* default_class;
 
 void DObjInfoInit(void);
 
@@ -154,9 +156,6 @@ lbl_803F4648:
 }
 #pragma pop
 
-extern char lbl_805DCA38[4];
-extern char lbl_805DCA40[4];
-
 HSD_DObj* HSD_DObjLoadDesc(HSD_DObjDesc* desc);
 HSD_PObj* HSD_PObjLoadDesc(HSD_PObjDesc* desc);
 HSD_MObj* HSD_MObjLoadDesc(HSD_MObjDesc* desc);
@@ -188,23 +187,18 @@ int DObjLoad(HSD_DObj* dobj, HSD_DObjDesc* desc)
                 break;
             default:
                 _OSReport("mobj has unexpected blending flags (0x%x).", dobj->mobj->rendermode);
-                HSD_Panic(lbl_805DCA38, 319, lbl_805DCA40);
+                HSD_Panic(__FILE__, 319, "");
         }
     }
     return 0;
 }
 
-extern HSD_DObjInfo* default_class;
-
 void HSD_DObjSetDefaultClass(HSD_DObjInfo* info)
 {
     if (info != NULL)
-        if (!hsdIsDescendantOf(info, &hsdDObj))
-            __assert(lbl_805DCA38, 0x155, "hsdIsDescendantOf(info, &hsdDObj)");
+        assert_line(0x155, hsdIsDescendantOf(info, &hsdDObj));
     default_class = info;
 }
-
-extern char lbl_805DCA44[4];
 
 void* hsdNew();
 
@@ -219,9 +213,7 @@ HSD_DObj* HSD_DObjLoadDesc(HSD_DObjDesc* desc)
         dobj = HSD_DObjAlloc();
     } else {
         dobj = HSD_DOBJ(hsdNew());
-        if (dobj == NULL) {
-            __assert(lbl_805DCA38, 0x181, lbl_805DCA44);
-        }
+        assert_line(0x181, dobj);
     }
     HSD_DOBJ_METHOD(dobj)->load(dobj, desc);
 
@@ -255,9 +247,7 @@ void HSD_DObjRemoveAll(HSD_DObj* dobj)
 HSD_DObj* HSD_DObjAlloc(void)
 {
     HSD_DObj* dobj = hsdNew((HSD_ClassInfo*) (default_class ? default_class : &hsdDObj));
-    if (dobj == NULL) {
-        __assert(lbl_805DCA38, 0x214, lbl_805DCA44);
-    }
+    assert_line(0x214, dobj);
     return dobj;
 }
 

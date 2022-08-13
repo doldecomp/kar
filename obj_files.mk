@@ -89,6 +89,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sbss_1.o\
 	$(BUILD_DIR)/asm/sdata.o\
 	$(BUILD_DIR)/asm/sdata2.o\
+	$(BUILD_DIR)/asm/sbss2.o\
 	$(BUILD_DIR)/src/sysdolphin/dobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tev.o\
@@ -105,12 +106,14 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/pobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/jobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/displayfunc.o\
+	$(BUILD_DIR)/src/sysdolphin/initialize.o\
 	$(BUILD_DIR)/asm/sysdolphin/initialize.o\
 	$(BUILD_DIR)/asm/sysdolphin/video.o\
 	$(BUILD_DIR)/asm/sysdolphin/controller.o\
 	$(BUILD_DIR)/asm/sysdolphin/rumble.o\
 	$(BUILD_DIR)/asm/sysdolphin/spline.o\
 	$(BUILD_DIR)/asm/sysdolphin/mtx.o\
+	$(BUILD_DIR)/src/sysdolphin/util.o\
 	$(BUILD_DIR)/asm/sysdolphin/util.o\
 	$(BUILD_DIR)/asm/sysdolphin/objalloc.o\
 	$(BUILD_DIR)/src/sysdolphin/robj.o\
@@ -153,6 +156,3 @@ DTORS_O_FILES :=\
 
 BSS_O_FILES :=\
 	$(BUILD_DIR)/asm/bss.o\
-
-SBSS2_O_FILES :=\
-	$(BUILD_DIR)/asm/sbss2.o\

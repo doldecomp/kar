@@ -1186,8 +1186,8 @@ func_80411A6C:
 /* 80411A7C 0040E87C  98 04 00 54 */	stb r0, 0x54(r4)
 /* 80411A80 0040E880  4E 80 00 20 */	blr 
 
-.global func_80411A84
-func_80411A84:
+.global HSD_VIInit
+HSD_VIInit:
 /* 80411A84 0040E884  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80411A88 0040E888  7C 08 02 A6 */	mflr r0
 /* 80411A8C 0040E88C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1383,3 +1383,33 @@ lbl_80503EDC:
 	.4byte 0x425F5741
 	.4byte 0x4954444F
 	.4byte 0x4E450000
+
+
+.section .sbss
+    .balign 8
+.global lbl_805DE2C8
+lbl_805DE2C8:
+    .skip 0x4
+.global lbl_805DE2CC
+lbl_805DE2CC:
+    .skip 0x4
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCC38
+lbl_805DCC38:
+    .4byte 0x76696465
+    .4byte 0x6F2E6300
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5B70
+lbl_805E5B70:
+    .4byte 0x3F800000
+    .4byte 0x00000000
+.global lbl_805E5B78
+lbl_805E5B78:
+    .4byte 0x43300000
+    .4byte 0x00000000

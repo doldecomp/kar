@@ -1485,7 +1485,7 @@ lbl_803FF048:
 /* 803FF060 003FBE60  E3 A1 00 C8 */	psq_l f29, 200(r1), 0, qr0
 /* 803FF064 003FBE64  39 61 00 C0 */	addi r11, r1, 0xc0
 /* 803FF068 003FBE68  CB A1 00 C0 */	lfd f29, 0xc0(r1)
-/* 803FF06C 003FBE6C  4B FA EB 29 */	bl func_803ADB94
+/* 803FF06C 003FBE6C  4B FA EB 29 */	bl _restgpr_24
 /* 803FF070 003FBE70  80 01 00 F4 */	lwz r0, 0xf4(r1)
 /* 803FF074 003FBE74  7C 08 03 A6 */	mtlr r0
 /* 803FF078 003FBE78  38 21 00 F0 */	addi r1, r1, 0xf0
@@ -3307,3 +3307,85 @@ lbl_8048C464:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
+
+
+.section .sbss
+    .balign 8
+.global lbl_805DE208
+lbl_805DE208:
+    .skip 0x4
+.global lbl_805DE20C
+lbl_805DE20C:
+    .skip 0x4
+.global nb_active_lights
+nb_active_lights:
+    .skip 0x4
+.global lightmask_diffuse
+lightmask_diffuse:
+    .skip 0x4
+.global lightmask_specular
+lightmask_specular:
+    .skip 0x4
+.global lightmask_attnfunc
+lightmask_attnfunc:
+    .skip 0x4
+.global lightmask_alpha
+lightmask_alpha:
+    .skip 0x8
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCAD8
+lbl_805DCAD8:
+    .4byte 0x6C6F626A
+    .4byte 0x2E630000
+.global lbl_805DCAE0
+lbl_805DCAE0:
+    .4byte 0x30000000
+.global lbl_805DCAE4
+lbl_805DCAE4:
+    .4byte 0x6C6F626A
+    .4byte 0x2E680000
+.global lbl_805DCAEC
+lbl_805DCAEC:
+    .4byte 0x6C6F626A
+    .4byte 0x00000000
+.global lbl_805DCAF4
+lbl_805DCAF4:
+    .4byte 0x6E657700
+.global lbl_805DCAF8
+lbl_805DCAF8:
+    .4byte 0x00000000
+.global lbl_805DCAFC
+lbl_805DCAFC:
+    .4byte 0x2A700000
+
+
+.section .sdata2
+.global lbl_805E5A20
+lbl_805E5A20:
+    .4byte 0x3FE00000
+    .4byte 0x00000000
+.global lbl_805E5A28
+lbl_805E5A28:
+    .4byte 0x00000000
+.global lbl_805E5A2C
+lbl_805E5A2C:
+    .4byte 0x3F800000
+.global lbl_805E5A30
+lbl_805E5A30:
+    .4byte 0x437F0000
+.global lbl_805E5A34
+lbl_805E5A34:
+    .4byte 0x3F000000
+.global lbl_805E5A38
+lbl_805E5A38:
+    .4byte 0xBF800000
+.global lbl_805E5A3C
+lbl_805E5A3C:
+    .4byte 0x42480000
+.global lbl_805E5A40
+lbl_805E5A40:
+    .4byte 0x49800000
+    .4byte 0x00000000

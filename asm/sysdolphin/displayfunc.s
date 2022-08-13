@@ -2,8 +2,8 @@
 
 .section .text
 
-.global func_8040E360
-func_8040E360:
+.global HSD_ZListInitAllocData
+HSD_ZListInitAllocData:
 /* 8040E360 0040B160  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040E364 0040B164  7C 08 02 A6 */	mflr r0
 /* 8040E368 0040B168  3C 60 80 59 */	lis r3, lbl_80589A18@ha
@@ -1801,3 +1801,78 @@ lbl_8048C498:
 	.4byte 0x00000000
 	.4byte 0x3F800000
 	.4byte 0x00000000
+
+
+.section .sbss
+    .balign 8
+.global lbl_805DE270
+lbl_805DE270:
+    .skip 0x4
+.global lbl_805DE274
+lbl_805DE274:
+    .skip 0x4
+.global lbl_805DE278
+lbl_805DE278:
+    .skip 0x4
+.global lbl_805DE27C
+lbl_805DE27C:
+    .skip 0x4
+.global lbl_805DE280
+lbl_805DE280:
+    .skip 0x4
+.global lbl_805DE284
+lbl_805DE284:
+    .skip 0x4
+.global lbl_805DE288
+lbl_805DE288:
+    .skip 0x8
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCB88
+lbl_805DCB88:
+    .4byte 0x00000000
+.global lbl_805DCB8C
+lbl_805DCB8C:
+    .4byte lbl_805DE278
+.global lbl_805DCB90
+lbl_805DCB90:
+    .4byte lbl_805DE27C
+.global lbl_805DCB94
+lbl_805DCB94:
+    .4byte lbl_805DE284
+.global lbl_805DCB98
+lbl_805DCB98:
+    .4byte 0x6A6F626A
+    .4byte 0x00000000
+.global lbl_805DCBA0
+lbl_805DCBA0:
+    .4byte 0x78000000
+.global lbl_805DCBA4
+lbl_805DCBA4:
+    .4byte 0x6A6F626A
+    .4byte 0x2E680000
+    .4byte 0x00000000
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5B48
+lbl_805E5B48:
+    .4byte 0x3F800000
+.global lbl_805E5B4C
+lbl_805E5B4C:
+    .4byte 0x00000000
+.global lbl_805E5B50
+lbl_805E5B50:
+    .4byte 0x3FE00000
+    .4byte 0x00000000
+.global lbl_805E5B58
+lbl_805E5B58:
+    .4byte 0x40080000
+    .4byte 0x00000000
+.global lbl_805E5B60
+lbl_805E5B60:
+    .4byte 0xBF800000
+    .4byte 0x00000000
