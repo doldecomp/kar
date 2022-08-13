@@ -124,7 +124,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/fog.o\
 	$(BUILD_DIR)/asm/sysdolphin/pref.o\
 	$(BUILD_DIR)/src/sysdolphin/list.o\
-	$(BUILD_DIR)/asm/sysdolphin/object.o\
+	$(BUILD_DIR)/src/sysdolphin/object.o\
 	$(BUILD_DIR)/asm/sysdolphin/memory.o\
 	$(BUILD_DIR)/src/sysdolphin/shadow.o\
 	$(BUILD_DIR)/asm/sysdolphin/shadow.o\
