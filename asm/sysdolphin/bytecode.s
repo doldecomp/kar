@@ -2218,3 +2218,77 @@ lbl_80504708:
 	.balign 4
 	.asciz "unexpected opcode 0x%x.\n"
 	.balign 4
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5DF8
+lbl_805E5DF8:
+    .4byte 0x00000000
+    .4byte 0x00000000
+.global lbl_805E5E00
+lbl_805E5E00:
+    .4byte 0x3F91DF46
+    .4byte 0xA2529D39
+.global lbl_805E5E08
+lbl_805E5E08:
+    .4byte 0x404CA5DC
+    .4byte 0x1A63C1F8
+.global lbl_805E5E10
+lbl_805E5E10:
+    .4byte 0x3FE00000
+    .4byte 0x00000000
+.global lbl_805E5E18
+lbl_805E5E18:
+    .4byte 0x40080000
+    .4byte 0x00000000
+.global lbl_805E5E20
+lbl_805E5E20:
+    .4byte 0x3FC90FDB
+.global lbl_805E5E24
+lbl_805E5E24:
+    .4byte 0xBFC90FDB
+.global lbl_805E5E28
+lbl_805E5E28:
+    .4byte 0x43300000
+    .4byte 0x80000000
+.global lbl_805E5E30
+lbl_805E5E30:
+    .4byte 0x3FF921FB
+    .4byte 0x54442D18
+.global lbl_805E5E38
+lbl_805E5E38:
+    .4byte 0x401921FB
+    .4byte 0x54442D18
+.global lbl_805E5E40
+lbl_805E5E40:
+    .4byte 0x400921FB
+    .4byte 0x54442D18
+.global lbl_805E5E48
+lbl_805E5E48:
+    .4byte 0x3F800000
+.global lbl_805E5E4C
+lbl_805E5E4C:
+    .4byte 0x3E2AAAAC
+.global lbl_805E5E50
+lbl_805E5E50:
+    .4byte 0x3C088666
+.global lbl_805E5E54
+lbl_805E5E54:
+    .4byte 0x394D64B6
+.global lbl_805E5E58
+lbl_805E5E58:
+    .4byte 0x3F7FFFFD
+.global lbl_805E5E5C
+lbl_805E5E5C:
+    .4byte 0x3EFFFF35
+.global lbl_805E5E60
+lbl_805E5E60:
+    .4byte 0x3D2A8ADB
+.global lbl_805E5E64
+lbl_805E5E64:
+    .4byte 0x3AAFA553
+.global lbl_805E5E68
+lbl_805E5E68:
+    .4byte 0x3FE921FB
+    .4byte 0x54442D18

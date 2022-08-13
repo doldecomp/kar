@@ -126,3 +126,15 @@ lbl_8041E6C8:
 /* 8041E6CC 0041B4CC  7C 08 03 A6 */	mtlr r0
 /* 8041E6D0 0041B4D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041E6D4 0041B4D4  4E 80 00 20 */	blr 
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5DE8
+lbl_805E5DE8:
+    .4byte 0x47800000
+    .4byte 0x00000000
+.global lbl_805E5DF0
+lbl_805E5DF0:
+    .4byte 0x43300000
+    .4byte 0x00000000
