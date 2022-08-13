@@ -150,6 +150,25 @@ lbl_8042857C:
 /* 804285A8 004253A8  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_8058BEC8
+lbl_8058BEC8:
+    .skip 0x2C8
+.global lbl_8058C190
+lbl_8058C190:
+    .skip 0xC
+.global lbl_8058C19C
+lbl_8058C19C:
+    .skip 0x2C
+.global lbl_8058C1C8
+lbl_8058C1C8:
+    .skip 0x2C
+.global lbl_8058C1F4
+lbl_8058C1F4:
+    .skip 0x14
+
+
 .section .data
     .balign 8
 .global lbl_80504D70

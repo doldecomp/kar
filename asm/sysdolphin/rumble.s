@@ -809,6 +809,13 @@ lbl_80414E18:
 /* 80414E80 00411C80  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_8058BB88
+lbl_8058BB88:
+    .skip 0x30
+
+
 .section .data
     .balign 8
 .global lbl_80503FB0

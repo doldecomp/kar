@@ -1145,6 +1145,13 @@ HSD_Alloc:
 /* 8041CF18 00419D18  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_8058BE80
+lbl_8058BE80:
+    .skip 0x18
+
+
 .section .data
     .balign 8
 .global lbl_80504500

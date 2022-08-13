@@ -2011,6 +2011,28 @@ func_803F98B0:
 /* 803F98B8 003F66B8  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_80589260
+lbl_80589260:
+    .skip 0x18
+.global lbl_80589278
+lbl_80589278:
+    .skip 0x2C
+.global lbl_805892A4
+lbl_805892A4:
+    .skip 0x2C
+.global lbl_805892D0
+lbl_805892D0:
+    .skip 0x2C
+.global lbl_805892FC
+lbl_805892FC:
+    .skip 0xC0
+.global lbl_805893BC
+lbl_805893BC:
+    .skip 0x5C4
+
+
 .section .data
 	.balign 8
 .global lbl_80502300

@@ -977,6 +977,16 @@ lbl_80410A78:
 /* 80410A8C 0040D88C  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global FrameBuffer
+FrameBuffer:
+    .skip 0xC
+.global memReport
+memReport:
+    .skip 0x2C
+
+
 .section .data
     .balign 4
 .global lbl_80503C70

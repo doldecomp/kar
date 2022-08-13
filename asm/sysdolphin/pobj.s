@@ -3026,6 +3026,13 @@ PObjInfoInit:
 /* 80407EDC 00404CDC  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_80589A08
+lbl_80589A08:
+    .skip 0x10
+
+
 .section .data
     .balign 8
 .global lbl_80503488

@@ -2990,6 +2990,13 @@ _HSD_AObjForgetMemory:
 /* 803FDAC8 003FA8C8  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global aobj_alloc_data
+aobj_alloc_data:
+    .skip 0x30
+
+
 .section .data
 	.balign 8
 .global lbl_80502C30

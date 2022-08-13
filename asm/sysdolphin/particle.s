@@ -865,6 +865,13 @@ lbl_8042AD2C:
 /* 8042AD40 00427B40  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_8058C208
+lbl_8058C208:
+    .skip 0x200
+
+
 .section .data
     .balign 8
 .global lbl_80504F50

@@ -2705,6 +2705,19 @@ lbl_80414318:
 /* 80414370 00411170  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_8058B080
+lbl_8058B080:
+    .skip 0x64
+.global lbl_8058B0E4
+lbl_8058B0E4:
+    .skip 0x550
+.global lbl_8058B634
+lbl_8058B634:
+    .skip 0x554
+
+
 .section .data
     .balign 8
 .global lbl_80503F08

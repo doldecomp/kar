@@ -555,6 +555,13 @@ lbl_8041E1DC:
 /* 8041E220 0041B020  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global shadow_alloc_data
+shadow_alloc_data:
+    .skip 0x30
+
+
 .section .data
     .balign 4
 .global lbl_80504678

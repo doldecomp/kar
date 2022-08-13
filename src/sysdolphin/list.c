@@ -1,7 +1,7 @@
 #include <sysdolphin/list.h>
 
-extern HSD_ObjAllocData slist_alloc_data;
-extern HSD_ObjAllocData dlist_alloc_data;
+static HSD_ObjAllocData slist_alloc_data;
+static HSD_ObjAllocData dlist_alloc_data;
 
 void HSD_ListInitAllocData()
 {

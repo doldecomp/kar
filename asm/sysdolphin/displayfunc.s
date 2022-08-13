@@ -1735,6 +1735,13 @@ func_8040FBE8:
 /* 8040FC18 0040CA18  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_80589A18
+lbl_80589A18:
+    .skip 0x30
+
+
 .section .data
 	.balign 8
 .global lbl_80503BA0
