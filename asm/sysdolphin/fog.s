@@ -2,23 +2,6 @@
 
 .section .text
 
-.global func_8041B0D0
-func_8041B0D0:
-/* 8041B0D0 00417ED0  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8041B0D4 00417ED4  7C 08 02 A6 */	mflr r0
-/* 8041B0D8 00417ED8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8041B0DC 00417EDC  90 6D 12 08 */	stw r3, lbl_805DE2E8@sda21(r13)
-/* 8041B0E0 00417EE0  48 00 00 1D */	bl HSD_FogSet
-/* 8041B0E4 00417EE4  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8041B0E8 00417EE8  7C 08 03 A6 */	mtlr r0
-/* 8041B0EC 00417EEC  38 21 00 10 */	addi r1, r1, 0x10
-/* 8041B0F0 00417EF0  4E 80 00 20 */	blr 
-
-.global func_8041B0F4
-func_8041B0F4:
-/* 8041B0F4 00417EF4  80 6D 12 08 */	lwz r3, lbl_805DE2E8@sda21(r13)
-/* 8041B0F8 00417EF8  4E 80 00 20 */	blr 
-
 .global HSD_FogSet
 HSD_FogSet:
 /* 8041B0FC 00417EFC  94 21 FF 20 */	stwu r1, -0xe0(r1)
@@ -221,12 +204,12 @@ lbl_8041B398:
 func_8041B3C0:
 /* 8041B3C0 004181C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B3C4 004181C4  7C 08 02 A6 */	mflr r0
-/* 8041B3C8 004181C8  3C 80 80 50 */	lis r4, lbl_80504270@ha
+/* 8041B3C8 004181C8  3C 80 80 50 */	lis r4, hsdFog@ha
 /* 8041B3CC 004181CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B3D0 004181D0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041B3D4 004181D4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8041B3D8 004181D8  7C 7E 1B 78 */	mr r30, r3
-/* 8041B3DC 004181DC  38 64 42 70 */	addi r3, r4, lbl_80504270@l
+/* 8041B3DC 004181DC  38 64 42 70 */	addi r3, r4, hsdFog@l
 /* 8041B3E0 004181E0  48 00 58 B5 */	bl hsdNew
 /* 8041B3E4 004181E4  7C 7F 1B 79 */	or. r31, r3, r3
 /* 8041B3E8 004181E8  40 82 00 14 */	bne lbl_8041B3FC
@@ -322,12 +305,12 @@ lbl_8041B504:
 func_8041B510:
 /* 8041B510 00418310  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B514 00418314  7C 08 02 A6 */	mflr r0
-/* 8041B518 00418318  3C 80 80 50 */	lis r4, lbl_805042B0@ha
+/* 8041B518 00418318  3C 80 80 50 */	lis r4, hsdFogAdj@ha
 /* 8041B51C 0041831C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B520 00418320  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8041B524 00418324  93 C1 00 08 */	stw r30, 8(r1)
 /* 8041B528 00418328  7C 7E 1B 78 */	mr r30, r3
-/* 8041B52C 0041832C  38 64 42 B0 */	addi r3, r4, lbl_805042B0@l
+/* 8041B52C 0041832C  38 64 42 B0 */	addi r3, r4, hsdFogAdj@l
 /* 8041B530 00418330  48 00 57 65 */	bl hsdNew
 /* 8041B534 00418334  7C 7F 1B 79 */	or. r31, r3, r3
 /* 8041B538 00418338  40 82 00 14 */	bne lbl_8041B54C
@@ -611,9 +594,9 @@ lbl_8041B8A8:
 lbl_8041B8E0:
 /* 8041B8E0 004186E0  80 7E 00 1C */	lwz r3, 0x1c(r30)
 /* 8041B8E4 004186E4  4B FD FD 01 */	bl HSD_AObjRemove
-/* 8041B8E8 004186E8  3C 80 80 50 */	lis r4, lbl_80504270@ha
+/* 8041B8E8 004186E8  3C 80 80 50 */	lis r4, hsdFog@ha
 /* 8041B8EC 004186EC  7F C3 F3 78 */	mr r3, r30
-/* 8041B8F0 004186F0  38 84 42 70 */	addi r4, r4, lbl_80504270@l
+/* 8041B8F0 004186F0  38 84 42 70 */	addi r4, r4, hsdFog@l
 /* 8041B8F4 004186F4  80 84 00 14 */	lwz r4, 0x14(r4)
 /* 8041B8F8 004186F8  81 84 00 30 */	lwz r12, 0x30(r4)
 /* 8041B8FC 004186FC  7D 89 03 A6 */	mtctr r12
@@ -625,25 +608,26 @@ lbl_8041B8E0:
 /* 8041B914 00418714  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041B918 00418718  4E 80 00 20 */	blr 
 
-func_8041B91C:
+.global FogInfoInit
+FogInfoInit:
 /* 8041B91C 0041871C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B920 00418720  7C 08 02 A6 */	mflr r0
-/* 8041B924 00418724  3C 60 80 50 */	lis r3, lbl_80504270@ha
+/* 8041B924 00418724  3C 60 80 50 */	lis r3, hsdFog@ha
 /* 8041B928 00418728  3C 80 80 50 */	lis r4, objInfo@ha
 /* 8041B92C 0041872C  3C A0 80 50 */	lis r5, lbl_80504364@ha
 /* 8041B930 00418730  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B934 00418734  38 CD FB F4 */	addi r6, r13, lbl_805DCCD4@sda21
-/* 8041B938 00418738  38 63 42 70 */	addi r3, r3, lbl_80504270@l
+/* 8041B938 00418738  38 63 42 70 */	addi r3, r3, hsdFog@l
 /* 8041B93C 0041873C  38 84 44 A8 */	addi r4, r4, objInfo@l
 /* 8041B940 00418740  38 A5 43 64 */	addi r5, r5, lbl_80504364@l
 /* 8041B944 00418744  38 E0 00 40 */	li r7, 0x40
 /* 8041B948 00418748  39 00 00 24 */	li r8, 0x24
 /* 8041B94C 0041874C  48 00 4B F5 */	bl hsdInitClassInfo
 /* 8041B950 00418750  3C A0 80 42 */	lis r5, lbl_8041B850@ha
-/* 8041B954 00418754  3C 80 80 50 */	lis r4, lbl_80504270@ha
+/* 8041B954 00418754  3C 80 80 50 */	lis r4, hsdFog@ha
 /* 8041B958 00418758  3C 60 80 42 */	lis r3, lbl_8041B620@ha
 /* 8041B95C 0041875C  38 A5 B8 50 */	addi r5, r5, lbl_8041B850@l
-/* 8041B960 00418760  38 84 42 70 */	addi r4, r4, lbl_80504270@l
+/* 8041B960 00418760  38 84 42 70 */	addi r4, r4, hsdFog@l
 /* 8041B964 00418764  38 03 B6 20 */	addi r0, r3, lbl_8041B620@l
 /* 8041B968 00418768  90 A4 00 30 */	stw r5, 0x30(r4)
 /* 8041B96C 0041876C  90 04 00 3C */	stw r0, 0x3c(r4)
@@ -652,12 +636,13 @@ func_8041B91C:
 /* 8041B978 00418778  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041B97C 0041877C  4E 80 00 20 */	blr 
 
-func_8041B980:
+.global FogAdjInfoInit
+FogAdjInfoInit:
 /* 8041B980 00418780  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041B984 00418784  7C 08 02 A6 */	mflr r0
-/* 8041B988 00418788  3C 80 80 50 */	lis r4, lbl_80504270@ha
+/* 8041B988 00418788  3C 80 80 50 */	lis r4, hsdFog@ha
 /* 8041B98C 0041878C  3C 60 80 50 */	lis r3, objInfo@ha
-/* 8041B990 00418790  38 C4 42 70 */	addi r6, r4, lbl_80504270@l
+/* 8041B990 00418790  38 C4 42 70 */	addi r6, r4, hsdFog@l
 /* 8041B994 00418794  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8041B998 00418798  38 83 44 A8 */	addi r4, r3, objInfo@l
 /* 8041B99C 0041879C  38 E0 00 3C */	li r7, 0x3c
@@ -673,52 +658,11 @@ func_8041B980:
 
 
 .section .data
-    .balign 8
-.global lbl_80504270
-lbl_80504270:
-	.4byte func_8041B91C
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-.global lbl_805042B0
-lbl_805042B0:
-	.4byte func_8041B980
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
-	.4byte 0x00000000
+    .balign 4
 .global lbl_805042EC
 lbl_805042EC:
-	.4byte 0x596F7520
-	.4byte 0x6D757374
-	.4byte 0x20737065
-	.4byte 0x63696679
-	.4byte 0x20434F62
-	.4byte 0x6A206669
-	.4byte 0x7273742E
-	.4byte 0x0A000000
+    .asciz "You must specify CObj first.\n"
+    .balign 4
 .global lbl_8050430C
 lbl_8050430C:
 	.4byte lbl_8041B848
@@ -745,15 +689,9 @@ lbl_8050430C:
 	.4byte lbl_8041B7F0
 .global lbl_80504364
 lbl_80504364:
-	.4byte 0x73797364
-	.4byte 0x6F6C7068
-	.4byte 0x696E5F62
-	.4byte 0x6173655F
-	.4byte 0x6C696272
-	.4byte 0x61727900
-	.4byte 0x6873645F
-	.4byte 0x666F6761
-	.4byte 0x646A0000
+    .asciz "sysdolphin_base_library"
+    .balign 4
+    .asciz "hsd_fogadj"
 
 
 .section .sbss
@@ -1563,30 +1501,23 @@ lbl_805E6380:
     .balign 8
 .global lbl_805DCCC0
 lbl_805DCCC0:
-	.4byte 0x666F672E
-	.4byte 0x63000000
+    .asciz "fog.c"
+    .balign 4
 .global lbl_805DCCC8
 lbl_805DCCC8:
-	.4byte 0x666F6700
+    .asciz "fog"
+    .balign 4
 .global lbl_805DCCCC
 lbl_805DCCCC:
-	.4byte 0x00000000
+    .asciz ""
+    .balign 4
 .global lbl_805DCCD0
 lbl_805DCCD0:
-	.4byte 0x61646A00
+    .asciz "adj"
+    .balign 4
 .global lbl_805DCCD4
 lbl_805DCCD4:
-	.4byte 0x6873645F
-	.4byte 0x666F6700
-	.4byte 0x00000000
-.global lbl_805DCCE0
-lbl_805DCCE0:
-	.4byte 0x70657266
-	.4byte 0x2E630000
-.global lbl_805DCCE8
-lbl_805DCCE8:
-	.4byte 0x6E203C20
-	.4byte 0x33320000
+    .asciz "hsd_fog"
 
 
 .section .sdata2

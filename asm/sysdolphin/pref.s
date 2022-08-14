@@ -248,3 +248,15 @@ lbl_80504418:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
+
+
+.section .sdata
+    .balign 8
+.global lbl_805DCCE0
+lbl_805DCCE0:
+	.4byte 0x70657266
+	.4byte 0x2E630000
+.global lbl_805DCCE8
+lbl_805DCCE8:
+	.4byte 0x6E203C20
+	.4byte 0x33320000
