@@ -152,6 +152,6 @@ typedef struct _GXColorS10 {
 
 #define GX_MAX_Z24          0x00ffffff
 
-#define MAX_GXLIGHT         9
+#define MAX_GXLIGHT         10
 
 #endif

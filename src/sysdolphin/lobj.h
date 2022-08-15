@@ -133,10 +133,9 @@ typedef struct _HSD_LightAnim {
 
 typedef struct _HSD_LObjInfo {
     HSD_ObjInfo parent;
-    void (*release)(HSD_Class* o);
-    void (*amnesia)(HSD_ClassInfo* info);
     int (*load)(HSD_LObj* lobj, HSD_LightDesc* ldesc);
-    void (*update)(void* obj, u32 type, FObjData* val);
+    void (*update)();
+    //void (*update)(void* obj, u32 type, FObjData* val);
 } HSD_LObjInfo;
 
 #define HSD_LOBJ(o) ((HSD_LObj*)(o))
