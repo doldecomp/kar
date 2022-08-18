@@ -45,7 +45,7 @@ void HSD_InitComponent(void)
     HSD_DVDInit();
     HSD_IDSetup();
     func_803DE164();
-    func_8041065C();
+    HSD_ObjInit();
     init_done = TRUE;
 }
 

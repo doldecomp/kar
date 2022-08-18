@@ -572,7 +572,7 @@ lbl_80410504:
 /* 80410504 0040D304  81 9F 00 00 */	lwz r12, 0(r31)
 /* 80410508 0040D308  28 0C 00 00 */	cmplwi r12, 0
 /* 8041050C 0040D30C  40 82 FF EC */	bne lbl_804104F8
-/* 80410510 0040D310  48 00 01 4D */	bl func_8041065C
+/* 80410510 0040D310  48 00 01 4D */	bl HSD_ObjInit
 /* 80410514 0040D314  48 00 C9 41 */	bl _HSD_MemGetRemain
 /* 80410518 0040D318  48 00 C9 0D */	bl _HSD_MemFree
 /* 8041051C 0040D31C  3C 80 80 59 */	lis r4, memReport@ha
@@ -584,13 +584,13 @@ lbl_80410504:
 /* 80410534 0040D334  38 21 00 30 */	addi r1, r1, 0x30
 /* 80410538 0040D338  4E 80 00 20 */	blr 
 
-.global func_8041053C
-func_8041053C:
+.global HSD_GetCurrentRenderPass
+HSD_GetCurrentRenderPass:
 /* 8041053C 0040D33C  80 6D 11 E4 */	lwz r3, current_render_pass@sda21(r13)
 /* 80410540 0040D340  4E 80 00 20 */	blr 
 
-.global func_80410544
-func_80410544:
+.global HSD_StartRender
+HSD_StartRender:
 /* 80410544 0040D344  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80410548 0040D348  7C 08 02 A6 */	mflr r0
 /* 8041054C 0040D34C  3C 80 80 59 */	lis r4, lbl_80589A80@ha
@@ -677,8 +677,8 @@ lbl_8041063C:
 /* 80410654 0040D454  38 21 00 10 */	addi r1, r1, 0x10
 /* 80410658 0040D458  4E 80 00 20 */	blr 
 
-.global func_8041065C
-func_8041065C:
+.global HSD_ObjInit
+HSD_ObjInit:
 /* 8041065C 0040D45C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80410660 0040D460  7C 08 02 A6 */	mflr r0
 /* 80410664 0040D464  90 01 00 14 */	stw r0, 0x14(r1)
@@ -775,8 +775,8 @@ lbl_80410790:
 /* 804107AC 0040D5AC  38 21 00 90 */	addi r1, r1, 0x90
 /* 804107B0 0040D5B0  4E 80 00 20 */	blr 
 
-.global func_804107B4
-func_804107B4:
+.global HSD_SetInitParameter
+HSD_SetInitParameter:
 /* 804107B4 0040D5B4  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 804107B8 0040D5B8  7C 08 02 A6 */	mflr r0
 /* 804107BC 0040D5BC  90 01 00 94 */	stw r0, 0x94(r1)
