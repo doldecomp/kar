@@ -616,8 +616,8 @@ lbl_803F5358:
 /* 803F5368 003F2168  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F536C 003F216C  4E 80 00 20 */	blr 
 
-.global func_803F5370
-func_803F5370:
+.global HSD_TObjAnim
+HSD_TObjAnim:
 /* 803F5370 003F2170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F5374 003F2174  7C 08 02 A6 */	mflr r0
 /* 803F5378 003F2178  28 03 00 00 */	cmplwi r3, 0
