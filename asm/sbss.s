@@ -1520,8 +1520,8 @@ lbl_805DDE78:
 .global lbl_805DDE80
 lbl_805DDE80:
 	.skip 0x8
-.global lbl_805DDE88
-lbl_805DDE88:
+.global AreWeInitialized
+AreWeInitialized:
 	.skip 0x4
 .global lbl_805DDE8C
 lbl_805DDE8C:
@@ -1535,26 +1535,26 @@ lbl_805DDE94:
 .global lbl_805DDE98
 lbl_805DDE98:
 	.skip 0x8
-.global lbl_805DDEA0
-lbl_805DDEA0:
+.global __OSStartTime
+__OSStartTime:
 	.skip 0x4
 .global lbl_805DDEA4
 lbl_805DDEA4:
 	.skip 0x4
-.global lbl_805DDEA8
-lbl_805DDEA8:
+.global AlarmQueue
+AlarmQueue:
 	.skip 0x8
-.global lbl_805DDEB0
-lbl_805DDEB0:
+.global HeapArray
+HeapArray:
 	.skip 0x4
-.global lbl_805DDEB4
-lbl_805DDEB4:
+.global NumHeaps
+NumHeaps:
 	.skip 0x4
-.global lbl_805DDEB8
-lbl_805DDEB8:
+.global ArenaStart
+ArenaStart:
 	.skip 0x4
-.global lbl_805DDEBC
-lbl_805DDEBC:
+.global ArenaEnd
+ArenaEnd:
 	.skip 0x4
 .global lbl_805DDEC0
 lbl_805DDEC0:

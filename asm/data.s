@@ -107648,7 +107648,7 @@ lbl_804F997C:
 	.4byte 0x00000000
 .global lbl_804F9998
 lbl_804F9998:
-	.4byte 0x803C860C
+	.4byte func_803C860C
 	.4byte 0x0000007F
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -109944,7 +109944,7 @@ lbl_804FBC38:
 	.4byte 0x00000000
 .global lbl_804FBC68
 lbl_804FBC68:
-	.4byte 0x803D7B48
+	.4byte OSOnReset
 	.4byte 0x0000007F
 	.4byte 0x00000000
 	.4byte 0x00000000

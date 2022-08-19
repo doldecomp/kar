@@ -20,7 +20,7 @@ void HSD_InitComponent(void)
     HSD_OSInit();
     HSD_AllocateXFB(lbl_805DCBC0, rmode);
     fifo = HSD_AllocateFIFO(lbl_805DCBBC);
-    lbl_805DE2A8 = func_803C879C(fifo, lbl_805DCBBC);
+    lbl_805DE2A8 = GXInit(fifo, lbl_805DCBBC);
     memReport.gxfifo = lbl_805DCBBC;
     func_8040FF8C(lbl_805DE2A8, &memReport);
 

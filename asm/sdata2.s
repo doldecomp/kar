@@ -18706,8 +18706,8 @@ lbl_805E5760:
 lbl_805E5768:
 	.4byte 0x40080000
 	.4byte 0x00000000
-.global lbl_805E5770
-lbl_805E5770:
+.global __GXContexts
+__GXContexts:
 	.4byte 0x8056CD48
 .global lbl_805E5774
 lbl_805E5774:

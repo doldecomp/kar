@@ -596,8 +596,8 @@ lbl_8056CD48:
 .global lbl_8056D2C0
 lbl_8056D2C0:
 	.skip 0x2A0
-.global lbl_8056D560
-lbl_8056D560:
+.global DriveInfo
+DriveInfo:
 	.skip 0x50
 .global lbl_8056D5B0
 lbl_8056D5B0:

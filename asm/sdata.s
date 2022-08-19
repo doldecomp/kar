@@ -12264,8 +12264,8 @@ lbl_805DC96C:
 .global msg
 msg:
 	.4byte 0x25730A00
-.global lbl_805DC978
-lbl_805DC978:
+.global __OSCurrHeap
+__OSCurrHeap:
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000000
 .global lbl_805DC980
