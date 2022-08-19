@@ -269,8 +269,8 @@ lbl_803F80DC:
 /* 803F80EC 003F4EEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F80F0 003F4EF0  4E 80 00 20 */	blr 
 
-.global func_803F80F4
-func_803F80F4:
+.global HSD_SetupRenderModeWithCustomPE
+HSD_SetupRenderModeWithCustomPE:
 /* 803F80F4 003F4EF4  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803F80F8 003F4EF8  7C 08 02 A6 */	mflr r0
 /* 803F80FC 003F4EFC  90 01 00 94 */	stw r0, 0x94(r1)
@@ -481,8 +481,8 @@ lbl_803F83CC:
 /* 803F83FC 003F51FC  38 21 00 90 */	addi r1, r1, 0x90
 /* 803F8400 003F5200  4E 80 00 20 */	blr 
 
-.global func_803F8404
-func_803F8404:
+.global HSD_SetMaterialColor
+HSD_SetMaterialColor:
 /* 803F8404 003F5204  C0 42 F2 F8 */	lfs f2, lbl_805E59F8@sda21(r2)
 /* 803F8408 003F5208  3C E0 80 59 */	lis r7, lbl_80589260@ha
 /* 803F840C 003F520C  80 C3 00 00 */	lwz r6, 0(r3)
@@ -516,8 +516,8 @@ lbl_803F8450:
 /* 803F8470 003F5270  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F8474 003F5274  4E 80 00 20 */	blr 
 
-.global func_803F8478
-func_803F8478:
+.global HSD_SetMaterialShininess
+HSD_SetMaterialShininess:
 /* 803F8478 003F5278  3C 60 80 59 */	lis r3, lbl_80589260@ha
 /* 803F847C 003F527C  38 63 92 60 */	addi r3, r3, lbl_80589260@l
 /* 803F8480 003F5280  D0 23 00 10 */	stfs f1, 0x10(r3)

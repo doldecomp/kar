@@ -208,8 +208,9 @@ void* hsdAllocMemPiece(s32 size)
     return temp_r3;
 }
 
-void hsdFreeMemPiece(HSD_FreeList* list, s32 i)
+void hsdFreeMemPiece(void* v, s32 i)
 {
+    HSD_FreeList* list = v;
     if (list != NULL) {
         HSD_MemoryEntry* entry = GetMemoryEntry((i + 31) / 32 - 1);
         list->next = entry->free_list;

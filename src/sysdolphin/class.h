@@ -49,6 +49,6 @@ typedef struct _HSD_MemoryEntry {
     struct _HSD_MemoryEntry* next;
 } HSD_MemoryEntry;
 
-void hsdFreeMemPiece(HSD_FreeList*, s32);
+void hsdFreeMemPiece(void*, s32);
 
 #endif
