@@ -103,7 +103,7 @@ typedef struct _HSD_LObj {
     struct _HSD_AObj* aobj;
     u32 id; //GXLightID
     GXLightObj lightobj; //0x50
-    u32 spec_id; //0x90 GXLightID
+    s32 spec_id; //0x90 GXLightID
     GXLightObj spec_lightobj; //0x94
 } HSD_LObj;
 
