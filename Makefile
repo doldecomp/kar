@@ -112,7 +112,7 @@ $(LDSCRIPT): ldscript.lcf
 	$(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
 $(DOL): $(ELF) tools
-	@echo Linking ELF $@
+	@echo Converting $< to $@
 	$(QUIET) $(ELF2DOL) $< $@
 
 clean:
@@ -123,6 +123,7 @@ tools:
 	$(MAKE) -C tools
 
 $(ELF): $(O_FILES) $(LDSCRIPT)
+	@echo Linking ELF $@
 	@echo $(O_FILES) > build/o_files
 	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
 
