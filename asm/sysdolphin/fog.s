@@ -744,8 +744,8 @@ lbl_805DE328:
 .global lbl_805DE32C
 lbl_805DE32C:
 	.skip 0x4
-.global lbl_805DE330
-lbl_805DE330:
+.global plinklow_gobjs
+plinklow_gobjs:
 	.skip 0x4
 .global lbl_805DE334
 lbl_805DE334:

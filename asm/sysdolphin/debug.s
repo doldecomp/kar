@@ -155,11 +155,11 @@ lbl_8042857C:
 .global lbl_8058BEC8
 lbl_8058BEC8:
     .skip 0x2C8
-.global lbl_8058C190
-lbl_8058C190:
+.global HSD_GObjLibInitData
+HSD_GObjLibInitData:
     .skip 0xC
-.global lbl_8058C19C
-lbl_8058C19C:
+.global gobj_alloc_data
+gobj_alloc_data:
     .skip 0x2C
 .global lbl_8058C1C8
 lbl_8058C1C8:

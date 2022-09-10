@@ -138,6 +138,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/texpdag.o\
 	$(BUILD_DIR)/asm/sysdolphin/debug.o\
 	$(BUILD_DIR)/asm/sysdolphin/gobjproc.o\
+	$(BUILD_DIR)/src/sysdolphin/gobjplink.o\
 	$(BUILD_DIR)/asm/sysdolphin/gobjplink.o\
 	$(BUILD_DIR)/asm/sysdolphin/gobjgxlink.o\
 	$(BUILD_DIR)/src/sysdolphin/gobjobject.o\
