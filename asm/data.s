@@ -107198,48 +107198,18 @@ lbl_804F92F0:
 	.4byte 0x6F6E0A00
 .global Dolphin_SDK_DSP_release_build
 Dolphin_SDK_DSP_release_build:
-	.4byte 0x3C3C2044
-	.4byte 0x6F6C7068
-	.4byte 0x696E2053
-	.4byte 0x444B202D
-	.4byte 0x20445350
-	.4byte 0x0972656C
-	.4byte 0x65617365
-	.4byte 0x20627569
-	.4byte 0x6C643A20
-	.4byte 0x53657020
-	.4byte 0x20352032
-	.4byte 0x30303220
-	.4byte 0x30353A33
-	.4byte 0x353A3133
-	.4byte 0x20283078
-	.4byte 0x32333031
-	.4byte 0x29203E3E
-	.4byte 0x00000000
-	.4byte 0x44535049
-	.4byte 0x6E697428
-	.4byte 0x293A2042
-	.4byte 0x75696C64
-	.4byte 0x20446174
-	.4byte 0x653A2025
-	.4byte 0x73202573
-	.4byte 0x0A000000
-	.4byte 0x53657020
-	.4byte 0x20352032
-	.4byte 0x30303200
-	.4byte 0x30353A33
-	.4byte 0x353A3133
-	.4byte 0x00000000
+	.asciz "<< Dolphin SDK - DSP	release build: Sep  5 2002 05:35:13 (0x2301) >>"
+	.balign 4
+	.asciz "DSPInit(): Build Date: %s %s\n"
+	.balign 4
+	.asciz "Sep  5 2002"
+	.balign 4
+	.asciz "05:35:13"
+	.balign 4
 .global lbl_804F9388
 lbl_804F9388:
-	.4byte 0x44535020
-	.4byte 0x69732062
-	.4byte 0x6F6F7469
-	.4byte 0x6E672074
-	.4byte 0x61736B3A
-	.4byte 0x20307825
-	.4byte 0x3038580A
-	.4byte 0x00000000
+	.asciz "DSP is booting task: 0x%08X\n"
+	.balign 4
 	.4byte 0x5F5F4453
 	.4byte 0x505F626F
 	.4byte 0x6F745F74
@@ -107430,24 +107400,12 @@ lbl_804F95FC:
 	.4byte 0x00000000
 .global lbl_804F9678
 lbl_804F9678:
-	.4byte 0x6C6F6164
-	.4byte 0x20667374
-	.4byte 0x0A000000
+	.asciz "load fst\n"
+	.balign 4
 .global lbl_804F9684
 lbl_804F9684:
-	.4byte 0x44564443
-	.4byte 0x68616E67
-	.4byte 0x65446973
-	.4byte 0x6B28293A
-	.4byte 0x20465354
-	.4byte 0x20696E20
-	.4byte 0x74686520
-	.4byte 0x6E657720
-	.4byte 0x64697363
-	.4byte 0x20697320
-	.4byte 0x746F6F20
-	.4byte 0x6269672E
-	.4byte 0x20202000
+	.asciz "DVDChangeDisk(): FST in the new disc is too big.   "
+	.balign 4
 .global lbl_804F96B8
 lbl_804F96B8:
 	.4byte 0x803C6D04
