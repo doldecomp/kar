@@ -2203,6 +2203,16 @@ lbl_8041A52C:
 /* 8041A538 00417338  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global robj_alloc_data
+robj_alloc_data:
+    .skip 0x2C
+.global rvalue_alloc_data
+rvalue_alloc_data:
+    .skip 0x2C
+
+
 .section .data
     .balign 8
 .global lbl_80504060

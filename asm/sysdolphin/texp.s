@@ -3969,3 +3969,15 @@ lbl_80504C2C:
 	.4byte 0x53445F54
 	.4byte 0x455F434E
 	.4byte 0x53540000
+
+
+.section .sdata2
+    .balign 8
+.global lbl_805E5E70
+lbl_805E5E70:
+    .4byte 0x437F0000
+    .4byte 0x00000000
+.global lbl_805E5E78
+lbl_805E5E78:
+    .4byte 0x406FE000
+    .4byte 0x00000000

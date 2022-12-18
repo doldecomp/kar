@@ -1909,6 +1909,13 @@ HSD_FObjFree:
 /* 80405318 00402118  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global fobj_alloc_data
+fobj_alloc_data:
+    .skip 0x30
+
+
 .section .data
     .balign 8
 .global lbl_80503440

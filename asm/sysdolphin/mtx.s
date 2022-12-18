@@ -2466,6 +2466,16 @@ HSD_MtxInitAllocData:
 /* 80417D48 00414B48  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_8058BBB8
+lbl_8058BBB8:
+    .skip 0x2C
+.global lbl_8058BBE4
+lbl_8058BBE4:
+    .skip 0x2C
+
+
 .section .sdata
     .balign 8
 .global lbl_805DCC40

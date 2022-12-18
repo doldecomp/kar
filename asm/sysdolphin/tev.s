@@ -38,14 +38,14 @@ lbl_803F7D84:
 /* 803F7DB8 003F4BB8  48 00 00 2C */	b lbl_803F7DE4
 lbl_803F7DBC:
 /* 803F7DBC 003F4BBC  7F 03 C3 78 */	mr r3, r24
-/* 803F7DC0 003F4BC0  48 00 5D C5 */	bl func_803FDB84
+/* 803F7DC0 003F4BC0  48 00 5D C5 */	bl HSD_LObjGetActiveByIndex
 /* 803F7DC4 003F4BC4  28 03 00 00 */	cmplwi r3, 0
 /* 803F7DC8 003F4BC8  41 82 00 18 */	beq lbl_803F7DE0
 /* 803F7DCC 003F4BCC  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 803F7DD0 003F4BD0  38 81 00 08 */	addi r4, r1, 8
 /* 803F7DD4 003F4BD4  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 803F7DD8 003F4BD8  90 01 00 08 */	stw r0, 8(r1)
-/* 803F7DDC 003F4BDC  48 00 62 F5 */	bl func_803FE0D0
+/* 803F7DDC 003F4BDC  48 00 62 F5 */	bl HSD_LObjSetup
 lbl_803F7DE0:
 /* 803F7DE0 003F4BE0  3B 18 00 01 */	addi r24, r24, 1
 lbl_803F7DE4:
@@ -55,7 +55,7 @@ lbl_803F7DEC:
 /* 803F7DEC 003F4BEC  56 E0 07 7B */	rlwinm. r0, r23, 0, 0x1d, 0x1d
 /* 803F7DF0 003F4BF0  41 82 01 08 */	beq lbl_803F7EF8
 /* 803F7DF4 003F4BF4  38 60 01 00 */	li r3, 0x100
-/* 803F7DF8 003F4BF8  48 00 5D 45 */	bl func_803FDB3C
+/* 803F7DF8 003F4BF8  48 00 5D 45 */	bl HSD_LObjGetActiveByID
 /* 803F7DFC 003F4BFC  7C 7F 1B 79 */	or. r31, r3, r3
 /* 803F7E00 003F4C00  41 82 00 2C */	beq lbl_803F7E2C
 /* 803F7E04 003F4C04  A0 1F 00 08 */	lhz r0, 8(r31)
@@ -269,8 +269,8 @@ lbl_803F80DC:
 /* 803F80EC 003F4EEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F80F0 003F4EF0  4E 80 00 20 */	blr 
 
-.global func_803F80F4
-func_803F80F4:
+.global HSD_SetupRenderModeWithCustomPE
+HSD_SetupRenderModeWithCustomPE:
 /* 803F80F4 003F4EF4  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803F80F8 003F4EF8  7C 08 02 A6 */	mflr r0
 /* 803F80FC 003F4EFC  90 01 00 94 */	stw r0, 0x94(r1)
@@ -481,8 +481,8 @@ lbl_803F83CC:
 /* 803F83FC 003F51FC  38 21 00 90 */	addi r1, r1, 0x90
 /* 803F8400 003F5200  4E 80 00 20 */	blr 
 
-.global func_803F8404
-func_803F8404:
+.global HSD_SetMaterialColor
+HSD_SetMaterialColor:
 /* 803F8404 003F5204  C0 42 F2 F8 */	lfs f2, lbl_805E59F8@sda21(r2)
 /* 803F8408 003F5208  3C E0 80 59 */	lis r7, lbl_80589260@ha
 /* 803F840C 003F520C  80 C3 00 00 */	lwz r6, 0(r3)
@@ -516,8 +516,8 @@ lbl_803F8450:
 /* 803F8470 003F5270  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F8474 003F5274  4E 80 00 20 */	blr 
 
-.global func_803F8478
-func_803F8478:
+.global HSD_SetMaterialShininess
+HSD_SetMaterialShininess:
 /* 803F8478 003F5278  3C 60 80 59 */	lis r3, lbl_80589260@ha
 /* 803F847C 003F527C  38 63 92 60 */	addi r3, r3, lbl_80589260@l
 /* 803F8480 003F5280  D0 23 00 10 */	stfs f1, 0x10(r3)
@@ -1380,7 +1380,7 @@ HSD_StateSetNumTexGens:
 /* 803F9000 003F5E00  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803F9004 003F5E04  80 0D 10 E8 */	lwz r0, lbl_805DE1C8@sda21(r13)
 /* 803F9008 003F5E08  54 03 06 3E */	clrlwi r3, r0, 0x18
-/* 803F900C 003F5E0C  4B FD 29 FD */	bl func_803CBA08
+/* 803F900C 003F5E0C  4B FD 29 FD */	bl GXSetNumTexGens
 /* 803F9010 003F5E10  38 00 00 00 */	li r0, 0
 /* 803F9014 003F5E14  90 0D 10 E8 */	stw r0, lbl_805DE1C8@sda21(r13)
 /* 803F9018 003F5E18  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2009,6 +2009,28 @@ func_803F98B0:
 /* 803F98B0 003F66B0  38 00 00 00 */	li r0, 0
 /* 803F98B4 003F66B4  90 0D 10 E8 */	stw r0, lbl_805DE1C8@sda21(r13)
 /* 803F98B8 003F66B8  4E 80 00 20 */	blr 
+
+
+.section .bss
+    .balign 8
+.global lbl_80589260
+lbl_80589260:
+    .skip 0x18
+.global lbl_80589278
+lbl_80589278:
+    .skip 0x2C
+.global lbl_805892A4
+lbl_805892A4:
+    .skip 0x2C
+.global lbl_805892D0
+lbl_805892D0:
+    .skip 0x2C
+.global lbl_805892FC
+lbl_805892FC:
+    .skip 0xC0
+.global lbl_805893BC
+lbl_805893BC:
+    .skip 0x5C4
 
 
 .section .data

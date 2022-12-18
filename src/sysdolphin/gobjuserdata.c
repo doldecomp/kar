@@ -25,7 +25,7 @@ void* func_80429D88(HSD_GObj* gobj)
     return ret;
 }
 
-void func_80429DBC(HSD_GObj* gobj)
+void GObj_RemoveUserData(HSD_GObj* gobj)
 {
     if (gobj->user_data_kind == HSD_GOBJ_USER_DATA_NONE)
         return;

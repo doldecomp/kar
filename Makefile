@@ -34,7 +34,7 @@ ASM_DIRS := asm asm/runtime asm/runtime/ asm/Runtime.PPCEABI.H asm/sysdolphin		\
 S_FILES := $(wildcard asm/*.s)
 C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
-LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
+LDSCRIPT := ldscript.lcf
 
 # Outputs
 DOL     := $(BUILD_DIR)/main.dol
@@ -63,7 +63,7 @@ else
   PYTHON  := python3
 endif
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
-CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
+CPP     := cpp -P
 CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 CC10    := $(WINE) tools/mwcc_compiler/1.0/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(MWLD_VERSION)/mwldeppc.exe
@@ -108,11 +108,8 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 .PHONY: tools
 
-$(LDSCRIPT): ldscript.lcf
-	$(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
-
 $(DOL): $(ELF) tools
-	@echo Linking ELF $@
+	@echo Converting $< to $@
 	$(QUIET) $(ELF2DOL) $< $@
 
 clean:
@@ -123,6 +120,7 @@ tools:
 	$(MAKE) -C tools
 
 $(ELF): $(O_FILES) $(LDSCRIPT)
+	@echo Linking ELF $@
 	@echo $(O_FILES) > build/o_files
 	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
 

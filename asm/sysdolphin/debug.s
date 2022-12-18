@@ -140,7 +140,7 @@ lbl_8042857C:
 /* 80428580 00425380  7F C4 F3 78 */	mr r4, r30
 /* 80428584 00425384  7F E5 FB 78 */	mr r5, r31
 /* 80428588 00425388  4C C6 31 82 */	crclr 6
-/* 8042858C 0042538C  4B FA C7 DD */	bl func_803D4D68
+/* 8042858C 0042538C  4B FA C7 DD */	bl OSPanic
 /* 80428590 00425390  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80428594 00425394  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80428598 00425398  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -148,6 +148,25 @@ lbl_8042857C:
 /* 804285A0 004253A0  7C 08 03 A6 */	mtlr r0
 /* 804285A4 004253A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804285A8 004253A8  4E 80 00 20 */	blr 
+
+
+.section .bss
+    .balign 8
+.global lbl_8058BEC8
+lbl_8058BEC8:
+    .skip 0x2C8
+.global HSD_GObjLibInitData
+HSD_GObjLibInitData:
+    .skip 0xC
+.global gobj_alloc_data
+gobj_alloc_data:
+    .skip 0x2C
+.global lbl_8058C1C8
+lbl_8058C1C8:
+    .skip 0x2C
+.global lbl_8058C1F4
+lbl_8058C1F4:
+    .skip 0x14
 
 
 .section .data

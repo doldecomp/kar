@@ -1339,6 +1339,16 @@ lbl_80411C70:
 /* 80411CA8 0040EAA8  4E 80 00 20 */	blr 
 
 
+.section .bss
+    .balign 8
+.global lbl_80589A80
+lbl_80589A80:
+    .skip 0x200
+.global lbl_80589C80
+lbl_80589C80:
+    .skip 0x1400
+
+
 .section .data
     .balign 8
 .global lbl_80503E80

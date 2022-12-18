@@ -57,6 +57,7 @@ typedef struct _HSD_PObj {
         struct _HSD_SList* envelope_list;
         struct _unk_struct_pobj* x14_unk;
     } u;
+    struct _HSD_AObj* aobj;
 } HSD_PObj;
 
 typedef struct _HSD_PObjDesc {

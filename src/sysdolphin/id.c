@@ -2,9 +2,8 @@
 
 #include <dolphin/types.h>
 
-extern HSD_ObjAllocData hsd_iddata;
-
-extern HSD_IDTable default_table;
+static HSD_ObjAllocData hsd_iddata;
+static HSD_IDTable default_table;
 
 HSD_ObjAllocData* HSD_IDGetAllocData(void)
 {

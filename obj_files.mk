@@ -63,6 +63,13 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_other.o\
 	$(BUILD_DIR)/asm/MetroTRK/TRK_MINNOW_DOLPHIN.o\
 	$(BUILD_DIR)/asm/PPCArch.o\
+	$(BUILD_DIR)/asm/bss.o\
+	$(BUILD_DIR)/asm/data.o\
+	$(BUILD_DIR)/asm/rodata.o\
+	$(BUILD_DIR)/asm/sbss_1.o\
+	$(BUILD_DIR)/asm/sdata.o\
+	$(BUILD_DIR)/asm/sdata2.o\
+	$(BUILD_DIR)/asm/sbss2.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_db.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_dsp.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_dvd.o\
@@ -84,17 +91,11 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_ax.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_mix.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_synth.o\
-	$(BUILD_DIR)/asm/data.o\
-	$(BUILD_DIR)/asm/rodata.o\
-	$(BUILD_DIR)/asm/sbss_1.o\
-	$(BUILD_DIR)/asm/sdata.o\
-	$(BUILD_DIR)/asm/sdata2.o\
-	$(BUILD_DIR)/asm/sbss2.o\
+	$(BUILD_DIR)/asm/dolphin/data.o\
 	$(BUILD_DIR)/src/sysdolphin/dobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tev.o\
 	$(BUILD_DIR)/src/sysdolphin/mobj.o\
-	$(BUILD_DIR)/asm/sysdolphin/mobj.o\
 	$(BUILD_DIR)/src/sysdolphin/aobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/aobj.o\
 	$(BUILD_DIR)/src/sysdolphin/lobj.o\
@@ -120,11 +121,13 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/robj.o\
 	$(BUILD_DIR)/src/sysdolphin/id.o\
 	$(BUILD_DIR)/src/sysdolphin/wobj.o\
+	$(BUILD_DIR)/src/sysdolphin/fog.o\
 	$(BUILD_DIR)/asm/sysdolphin/fog.o\
 	$(BUILD_DIR)/asm/sysdolphin/pref.o\
 	$(BUILD_DIR)/src/sysdolphin/list.o\
-	$(BUILD_DIR)/asm/sysdolphin/object.o\
+	$(BUILD_DIR)/src/sysdolphin/object.o\
 	$(BUILD_DIR)/asm/sysdolphin/memory.o\
+	$(BUILD_DIR)/src/sysdolphin/shadow.o\
 	$(BUILD_DIR)/asm/sysdolphin/shadow.o\
 	$(BUILD_DIR)/src/sysdolphin/archive.o\
 	$(BUILD_DIR)/asm/sysdolphin/random.o\
@@ -136,6 +139,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/texpdag.o\
 	$(BUILD_DIR)/asm/sysdolphin/debug.o\
 	$(BUILD_DIR)/asm/sysdolphin/gobjproc.o\
+	$(BUILD_DIR)/src/sysdolphin/gobjplink.o\
 	$(BUILD_DIR)/asm/sysdolphin/gobjplink.o\
 	$(BUILD_DIR)/asm/sysdolphin/gobjgxlink.o\
 	$(BUILD_DIR)/src/sysdolphin/gobjobject.o\
@@ -153,6 +157,3 @@ CTORS_O_FILES :=\
 
 DTORS_O_FILES :=\
 	$(BUILD_DIR)/asm/dtors.o\
-
-BSS_O_FILES :=\
-	$(BUILD_DIR)/asm/bss.o\

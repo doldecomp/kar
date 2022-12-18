@@ -1376,8 +1376,8 @@ lbl_805DDD9C:
 .global lbl_805DDDA0
 lbl_805DDDA0:
 	.skip 0x8
-.global lbl_805DDDA8
-lbl_805DDDA8:
+.global executing
+executing:
 	.skip 0x4
 .global lbl_805DDDAC
 lbl_805DDDAC:
@@ -1385,8 +1385,8 @@ lbl_805DDDAC:
 .global lbl_805DDDB0
 lbl_805DDDB0:
 	.skip 0x4
-.global lbl_805DDDB4
-lbl_805DDDB4:
+.global PauseFlag
+PauseFlag:
 	.skip 0x4
 .global lbl_805DDDB8
 lbl_805DDDB8:
@@ -1397,8 +1397,8 @@ lbl_805DDDBC:
 .global lbl_805DDDC0
 lbl_805DDDC0:
 	.skip 0x4
-.global lbl_805DDDC4
-lbl_805DDDC4:
+.global CurrCommand
+CurrCommand:
 	.skip 0x4
 .global lbl_805DDDC8
 lbl_805DDDC8:
@@ -1520,8 +1520,8 @@ lbl_805DDE78:
 .global lbl_805DDE80
 lbl_805DDE80:
 	.skip 0x8
-.global lbl_805DDE88
-lbl_805DDE88:
+.global AreWeInitialized
+AreWeInitialized:
 	.skip 0x4
 .global lbl_805DDE8C
 lbl_805DDE8C:
@@ -1535,26 +1535,26 @@ lbl_805DDE94:
 .global lbl_805DDE98
 lbl_805DDE98:
 	.skip 0x8
-.global lbl_805DDEA0
-lbl_805DDEA0:
+.global __OSStartTime
+__OSStartTime:
 	.skip 0x4
 .global lbl_805DDEA4
 lbl_805DDEA4:
 	.skip 0x4
-.global lbl_805DDEA8
-lbl_805DDEA8:
+.global AlarmQueue
+AlarmQueue:
 	.skip 0x8
-.global lbl_805DDEB0
-lbl_805DDEB0:
+.global HeapArray
+HeapArray:
 	.skip 0x4
-.global lbl_805DDEB4
-lbl_805DDEB4:
+.global NumHeaps
+NumHeaps:
 	.skip 0x4
-.global lbl_805DDEB8
-lbl_805DDEB8:
+.global ArenaStart
+ArenaStart:
 	.skip 0x4
-.global lbl_805DDEBC
-lbl_805DDEBC:
+.global ArenaEnd
+ArenaEnd:
 	.skip 0x4
 .global lbl_805DDEC0
 lbl_805DDEC0:

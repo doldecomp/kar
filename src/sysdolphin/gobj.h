@@ -5,6 +5,7 @@
 
 #include <sysdolphin/objalloc.h>
 
+#define HSD_GOBJ_GXLINK_NONE 0xFF
 #define HSD_GOBJ_OBJ_NONE 0xFF
 
 typedef struct _HSD_GObj {
@@ -40,7 +41,7 @@ typedef struct _HSD_GObjProc {
     void (*callback)(struct _HSD_GObj*); //0x14
 } HSD_GObjProc;
 
-typedef struct _HSD_GObjLibInitData {
+typedef struct _HSD_GObjLibInitDataType {
     u8 p_link_max; //804CE380
     u8 gx_link_max; //804CE381
     u8 gproc_pri_max; //804CE382
@@ -48,10 +49,26 @@ typedef struct _HSD_GObjLibInitData {
     u32* unk_2; //804CE388
     HSD_ObjAllocData gobj_def; //804CE38C
     HSD_ObjAllocData gobj_proc_def; //804CE3B8
-} HSD_GObjLibInitData;
+} HSD_GObjLibInitDataType;
 
-#endif
+extern struct _unk_gobj_struct {
+    union {
+        u32 flags;
+        struct {
+            u32 b0 : 1;
+            u32 b1 : 1;
+            u32 b2 : 1;
+            u32 b3 : 1;
+        };
+    };
+    u32 type;
+    u8 p_link;
+    u8 p_prio;
+    HSD_GObj* gobj;
+} lbl_8058C1F4;
 
 void func_80390C5C(HSD_GObj* gobj);
 void func_80390C84(HSD_GObj* gobj);
 void func_80390CAC(HSD_GObj* gobj);
+
+#endif
