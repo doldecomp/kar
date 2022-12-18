@@ -17,7 +17,7 @@ char lbl_80503C60[] = "initialize.c";
 void HSD_InitComponent(void)
 {
     void* fifo;
-    HSD_OSInit();
+    DVDInit();
     HSD_AllocateXFB(lbl_805DCBC0, rmode);
     fifo = HSD_AllocateFIFO(lbl_805DCBBC);
     lbl_805DE2A8 = GXInit(fifo, lbl_805DCBBC);

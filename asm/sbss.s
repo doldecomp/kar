@@ -1376,8 +1376,8 @@ lbl_805DDD9C:
 .global lbl_805DDDA0
 lbl_805DDDA0:
 	.skip 0x8
-.global lbl_805DDDA8
-lbl_805DDDA8:
+.global executing
+executing:
 	.skip 0x4
 .global lbl_805DDDAC
 lbl_805DDDAC:
@@ -1385,8 +1385,8 @@ lbl_805DDDAC:
 .global lbl_805DDDB0
 lbl_805DDDB0:
 	.skip 0x4
-.global lbl_805DDDB4
-lbl_805DDDB4:
+.global PauseFlag
+PauseFlag:
 	.skip 0x4
 .global lbl_805DDDB8
 lbl_805DDDB8:
@@ -1397,8 +1397,8 @@ lbl_805DDDBC:
 .global lbl_805DDDC0
 lbl_805DDDC0:
 	.skip 0x4
-.global lbl_805DDDC4
-lbl_805DDDC4:
+.global CurrCommand
+CurrCommand:
 	.skip 0x4
 .global lbl_805DDDC8
 lbl_805DDDC8:

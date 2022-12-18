@@ -63,6 +63,13 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_other.o\
 	$(BUILD_DIR)/asm/MetroTRK/TRK_MINNOW_DOLPHIN.o\
 	$(BUILD_DIR)/asm/PPCArch.o\
+	$(BUILD_DIR)/asm/bss.o\
+	$(BUILD_DIR)/asm/data.o\
+	$(BUILD_DIR)/asm/rodata.o\
+	$(BUILD_DIR)/asm/sbss_1.o\
+	$(BUILD_DIR)/asm/sdata.o\
+	$(BUILD_DIR)/asm/sdata2.o\
+	$(BUILD_DIR)/asm/sbss2.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_db.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_dsp.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_dvd.o\
@@ -84,13 +91,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_ax.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_mix.o\
 	$(BUILD_DIR)/asm/dolphin/dolphin_sdk_synth.o\
-	$(BUILD_DIR)/asm/bss.o\
-	$(BUILD_DIR)/asm/data.o\
-	$(BUILD_DIR)/asm/rodata.o\
-	$(BUILD_DIR)/asm/sbss_1.o\
-	$(BUILD_DIR)/asm/sdata.o\
-	$(BUILD_DIR)/asm/sdata2.o\
-	$(BUILD_DIR)/asm/sbss2.o\
+	$(BUILD_DIR)/asm/dolphin/data.o\
 	$(BUILD_DIR)/src/sysdolphin/dobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/tev.o\
