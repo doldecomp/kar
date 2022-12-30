@@ -3578,6 +3578,7 @@ lbl_805DCB18:
 
 
 .section .sdata2
+    .balign 8
 .global lbl_805E5A48
 lbl_805E5A48:
     .4byte 0x3FE00000
