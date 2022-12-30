@@ -27,11 +27,14 @@ jobs:
         curl -L https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip \
           | bsdtar -xvf- -C tools --exclude Wii
         mv tools/GC tools/mwcc_compiler
-    - name: Build KAR
-      run: make -j$(nproc) ${{ matrix.makeflags }}
+    - name: Build map
+      if: matrix.makeflags == 'GENERATE_MAP=1'
+      run: make -j$(nproc) ${{ matrix.makeflags }} build/kar.kor/main.elf
     - name: Upload map
       if: matrix.makeflags == 'GENERATE_MAP=1'
       uses: actions/upload-artifact@v2
       with:
         name: kar.map
         path: build/kar.kor/kar.map
+    - name: Build KAR
+      run: make -j$(nproc) ${{ matrix.makeflags }}
