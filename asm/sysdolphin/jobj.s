@@ -7691,9 +7691,8 @@ lbl_80503A9C:
 	.4byte 0x6173655F
 	.4byte 0x6C696272
 	.4byte 0x61727900
-	.4byte 0x6873645F
-	.4byte 0x6A6F626A
-	.4byte 0x00000000
+	.asciz "hsd_jobj"
+	.skip 0x3
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000

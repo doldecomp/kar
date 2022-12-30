@@ -1683,8 +1683,8 @@ lbl_80404FD8:
 /* 80404FF4 00401DF4  38 21 00 60 */	addi r1, r1, 0x60
 /* 80404FF8 00401DF8  4E 80 00 20 */	blr 
 
-.global HSD_HSD_FObjInterpretAnimAll
-HSD_HSD_FObjInterpretAnimAll:
+.global HSD_FObjInterpretAnimAll
+HSD_FObjInterpretAnimAll:
 /* 80404FFC 00401DFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80405000 00401E00  7C 08 02 A6 */	mflr r0
 /* 80405004 00401E04  90 01 00 24 */	stw r0, 0x24(r1)

@@ -3538,7 +3538,7 @@ HSD_ImageDescCopyFromEFB:
 /* 803F7AE4 003F48E4  38 60 00 01 */	li r3, 1
 /* 803F7AE8 003F48E8  38 80 00 03 */	li r4, 3
 /* 803F7AEC 003F48EC  38 A0 00 01 */	li r5, 1
-/* 803F7AF0 003F48F0  48 00 0A D9 */	bl func_803F85C8
+/* 803F7AF0 003F48F0  48 00 0A D9 */	bl HSD_StateSetZMode
 lbl_803F7AF4:
 /* 803F7AF4 003F48F4  80 7D 00 00 */	lwz r3, 0(r29)
 /* 803F7AF8 003F48F8  7F C4 F3 78 */	mr r4, r30
@@ -4058,9 +4058,8 @@ lbl_80502294:
 	.4byte 0x6173655F
 	.4byte 0x6C696272
 	.4byte 0x61727900
-	.4byte 0x6873645F
-	.4byte 0x746F626A
-	.4byte 0x00000000
+	.asciz "hsd_tobj"
+	.skip 0x3
 	.4byte 0x00000000
 
 

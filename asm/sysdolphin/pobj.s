@@ -3257,9 +3257,8 @@ lbl_8050378C:
 	.4byte 0x6173655F
 	.4byte 0x6C696272
 	.4byte 0x61727900
-	.4byte 0x6873645F
-	.4byte 0x706F626A
-	.4byte 0x00000000
+	.asciz "hsd_pobj"
+	.skip 0x3
 	.4byte 0x00000000
 
 

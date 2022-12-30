@@ -223,7 +223,7 @@ void HSD_LObjGetLightVector(HSD_LObj* lobj, Vec* v)
     }
 }
 
-void func_803CCF88(GXLightObj*, f32, f32, f32, f32, f32, f32);
+void GXInitLightAttn(GXLightObj*, f32, f32, f32, f32, f32, f32);
 extern f32 lbl_805E5A34;
 
 void HSD_LObjSetup(HSD_LObj* lobj, GXColor* color, f32 arg8)
@@ -239,7 +239,7 @@ void HSD_LObjSetup(HSD_LObj* lobj, GXColor* color, f32 arg8)
             lobj->flags |= LOBJ_DIFF_DIRTY;
         }
         if (lobj->flags & LOBJ_DIFF_DIRTY) {
-            func_803CD23C(&lobj->lightobj, lobj->id);
+            GXLoadLightObjImm(&lobj->lightobj, lobj->id);
             lobj->flags &= ~LOBJ_DIFF_DIRTY;
         }
     }
@@ -247,11 +247,11 @@ void HSD_LObjSetup(HSD_LObj* lobj, GXColor* color, f32 arg8)
         if (lobj->shininess != arg8) {
             f32 temp_f4 = arg8 * lbl_805E5A34;
             lobj->shininess = arg8;
-            func_803CCF88(&lobj->spec_lightobj, 0.0f, 0.0f, 1.0f, temp_f4, 0.0f, 1.0f - temp_f4);
+            GXInitLightAttn(&lobj->spec_lightobj, 0.0f, 0.0f, 1.0f, temp_f4, 0.0f, 1.0f - temp_f4);
             lobj->flags |= LOBJ_SPEC_DIRTY;
         }
         if (lobj->flags & LOBJ_SPEC_DIRTY) {
-            func_803CD23C(&lobj->spec_lightobj, lobj->spec_id);
+            GXLoadLightObjImm(&lobj->spec_lightobj, lobj->spec_id);
             lobj->flags &= ~LOBJ_SPEC_DIRTY;
         }
     }

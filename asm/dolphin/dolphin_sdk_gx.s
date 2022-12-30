@@ -5191,8 +5191,8 @@ func_803CCF50:
 /* 803CCF80 003C9D80  B0 03 00 02 */	sth r0, 2(r3)
 /* 803CCF84 003C9D84  4E 80 00 20 */	blr 
 
-.global func_803CCF88
-func_803CCF88:
+.global GXInitLightAttn
+GXInitLightAttn:
 /* 803CCF88 003C9D88  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 803CCF8C 003C9D8C  D0 43 00 14 */	stfs f2, 0x14(r3)
 /* 803CCF90 003C9D90  D0 63 00 18 */	stfs f3, 0x18(r3)
@@ -5395,8 +5395,8 @@ func_803CD230:
 /* 803CD234 003CA034  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803CD238 003CA038  4E 80 00 20 */	blr 
 
-.global func_803CD23C
-func_803CD23C:
+.global GXLoadLightObjImm
+GXLoadLightObjImm:
 /* 803CD23C 003CA03C  7C 80 00 34 */	cntlzw r0, r4
 /* 803CD240 003CA040  20 00 00 1F */	subfic r0, r0, 0x1f
 /* 803CD244 003CA044  54 05 26 76 */	rlwinm r5, r0, 4, 0x19, 0x1b
