@@ -1,6 +1,7 @@
 .include "macros.inc"
 
 .section .sdata  # 0x805D50E0-805DD520
+	.balign 8
 .global lbl_805D50E0
 lbl_805D50E0:
 	.4byte 0x30000000

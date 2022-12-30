@@ -1,6 +1,9 @@
 .include "macros.inc"
 
 .section .rodata  # 0x80489480 - 0x80494E60
+	.balign 8
+.global lbl_80489480
+lbl_80489480:
 	.4byte 0xFFAABD00
 	.4byte 0xFFE85200
 	.4byte 0x5AC9FF00

@@ -1,4 +1,5 @@
 .section .bss, "wa"  # 0x80535300 - 0x805E6390
+	.balign 8
 .global SoundBuffer
 SoundBuffer:
 	.skip 0x694
