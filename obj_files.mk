@@ -22,6 +22,7 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/gmautodemo.o\
 	$(BUILD_DIR)/asm/text_80010BBC.o\
 	$(BUILD_DIR)/asm/text_80060ED0.o\
+	$(BUILD_DIR)/asm/db_800AD79C.o\
 	$(BUILD_DIR)/asm/smsoundtest.o\
 	$(BUILD_DIR)/asm/text_800AF474.o\
 	$(BUILD_DIR)/asm/grcity1.o\
