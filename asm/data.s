@@ -5988,40 +5988,15 @@ lbl_8049A304:
 	.4byte 0x80076008
 .global lbl_8049A338
 lbl_8049A338:
-	.4byte 0x5B4C6244
-	.4byte 0x76644572
-	.4byte 0x726F725D
-	.4byte 0x204E6F20
-	.4byte 0x4572726F
-	.4byte 0x722E2057
-	.4byte 0x68792064
-	.4byte 0x6F204C4F
-	.4byte 0x4F502063
-	.4byte 0x6F6E7469
-	.4byte 0x6E756520
-	.4byte 0x3F0A0000
-	.4byte 0x83668342
-	.4byte 0x8358834E
-	.4byte 0x834A836F
-	.4byte 0x815B82AA
-	.4byte 0x8A4A82A2
-	.4byte 0x82C482A2
-	.4byte 0x82DC82B7
-	.4byte 0x81420000
-	.4byte 0x8351815B
-	.4byte 0x838082F0
-	.4byte 0x91B182AF
-	.4byte 0x82E98FEA
-	.4byte 0x8D8782CD
-	.4byte 0x81418366
-	.4byte 0x83428358
-	.4byte 0x834E834A
-	.4byte 0x836F815B
-	.4byte 0x82F095C2
-	.4byte 0x82DF82C4
-	.4byte 0x82AD82BE
-	.4byte 0x82B382A2
-	.4byte 0x81420000
+	.asciz "[LbDvdError] No Error. Why do LOOP continue ?\n"
+	.byte 0x00
+	
+	.asciz "ディスクカバーが開いています。"
+	.byte 0x00
+	
+	.asciz "ゲームを続ける場合は、ディスクカバーを閉めてください。"
+	.byte 0x00
+	
 	.4byte 0x8175834A
 	.4byte 0x815B8372
 	.4byte 0x834282CC
@@ -6094,12 +6069,10 @@ lbl_8049A338:
 	.4byte 0x82A282DC
 	.4byte 0x82B78142
 	.4byte 0x00000000
-	.4byte 0x826B8260
-	.4byte 0x826D82A9
-	.4byte 0x82E790D8
-	.4byte 0x926682B5
-	.4byte 0x82DC82B5
-	.4byte 0x82BD0000
+	
+	.asciz "ＬＡＮから切断しました" #Disconnected from LAN.
+	.byte 0x00
+	
 	.4byte 0x8350815B
 	.4byte 0x8375838B
 	.4byte 0x82CC90DA
@@ -6161,13 +6134,12 @@ lbl_8049A338:
 	.4byte 0x82B582DC
 	.4byte 0x82B582BD
 	.4byte 0x00000000
-	.4byte 0x826B8260
-	.4byte 0x826D82A9
-	.4byte 0x82E790D8
-	.4byte 0x926682B5
-	.4byte 0x82C482A2
-	.4byte 0x82DC82B7
-	.4byte 0x00000000
+	
+	.asciz "ＬＡＮから切断しています" #Disconnected from LAN
+	.byte 0x00
+	.byte 0x00
+	.byte 0x00
+	
 .global lbl_8049A608
 lbl_8049A608:
 	.4byte 0x805D53B8
@@ -56541,11 +56513,11 @@ lbl_804C8B5C:
 	.4byte 0x89F194F0
 	.4byte 0x8B9797A3
 	.4byte 0x5B6D5D00
-	.4byte 0x8F8788CA
-	.4byte 0x9688836F
-	.4byte 0x834A8A6D
-	.4byte 0x97A75B25
-	.4byte 0x5D000000
+	
+	.asciz "順位毎バカ確立[%]" #Stupidity probability per rank [%].
+	.byte 0x00
+	.byte 0x00
+	
 	.4byte 0x8D7393AE
 	.4byte 0x8A6D97A6
 	.4byte 0x835E8343
@@ -84617,7 +84589,7 @@ lbl_804E3C48:
 	.4byte 0x42473130
 	.4byte 0x30308FEE
 	.4byte 0x95F10A00
-	#.asciz "/// BG1000諠�蝣ｱ\n"
+	#.asciz "/// BG1000諠・ｱ\n"
 .global lbl_804E3C58
 lbl_804E3C58:
 	.4byte 0x73746174
@@ -93886,10 +93858,10 @@ lbl_804EC140:
 	.4byte 0x8374835A
 	.4byte 0x83628367
 	.4byte 0x00000000
-	.4byte 0x827988CA
-	.4byte 0x9275838A
-	.4byte 0x837E8362
-	.4byte 0x83670000
+	
+	.asciz "Ｚ位置リミット" #Z-position limit
+	.byte 0x00
+	
 	.4byte 0x8AE18B85
 	.4byte 0x89C293AE
 	.4byte 0x8A709378
@@ -105522,10 +105494,10 @@ lbl_804F7878:
 	.4byte 0x83758358
 	.4byte 0x835E815B
 	.4byte 0x83670000
-	.4byte 0x82638285
-	.4byte 0x82868281
-	.4byte 0x8295828C
-	.4byte 0x82940000
+	
+	.asciz "Ｄｅｆａｕｌｔ"
+	.byte 0x00
+	
 	.4byte 0x746F6767
 	.4byte 0x6C655F6F
 	.4byte 0x6E000000
