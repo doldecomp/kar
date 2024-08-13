@@ -2423,8 +2423,8 @@ lbl_80417CC4:
 /* 80417CCC 00414ACC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80417CD0 00414AD0  4E 80 00 20 */	blr 
 
-.global func_80417CD4
-func_80417CD4:
+.global HSD_VecGetAllocData
+HSD_VecGetAllocData:
 /* 80417CD4 00414AD4  3C 60 80 59 */	lis r3, lbl_8058BBB8@ha
 /* 80417CD8 00414AD8  38 63 BB B8 */	addi r3, r3, lbl_8058BBB8@l
 /* 80417CDC 00414ADC  4E 80 00 20 */	blr 
@@ -2444,8 +2444,8 @@ HSD_VecInitAllocData:
 /* 80417D08 00414B08  38 21 00 10 */	addi r1, r1, 0x10
 /* 80417D0C 00414B0C  4E 80 00 20 */	blr 
 
-.global func_80417D10
-func_80417D10:
+.global HSD_MtxGetAllocData
+HSD_MtxGetAllocData:
 /* 80417D10 00414B10  3C 60 80 59 */	lis r3, lbl_8058BBE4@ha
 /* 80417D14 00414B14  38 63 BB E4 */	addi r3, r3, lbl_8058BBE4@l
 /* 80417D18 00414B18  4E 80 00 20 */	blr 

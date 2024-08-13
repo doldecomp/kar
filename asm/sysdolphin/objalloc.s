@@ -368,8 +368,8 @@ lbl_8041833C:
 /* 80418378 00415178  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041837C 0041517C  4E 80 00 20 */	blr 
 
-.global func_80418380
-func_80418380:
+.global _HSD_ObjAllocForgetMemory
+_HSD_ObjAllocForgetMemory:
 /* 80418380 00415180  38 00 00 00 */	li r0, 0
 /* 80418384 00415184  90 0D 11 F0 */	stw r0, lbl_805DE2D0@sda21(r13)
 /* 80418388 00415188  4E 80 00 20 */	blr 

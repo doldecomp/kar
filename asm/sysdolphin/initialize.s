@@ -541,10 +541,10 @@ lbl_8041047C:
 func_80410494:
 /* 80410494 0040D294  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80410498 0040D298  7C 08 02 A6 */	mflr r0
-/* 8041049C 0040D29C  3C 80 80 49 */	lis r4, lbl_8048C4A8@ha
+/* 8041049C 0040D29C  3C 80 80 49 */	lis r4, FP_HSD_AObjForgetMemory@ha
 /* 804104A0 0040D2A0  3C 60 80 50 */	lis r3, lbl_80503CE4@ha
 /* 804104A4 0040D2A4  90 01 00 34 */	stw r0, 0x34(r1)
-/* 804104A8 0040D2A8  39 44 C4 A8 */	addi r10, r4, lbl_8048C4A8@l
+/* 804104A8 0040D2A8  39 44 C4 A8 */	addi r10, r4, FP_HSD_AObjForgetMemory@l
 /* 804104AC 0040D2AC  38 63 3C E4 */	addi r3, r3, lbl_80503CE4@l
 /* 804104B0 0040D2B0  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 804104B4 0040D2B4  81 2A 00 00 */	lwz r9, 0(r10)
@@ -1044,30 +1044,30 @@ jtbl_80503E58:
 
 .section .rodata
     .balign 8
-.global lbl_8048C4A8
-lbl_8048C4A8:
+.global FP_HSD_AObjForgetMemory
+FP_HSD_AObjForgetMemory:
 	.4byte _HSD_AObjForgetMemory
-	.4byte func_8040FBE8
+	.4byte _HSD_DispForgetMemory
 	.4byte _HSD_IDForgetMemory
-	.4byte func_80418380
+	.4byte _HSD_ObjAllocForgetMemory
 	.4byte func_8041E6A4
 	.4byte func_8041A504
 	.4byte 0
 .global lbl_8048C4C4
 lbl_8048C4C4:
 	.4byte HSD_AObjGetAllocData
-	.4byte lbl_805DCBD0
+	.4byte PTR_aobj
 	.4byte HSD_FObjGetAllocData
-	.4byte lbl_805DCBD8
+	.4byte PTR_fobj
 	.4byte HSD_IDGetAllocData
-	.4byte lbl_805DCBE0
+	.4byte PTR_id
 	.4byte HSD_SListGetAllocData
-	.4byte lbl_805DCBE4
+	.4byte PTR_slist
 	.4byte HSD_DListGetAllocData
-	.4byte lbl_805DCBEC
-	.4byte func_80417CD4
+	.4byte PTR_dlist
+	.4byte HSD_VecGetAllocData
 	.4byte lbl_805DCBF4
-	.4byte func_80417D10
+	.4byte HSD_MtxGetAllocData
 	.4byte lbl_805DCBF8
 	.4byte HSD_RObjGetAllocData
 	.4byte lbl_805DCBFC
@@ -1075,11 +1075,11 @@ lbl_8048C4C4:
 	.4byte lbl_805DCC04
 	.4byte HSD_ShadowGetAllocData
 	.4byte lbl_805DCC0C
-	.4byte func_803F8A48
+	.4byte HSD_RenderGetAllocData
 	.4byte lbl_805DCC14
-	.4byte func_803F8A60
+	.4byte HSD_ChanGetAllocData
 	.4byte lbl_805DCC1C
-	.4byte func_803F8A54
+	.4byte HSD_TevRegGetAllocData
 	.4byte lbl_805DCC24
 	.4byte 0
 	.4byte 0
@@ -1156,23 +1156,23 @@ lbl_805DCBC4:
 lbl_805DCBC8:
     .4byte 0x61646472
     .4byte 0x00000000
-.global lbl_805DCBD0
-lbl_805DCBD0:
-    .4byte 0x616F626A
-    .4byte 0x00000000
-.global lbl_805DCBD8
-lbl_805DCBD8:
+.global PTR_aobj
+PTR_aobj:
+    .asciz "aobj"
+    .balign 4
+.global PTR_fobj
+PTR_fobj:
     .4byte 0x666F626A
     .4byte 0x00000000
-.global lbl_805DCBE0
-lbl_805DCBE0:
+.global PTR_id
+PTR_id:
     .4byte 0x69640000
-.global lbl_805DCBE4
-lbl_805DCBE4:
+.global PTR_slist
+PTR_slist:
     .4byte 0x736C6973
     .4byte 0x74000000
-.global lbl_805DCBEC
-lbl_805DCBEC:
+.global PTR_dlist
+PTR_dlist:
     .4byte 0x646C6973
     .4byte 0x74000000
 .global lbl_805DCBF4

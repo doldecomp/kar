@@ -1718,8 +1718,8 @@ lbl_8040FBC4:
 /* 8040FBE0 0040C9E0  38 21 00 70 */	addi r1, r1, 0x70
 /* 8040FBE4 0040C9E4  4E 80 00 20 */	blr 
 
-.global func_8040FBE8
-func_8040FBE8:
+.global _HSD_DispForgetMemory
+_HSD_DispForgetMemory:
 /* 8040FBE8 0040C9E8  38 A0 00 00 */	li r5, 0
 /* 8040FBEC 0040C9EC  38 8D 11 98 */	addi r4, r13, lbl_805DE278@sda21
 /* 8040FBF0 0040C9F0  38 6D 11 9C */	addi r3, r13, lbl_805DE27C@sda21

@@ -959,20 +959,20 @@ HSD_RenderInitAllocData:
 /* 803F8A40 003F5840  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F8A44 003F5844  4E 80 00 20 */	blr 
 
-.global func_803F8A48
-func_803F8A48:
+.global HSD_RenderGetAllocData
+HSD_RenderGetAllocData:
 /* 803F8A48 003F5848  3C 60 80 59 */	lis r3, lbl_80589278@ha
 /* 803F8A4C 003F584C  38 63 92 78 */	addi r3, r3, lbl_80589278@l
 /* 803F8A50 003F5850  4E 80 00 20 */	blr 
 
-.global func_803F8A54
-func_803F8A54:
+.global HSD_TevRegGetAllocData
+HSD_TevRegGetAllocData:
 /* 803F8A54 003F5854  3C 60 80 59 */	lis r3, lbl_805892A4@ha
 /* 803F8A58 003F5858  38 63 92 A4 */	addi r3, r3, lbl_805892A4@l
 /* 803F8A5C 003F585C  4E 80 00 20 */	blr 
 
-.global func_803F8A60
-func_803F8A60:
+.global HSD_ChanGetAllocData
+HSD_ChanGetAllocData:
 /* 803F8A60 003F5860  3C 60 80 59 */	lis r3, lbl_805892D0@ha
 /* 803F8A64 003F5864  38 63 92 D0 */	addi r3, r3, lbl_805892D0@l
 /* 803F8A68 003F5868  4E 80 00 20 */	blr 
