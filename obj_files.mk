@@ -150,6 +150,8 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/sysdolphin/gobj.o\
 	$(BUILD_DIR)/asm/sysdolphin/particle.o\
 	$(BUILD_DIR)/asm/text_8042AD44.o\
+	$(BUILD_DIR)/asm/sysdolphin/archive.o\
+	$(BUILD_DIR)/asm/text_804452A0.o\
 	$(BUILD_DIR)/asm/IPSocket.o\
 	$(BUILD_DIR)/asm/text_8047DB6C.o\
 	$(BUILD_DIR)/asm/IPIgmp.o\
