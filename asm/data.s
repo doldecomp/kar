@@ -107112,26 +107112,26 @@ lbl_804F923C:
 	.4byte 0x803BF4F8
 	.4byte 0x803BF500
 	.4byte 0x803BF508
-.global lbl_804F9258
-lbl_804F9258:
+.global gTRKRestoreFlags
+gTRKRestoreFlags:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.global lbl_804F9264
-lbl_804F9264:
+.global gTRKExceptionStatus
+gTRKExceptionStatus:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x01000000
-.global lbl_804F9274
-lbl_804F9274:
+.global gTRKStepStatus
+gTRKStepStatus:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
-.global lbl_804F9288
-lbl_804F9288:
+.global TRK_ISR_OFFSETS
+TRK_ISR_OFFSETS:
 	.4byte 0x00000100
 	.4byte 0x00000200
 	.4byte 0x00000300
@@ -107148,8 +107148,8 @@ lbl_804F9288:
 	.4byte 0x00001400
 	.4byte 0x00001700
 	.4byte 0x00000000
-.global lbl_804F92C8
-lbl_804F92C8:
+.global gDBCommTable
+gDBCommTable:
 	.4byte 0x00000000
 	.4byte 0x00000000
 	.4byte 0x00000000
@@ -107162,12 +107162,8 @@ lbl_804F92C8:
 	.4byte 0x00000000
 .global lbl_804F92F0
 lbl_804F92F0:
-	.4byte 0x44424578
-	.4byte 0x63657074
-	.4byte 0x696F6E44
-	.4byte 0x65737469
-	.4byte 0x6E617469
-	.4byte 0x6F6E0A00
+	.asciz "DBExceptionDestination\n"
+	.balign 4
 .global Dolphin_SDK_DSP_release_build
 Dolphin_SDK_DSP_release_build:
 	.asciz "<< Dolphin SDK - DSP	release build: Sep  5 2002 05:35:13 (0x2301) >>"
@@ -107182,75 +107178,15 @@ Dolphin_SDK_DSP_release_build:
 lbl_804F9388:
 	.asciz "DSP is booting task: 0x%08X\n"
 	.balign 4
-	.4byte 0x5F5F4453
-	.4byte 0x505F626F
-	.4byte 0x6F745F74
-	.4byte 0x61736B28
-	.4byte 0x2920203A
-	.4byte 0x20495241
-	.4byte 0x4D204D4D
-	.4byte 0x454D2041
-	.4byte 0x4444523A
-	.4byte 0x20307825
-	.4byte 0x3038580A
-	.4byte 0x00000000
-	.4byte 0x5F5F4453
-	.4byte 0x505F626F
-	.4byte 0x6F745F74
-	.4byte 0x61736B28
-	.4byte 0x2920203A
-	.4byte 0x20495241
-	.4byte 0x4D204453
-	.4byte 0x50204144
-	.4byte 0x4452203A
-	.4byte 0x20307825
-	.4byte 0x3038580A
-	.4byte 0x00000000
-	.4byte 0x5F5F4453
-	.4byte 0x505F626F
-	.4byte 0x6F745F74
-	.4byte 0x61736B28
-	.4byte 0x2920203A
-	.4byte 0x20495241
-	.4byte 0x4D204C45
-	.4byte 0x4E475448
-	.4byte 0x2020203A
-	.4byte 0x20307825
-	.4byte 0x3038580A
-	.4byte 0x00000000
-	.4byte 0x5F5F4453
-	.4byte 0x505F626F
-	.4byte 0x6F745F74
-	.4byte 0x61736B28
-	.4byte 0x2920203A
-	.4byte 0x20445241
-	.4byte 0x4D204D4D
-	.4byte 0x454D2041
-	.4byte 0x4444523A
-	.4byte 0x20307825
-	.4byte 0x3038580A
-	.4byte 0x00000000
-	.4byte 0x5F5F4453
-	.4byte 0x505F626F
-	.4byte 0x6F745F74
-	.4byte 0x61736B28
-	.4byte 0x2920203A
-	.4byte 0x20537461
-	.4byte 0x72742056
-	.4byte 0x6563746F
-	.4byte 0x7220203A
-	.4byte 0x20307825
-	.4byte 0x3038580A
-	.4byte 0x00000000
-	.4byte 0x5F5F4453
-	.4byte 0x505F6164
-	.4byte 0x645F7461
-	.4byte 0x736B2829
-	.4byte 0x203A2041
-	.4byte 0x64646564
-	.4byte 0x20746173
-	.4byte 0x6B202020
-	.4byte 0x203A2030
-	.4byte 0x78253038
-	.4byte 0x580A0000
-	.4byte 0x00000000
+	.asciz "__DSP_boot_task()  : IRAM MMEM ADDR: 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_boot_task()  : IRAM DSP ADDR : 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_boot_task()  : IRAM LENGTH   : 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_boot_task()  : DRAM MMEM ADDR: 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_boot_task()  : Start Vector  : 0x%08X\n"
+	.balign 4
+	.asciz "__DSP_add_task() : Added task    : 0x%08X\n"
+	.balign 4

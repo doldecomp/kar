@@ -7,10 +7,12 @@ lbl_805D50E0:
 	.4byte 0x30000000
 .global lbl_805D50E4
 lbl_805D50E4:
-	.4byte 0x6A700000
+	.asciz "jp"
+	.balign 4
 .global lbl_805D50E8
 lbl_805D50E8:
-	.4byte 0x75730000
+	.asciz "us"
+	.balign 4
 .global lbl_805D50EC
 lbl_805D50EC:
 	.4byte 0x230A0000
@@ -30,16 +32,16 @@ lbl_805D5104:
 	.4byte 0x404040FF
 .global lbl_805D5108
 lbl_805D5108:
-	.4byte 0x0A000000
-	.4byte 0x00000000
+	.asciz "\n"
+	.balign 8
 .global lbl_805D5110
 lbl_805D5110:
 	.4byte 0x30000000
 	.4byte 0x00000000
 .global lbl_805D5118
 lbl_805D5118:
-	.4byte 0x676D6C69
-	.4byte 0x622E6300
+	.asciz "gmlib.c"
+	.balign 4
 .global lbl_805D5120
 lbl_805D5120:
 	.4byte 0x30000000
@@ -49,9 +51,8 @@ lbl_805D5124:
 	.4byte 0x0C0C0C0C
 .global lbl_805D512C
 lbl_805D512C:
-	.4byte 0x61697220
-	.4byte 0x7A200A00
-	.4byte 0x00000000
+	.asciz "air z \n"
+	.balign 8
 .global lbl_805D5138
 lbl_805D5138:
 	.4byte 0x25730000
