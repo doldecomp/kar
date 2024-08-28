@@ -9056,8 +9056,8 @@ lbl_803D04F8:
 /* 803D0560 003CD360  D0 08 00 00 */	stfs f0, 0(r8)
 /* 803D0564 003CD364  4E 80 00 20 */	blr 
 
-.global func_803D0568
-func_803D0568:
+.global GXSetProjection
+GXSetProjection:
 /* 803D0568 003CD368  80 A2 F0 70 */	lwz r5, __GXContexts@sda21(r2)
 /* 803D056C 003CD36C  2C 04 00 01 */	cmpwi r4, 1
 /* 803D0570 003CD370  90 85 04 20 */	stw r4, 0x420(r5)

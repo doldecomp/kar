@@ -2,8 +2,8 @@
 
 .section .text
 
-.global func_803D1DEC
-func_803D1DEC:
+.global PSMTXMultVec
+PSMTXMultVec:
 /* 803D1DEC 003CEBEC  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0
 /* 803D1DF0 003CEBF0  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 803D1DF4 003CEBF4  E0 24 80 08 */	psq_l f1, 8(r4), 1, qr0

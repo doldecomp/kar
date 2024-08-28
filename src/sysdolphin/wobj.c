@@ -171,7 +171,7 @@ void HSD_WObjSetPositionX(HSD_WObj* wobj, f32 val)
             if (wobj->aobj != NULL && wobj->aobj->hsd_obj != NULL) {
                 jp = (HSD_JObj*) wobj->aobj->hsd_obj;
                 HSD_JObjSetupMatrix((HSD_JObj*) wobj->aobj->hsd_obj);
-                func_803D1DEC(jp->mtx, &wobj->pos, &wobj->pos);
+                PSMTXMultVec(jp->mtx, &wobj->pos, &wobj->pos);
             }
             wobj->flags &= 0xFFFFFFFE;
         }
@@ -189,7 +189,7 @@ void HSD_WObjSetPositionY(HSD_WObj* wobj, f32 val)
             if (wobj->aobj != NULL && wobj->aobj->hsd_obj != NULL) {
                 jp = (HSD_JObj*) wobj->aobj->hsd_obj;
                 HSD_JObjSetupMatrix((HSD_JObj*) wobj->aobj->hsd_obj);
-                func_803D1DEC(jp->mtx, &wobj->pos, &wobj->pos);
+                PSMTXMultVec(jp->mtx, &wobj->pos, &wobj->pos);
             }
             wobj->flags &= 0xFFFFFFFE;
         }
@@ -207,7 +207,7 @@ void HSD_WObjSetPositionZ(HSD_WObj* wobj, f32 val)
             if (wobj->aobj != NULL && wobj->aobj->hsd_obj != NULL) {
                 jp = (HSD_JObj*) wobj->aobj->hsd_obj;
                 HSD_JObjSetupMatrix((HSD_JObj*) wobj->aobj->hsd_obj);
-                func_803D1DEC(jp->mtx, &wobj->pos, &wobj->pos);
+                PSMTXMultVec(jp->mtx, &wobj->pos, &wobj->pos);
             }
             wobj->flags &= 0xFFFFFFFE;
         }
@@ -227,7 +227,7 @@ void HSD_WObjGetPosition(HSD_WObj* wobj, Vec* vec)
         if (wobj->aobj != NULL && wobj->aobj->hsd_obj != NULL) {
             jp = (HSD_JObj*)wobj->aobj->hsd_obj;
             HSD_JObjSetupMatrix((HSD_JObj*)wobj->aobj->hsd_obj);
-            func_803D1DEC(jp->mtx, &wobj->pos, &wobj->pos);
+            PSMTXMultVec(jp->mtx, &wobj->pos, &wobj->pos);
         }
         wobj->flags &= 0xFFFFFFFE;
     }

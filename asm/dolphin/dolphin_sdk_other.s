@@ -10018,8 +10018,8 @@ func_803BD3E8:
 /* 803BD400 003BA200  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BD404 003BA204  4E 80 00 20 */	blr 
 
-.global func_803BD408
-func_803BD408:
+.global fmod
+fmod:
 /* 803BD408 003BA208  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BD40C 003BA20C  7C 08 02 A6 */	mflr r0
 /* 803BD410 003BA210  90 01 00 14 */	stw r0, 0x14(r1)

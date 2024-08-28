@@ -242,7 +242,7 @@ void HSD_ShadowStartRender(HSD_Shadow* shadow)
         channel.mat_color.b = 0xFF;
         HSD_SetupChannelAll(&channel);
         C_MTXOrtho(&sp8, 1.0F, 0.0F, 0.0F, 1.0F, -1.0F, 1.0F);
-        func_803D0568(&sp8, 1);
+        GXSetProjection(&sp8, 1);
         GXSetViewport(0.0F, 0.0F, imgdesc->width, imgdesc->height, 0.0F, 1.0F);
         GXSetScissor(0, 0, imgdesc->width, imgdesc->height);
         GXLoadPosMtxImm(&lbl_80503FC0, 0);
@@ -265,10 +265,10 @@ void HSD_ShadowStartRender(HSD_Shadow* shadow)
         channel.mat_color.g = temp_r0;
         channel.mat_color.b = temp_r0;
         HSD_SetupChannelAll(&channel);
-        if (shadow->objects != NULL && HSD_CObjGetEyeDistance(camera) >= lbl_805DC8C0[0] && func_80401150(camera)) {
+        if (shadow->objects != NULL && HSD_CObjGetEyeDistance(camera) >= lbl_805DC8C0[0] && HSD_CObjSetCurrent(camera)) {
             GXSetScissor(2, 2, imgdesc->width - 4, imgdesc->height - 4);
             for (var_r26 = shadow->objects; var_r26 != NULL; var_r26 = var_r26->next) {
-                func_8040A7B8(var_r26->data, 0, 5, 0x04000000);
+                HSD_JObjDispAll(var_r26->data, 0, 5, 0x04000000);
             }
             HSD_CObjEndCurrent();
         }
