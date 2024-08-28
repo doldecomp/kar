@@ -317,7 +317,7 @@ void* hsdNew(HSD_ClassInfo* info)
 
 extern char lbl_805DCD5C[4];
 
-BOOL func_80420D5C(HSD_Class* object, HSD_ClassInfo* class_info)
+BOOL hsdChangeClass(HSD_Class* object, HSD_ClassInfo* class_info)
 {
     HSD_ClassInfo* info1;
     HSD_ClassInfo* info2;
@@ -374,7 +374,7 @@ BOOL hsdIsDescendantOf(HSD_ClassInfo* info, HSD_ClassInfo* class_info)
     return FALSE;
 }
 
-BOOL func_80420F34(HSD_Class* cls, HSD_ClassInfo* class_info)
+BOOL hsdIsDerivedFrom(HSD_Class* cls, HSD_ClassInfo* class_info)
 {
     HSD_ClassInfo* var_r31;
 
@@ -394,7 +394,7 @@ BOOL func_80420F34(HSD_Class* cls, HSD_ClassInfo* class_info)
     return FALSE;
 }
 
-void func_80420FBC(HSD_ClassInfo* class_info, s32 arg1, s32 arg2)
+void class_set_flags(HSD_ClassInfo* class_info, s32 arg1, s32 arg2)
 {
     class_info->head.flags = class_info->head.flags & ~arg2 | arg1;
 }
@@ -412,7 +412,7 @@ void func_80420FD0(HSD_ClassInfo* class_info)
     class_info->amnesia(class_info);
     class_info->head.child = NULL;
     class_info->head.parent = NULL;
-    func_80420FBC(class_info, 0, 1);
+    class_set_flags(class_info, 0, 1);
 }
 
 void func_804211B4(char* name, HSD_ClassInfo* class_info)

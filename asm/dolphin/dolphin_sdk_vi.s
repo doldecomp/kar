@@ -707,8 +707,8 @@ lbl_803DE144:
 /* 803DE15C 003DAF5C  7C 08 03 A6 */	mtlr r0
 /* 803DE160 003DAF60  4E 80 00 20 */	blr 
 
-.global func_803DE164
-func_803DE164:
+.global VIWaitForRetrace
+VIWaitForRetrace:
 /* 803DE164 003DAF64  7C 08 02 A6 */	mflr r0
 /* 803DE168 003DAF68  90 01 00 04 */	stw r0, 4(r1)
 /* 803DE16C 003DAF6C  94 21 FF F0 */	stwu r1, -0x10(r1)

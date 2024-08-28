@@ -10,7 +10,7 @@ extern GXRenderModeObj* rmode;
 
 extern int lbl_805DCBC0;
 extern int lbl_805DCBBC, lbl_805DE2A8;
-void func_8040FF8C();
+void HSD_OSInit();
 
 char lbl_80503C60[] = "initialize.c";
 
@@ -22,7 +22,7 @@ void HSD_InitComponent(void)
     fifo = HSD_AllocateFIFO(lbl_805DCBBC);
     lbl_805DE2A8 = GXInit(fifo, lbl_805DCBBC);
     memReport.gxfifo = lbl_805DCBBC;
-    func_8040FF8C(lbl_805DE2A8, &memReport);
+    HSD_OSInit(lbl_805DE2A8, &memReport);
 
     {
         HSD_VIStatus vi_status;
@@ -44,7 +44,7 @@ void HSD_InitComponent(void)
     HSD_GXInit();
     HSD_DVDInit();
     HSD_IDSetup();
-    func_803DE164();
+    VIWaitForRetrace();
     HSD_ObjInit();
     init_done = TRUE;
 }

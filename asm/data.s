@@ -92275,11 +92275,12 @@ lbl_804EADB0:
 	.4byte 0x91AC9378
 	.4byte 0x8CB8908A
 	.4byte 0x97A60000
-	.4byte 0x89F1959C
-	.4byte 0x8E9E96B3
-	.4byte 0x93478E9E
-	.4byte 0x8AD45B66
-	.4byte 0x5D000000
+	
+.global lbl_804eb254
+lbl_804eb254:
+	.asciz "回復時無敵時間[f]" #Invincibility time on recovery [f]
+	.balign 4
+	
 	.4byte 0x2F2F2F20
 	.4byte 0x834E8358
 	.4byte 0x835F837D
@@ -93267,25 +93268,26 @@ lbl_804EC140:
 	.4byte 0x805DB498
 	.4byte 0x00000000
 	.4byte 0x00000000
-	.4byte 0x836E8393
-	.4byte 0x837D815B
-	.4byte 0x81408140
-	.4byte 0x81400000
-	.4byte 0x83418343
-	.4byte 0x83658380
-	.4byte 0x8EF596BD
-	.4byte 0x5B665D00
-	.4byte 0x92CA8FED
-	.4byte 0x8E9E974C
-	.4byte 0x8CF88E9E
-	.4byte 0x8AD45B66
-	.4byte 0x5D000000
-	.4byte 0x8375815B
-	.4byte 0x83588367
-	.4byte 0x8E9E974C
-	.4byte 0x8CF88E9E
-	.4byte 0x8AD45B66
-	.4byte 0x5D000000
+	
+.global lbl_804ec174
+lbl_804ec174:
+	.asciz "ハンマー　　　" #Hammer
+	.balign 4
+	
+.global lbl_804ec184
+lbl_804ec184:
+	.asciz "アイテム寿命[f]" #Item Lifetime [f]
+	
+.global lbl_804ec194
+lbl_804ec194:
+	.asciz "通常時有効時間[f]" #Normal effect time [f]
+	.balign 4
+	
+.global lbl_804ec1a8
+lbl_804ec1a8:
+	.asciz "ブースト時有効時間[f]" #Effect time at boost [f]
+	.balign 4
+	
 	.4byte 0x836E8393
 	.4byte 0x836692CA
 	.4byte 0x8FED8E9E
@@ -93582,11 +93584,12 @@ lbl_804EC140:
 	.4byte 0x898A94BC
 	.4byte 0x8C615B6D
 	.4byte 0x5D000000
-	.4byte 0x89F1959C
-	.4byte 0x8E9E96B3
-	.4byte 0x93478E9E
-	.4byte 0x8AD45B66
-	.4byte 0x5D000000
+	
+.global lbl_804ec660
+lbl_804ec660:
+	.asciz "回復時無敵時間[f]" #Invincibility time on recovery [f]
+	.balign 4
+	
 	.4byte 0x834E8358
 	.4byte 0x835F837D
 	.4byte 0x81408140

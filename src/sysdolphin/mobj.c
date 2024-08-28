@@ -165,7 +165,7 @@ int MObjLoad(HSD_MObj *mobj, HSD_MObjDesc *desc)
 
 char lbl_805DCAA0[] = "mobj.c";
 extern HSD_MObjInfo hsdMObj;
-void func_803F9FA4(HSD_MObjInfo* info) {
+void HSD_MObjSetDefaultClass(HSD_MObjInfo* info) {
     if (info != NULL) {
         if (!hsdIsDescendantOf(info, &hsdMObj))
             __assert(lbl_805DCAA0, 0x14E, "hsdIsDescendantOf(info, &hsdMObj)");

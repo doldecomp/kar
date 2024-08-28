@@ -162,8 +162,8 @@ lbl_8040FF50:
 /* 8040FF84 0040CD84  38 21 00 60 */	addi r1, r1, 0x60
 /* 8040FF88 0040CD88  4E 80 00 20 */	blr 
 
-.global func_8040FF8C
-func_8040FF8C:
+.global HSD_OSInit
+HSD_OSInit:
 /* 8040FF8C 0040CD8C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8040FF90 0040CD90  7C 08 02 A6 */	mflr r0
 /* 8040FF94 0040CD94  90 01 00 34 */	stw r0, 0x34(r1)
