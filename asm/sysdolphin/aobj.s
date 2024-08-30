@@ -297,8 +297,8 @@ lbl_803FB6E4:
 /* 803FB6EC 003F84EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FB6F0 003F84F0  4E 80 00 20 */	blr 
 
-.global func_803FB6F4
-func_803FB6F4:
+.global callbackForeachFunc
+callbackForeachFunc:
 /* 803FB6F4 003F84F4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803FB6F8 003F84F8  7C 08 02 A6 */	mflr r0
 /* 803FB6FC 003F84FC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2521,7 +2521,7 @@ lbl_803FD49C:
 /* 803FD4A4 003FA2A4  7F C5 F3 78 */	mr r5, r30
 /* 803FD4A8 003FA2A8  7F E6 FB 78 */	mr r6, r31
 /* 803FD4AC 003FA2AC  38 E1 00 68 */	addi r7, r1, 0x68
-/* 803FD4B0 003FA2B0  4B FF E2 45 */	bl func_803FB6F4
+/* 803FD4B0 003FA2B0  4B FF E2 45 */	bl callbackForeachFunc
 /* 803FD4B4 003FA2B4  48 00 05 70 */	b lbl_803FDA24
 lbl_803FD4B8:
 /* 803FD4B8 003FA2B8  57 BC 05 AC */	rlwinm r28, r29, 0, 0x16, 0x16
