@@ -3342,7 +3342,7 @@ lbl_804FCA40:
     .4byte 0x00010295
     .4byte 0x005A0380
     .4byte 0x00020295
-    .4byte func_8000029F
+    .4byte 0x8000029F
     .4byte 0x00480021
     .4byte 0x8E0002BF
     .4byte 0x008E25FF
@@ -3368,10 +3368,10 @@ lbl_804FCA40:
     .4byte 0x1206029F
     .4byte 0x80B50021
     .4byte 0x27FC03C0
-    .4byte func_8000029D
+    .4byte 0x8000029D
     .4byte 0x008802DF
     .4byte 0x27FE03C0
-    .4byte func_8000029C
+    .4byte 0x8000029C
     .4byte 0x008E02DF
     .4byte 0x2ECE2CCF
     .4byte 0x00F8FFCD
@@ -5382,17 +5382,17 @@ lbl_804FEA00:
     .4byte 0x16FD0001
     .4byte 0x16FB0001
     .4byte 0x26FC02A0
-    .4byte func_8000029C
+    .4byte 0x8000029C
     .4byte 0x00408E00
     .4byte 0x81008900
     .4byte 0x009FBABE
     .4byte 0x26FE02C0
-    .4byte func_8000029C
+    .4byte 0x8000029C
     .4byte 0x004A8200
     .4byte 0x0294004A
     .4byte 0x23FF8100
     .4byte 0x26FE02C0
-    .4byte func_8000029C
+    .4byte 0x8000029C
     .4byte 0x005427FF
     .4byte 0x02407FFF
     .4byte 0x2ECE2FCF
@@ -5757,7 +5757,7 @@ lbl_804FEA00:
     .4byte 0x1F1F4D00
     .4byte 0x14818D1E
     .4byte 0x1FD80098
-    .4byte func_80000080
+    .4byte 0x80000080
     .4byte 0x0E48A830
     .4byte 0xAC38AD30
     .4byte 0xAC38AD30
@@ -6195,13 +6195,13 @@ lbl_804FEA00:
     .4byte 0x0004029C
     .4byte 0x069402DF
     .4byte 0x26FE02C0
-    .4byte func_8000029C
+    .4byte 0x8000029C
     .4byte 0x069A02DF
     .4byte 0x26FC02A0
-    .4byte func_8000029C
+    .4byte 0x8000029C
     .4byte 0x06A002DF
     .4byte 0x26FC02A0
-    .4byte func_8000029C
+    .4byte 0x8000029C
     .4byte 0x06A602DF
     .4byte 0x81008970
     .4byte 0x8E602ECE
@@ -7245,7 +7245,7 @@ lbl_804FEA00:
     .4byte 0x1D9E16FC
     .4byte 0xFEED2EFD
     .4byte 0x26FC02A0
-    .4byte func_8000029C
+    .4byte 0x8000029C
     .4byte 0x0ECE00D0
     .4byte 0x0E1700DE
     .4byte 0x0E1800DC
@@ -7332,7 +7332,7 @@ lbl_804FEA00:
     .4byte 0x029C0F75
     .4byte 0x029F80B5
     .4byte 0x0021029F
-    .4byte func_80000021
+    .4byte 0x80000021
     .4byte 0x029F0045
     .4byte 0x002126FE
     .4byte 0x02C08000

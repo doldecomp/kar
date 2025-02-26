@@ -152,7 +152,6 @@ TEXT_O_FILES :=\
 	$(BUILD_DIR)/asm/text_8042AD44.o\
 	$(BUILD_DIR)/asm/sysdolphin/axdriver.o\
 	$(BUILD_DIR)/asm/text_804452A0.o\
-	$(BUILD_DIR)/asm/text_8046A7A0.o\
 	$(BUILD_DIR)/asm/IPSocket.o\
 	$(BUILD_DIR)/asm/text_8047DB6C.o\
 	$(BUILD_DIR)/asm/IPIgmp.o\
