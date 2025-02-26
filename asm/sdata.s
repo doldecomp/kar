@@ -475,7 +475,7 @@ lbl_805D543C:
 	.4byte 0xFF8000FF
 .global lbl_805D5440
 lbl_805D5440:
-	.4byte 0x800080FF
+	.4byte func_800080FF
 	.4byte 0x00000000
 .global lbl_805D5448
 lbl_805D5448:
@@ -614,11 +614,11 @@ lbl_805D5518:
 .global lbl_805D5520
 lbl_805D5520:
 	.4byte 0xFF000080
-	.4byte 0x80000080
+	.4byte func_80000080
 .global lbl_805D5528
 lbl_805D5528:
 	.4byte 0xFF00FF80
-	.4byte 0x80008080
+	.4byte func_80008080
 	.4byte 0xFFFF0080
 	.4byte 0x80800080
 	.4byte 0x00FF0080
